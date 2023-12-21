@@ -1,0 +1,52 @@
+.TitleLogo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.MouseLogo {
+  height: 5vmin;
+  pointer-events: none;
+}
+
+.DownLogo {
+  height: 3vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .TitleHeader-footer {
+    transform: translateY(-20px);
+    animation: scroll-animation 1s ease-in-out infinite;
+  }
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.TitleHeader {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.TitleHeader-header {
+  align-items: center;
+}
+
+.TitleHeader-footer {
+  position: absolute;
+  bottom: 20px;
+}
