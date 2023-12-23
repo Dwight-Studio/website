@@ -1,7 +1,7 @@
 import '../base.css';
-import './TitleHeader.css';
+import './Header.css';
 
-function TitleHeader() {
+function Header() {
     return (
         <div className="header">
             <div className="nav">
@@ -28,4 +28,4 @@ function TitleHeader() {
     )
 }
 
-export default TitleHeader;
+export default Header;

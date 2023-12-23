@@ -6,7 +6,7 @@ function Title() {
     return (
         <div className="title-wrapper">
             <video autoPlay muted loop className="title-background-video">
-                <source src="/index.mp4" type="video/mp4"/>
+                <source src="/media/index.mp4" type="video/mp4"/>
             </video>
             <div className="title-logo-wrapper">
                 <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="title-logo"
