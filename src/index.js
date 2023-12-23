@@ -11,6 +11,8 @@ root.render(
         <Title/>
         <Header/>
 
-        <div className="TestDiv"/>
+        <div id="content">
+            <div className="TestDiv"/>
+        </div>
     </React.StrictMode>
 );

@@ -10,6 +10,8 @@
     /* Deactivated */
     --text-deactivated: #7f8285;
     --deactivated: #4a4b4f;
+
+    scroll-behavior: smooth;
 }
 
 ::selection {

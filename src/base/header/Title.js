@@ -12,17 +12,19 @@ function Title() {
                 <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="title-logo"
                      alt="Title logo"/>
             </div>
-            <div vertical layout className="title-animation-wrapper">
-                <div className="title-down-logo-wrapper">
-                    <img src={down} className="title-down-logo" alt="Down"/>
+            <a href="#content">
+                <div vertical layout className="title-animation-wrapper">
+                    <div className="title-down-logo-wrapper">
+                        <img src={down} className="title-down-logo" alt="Down"/>
+                    </div>
+                    <div className="title-down-logo-wrapper">
+                        <img src={down} className="title-down-logo" alt="Down"/>
+                    </div>
+                    <div className="title-down-logo-wrapper">
+                        <img src={down} className="title-down-logo" alt="Down"/>
+                    </div>
                 </div>
-                <div className="title-down-logo-wrapper">
-                    <img src={down} className="title-down-logo" alt="Down"/>
-                </div>
-                <div className="title-down-logo-wrapper">
-                    <img src={down} className="title-down-logo" alt="Down"/>
-                </div>
-            </div>
+            </a>
         </div>
     )
         ;
