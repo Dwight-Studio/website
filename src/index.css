@@ -14,5 +14,5 @@ code {
 
 .TestDiv {
   padding-bottom: 300%;
-  background-color: var(--background-subtle);
+  background-color: var(--background);
 }

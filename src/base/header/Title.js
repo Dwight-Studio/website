@@ -1,5 +1,5 @@
 import '../base.css';
-import './TitleHeader.css';
+import './Title.css';
 import down from './down.svg';
 
 function Title() {

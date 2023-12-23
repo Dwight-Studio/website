@@ -1,4 +1,22 @@
 :root {
-    --background-emphasis: black;
-    --background-subtle: #16191c;
+    /* Normal */
+    --background: #16191c;
+    --text: #eee;
+
+    /* Accent */
+    --background-accent: black;
+    --text-accent: #e51a1a;
+
+    /* Deactivated */
+    --text-deactivated: #7f8285;
+    --deactivated: #4a4b4f;
+}
+
+::selection {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+* {
+    color: var(--text);
 }
