@@ -11,8 +11,8 @@ function Header({selected}) {
     }
 
     return (
-        <div className="header">
-            <div className="nav">
+        <div className="header-wrapper">
+            <div className="nav-wrapper">
                 <Link to="/" className="header-logo-wrapper">
                     <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="header-logo"
                          alt="Logo"/>

@@ -1,4 +1,4 @@
-.header {
+.header-wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -22,27 +22,27 @@
   padding: 2vmin 0;
 }
 
-.nav {
+.nav-wrapper {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
 
-.nav > * {
+.nav-wrapper > * {
   padding: 2vmin 0;
   font-weight: 300;
   text-decoration: none;
 }
 
-.nav > .header-selected > div {
+.nav-wrapper > .header-selected > div {
   color: var(--background-accent);
   background-color: var(--text);
   border-radius: 1000px;
   font-weight: 700;
 }
 
-.nav > * > div {
+.nav-wrapper > * > div {
   color: var(--text);
   transition: .2s;
   padding: 5px 10px;

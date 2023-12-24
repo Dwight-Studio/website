@@ -15,6 +15,22 @@ code {
 .content-wrapper {
   min-height: 100%;
   min-width: 100%;
+  max-width: 100%;
+  overflow: clip;
+}
+
+@media (max-width: 600px) {
+  .screen-width-wrapper {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .screen-width-wrapper {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
 }
 
 .test-content {

@@ -1,6 +1,7 @@
 import Header from "../base/header/header";
 import React from "react";
 import "./not-found.css"
+import Footer from "../base/footer/footer";
 
 function NotFound() {
     return (
@@ -13,6 +14,8 @@ function NotFound() {
                     <h1 className="error-subtitle">Error 404: Not Found</h1>
                 </div>
             </div>
+
+            <Footer/>
         </div>
     )
 }

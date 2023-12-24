@@ -1,10 +1,13 @@
 import '../base.css';
 import './title.css';
 import down from './down.svg';
+import ScrollToTop from "../ScrollToTop";
+import React from "react";
 
 function Title({backgroundVideo}) {
     return (
         <div className="title-wrapper">
+            <ScrollToTop/>
             <video autoPlay muted loop className="title-background-video">
                 <source src={backgroundVideo} type="video/mp4"/>
             </video>

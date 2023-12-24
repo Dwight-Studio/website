@@ -1,7 +1,8 @@
 import Title from "../base/header/title";
-import video from "../medias/dpt.mp4";
+import video from "../medias/slime-sim.mp4";
 import Header from "../base/header/header";
 import React from "react";
+import Footer from "../base/footer/footer";
 
 function Home() {
     return (
@@ -10,8 +11,12 @@ function Home() {
             <Header selected={"home"}/>
 
             <div id="content" className="content-wrapper">
-                <div className="test-content"/>
+                <div className="screen-width-wrapper">
+                    <div className="test-content"/>
+                </div>
             </div>
+
+            <Footer/>
         </div>
     )
 }
