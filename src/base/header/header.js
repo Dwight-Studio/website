@@ -1,26 +1,27 @@
 import '../base.css';
-import './Header.css';
+import './header.css';
+import {Link} from "react-router-dom";
 
 function Header() {
     return (
         <div className="header">
             <div className="nav">
-                <a href="/" className="header-logo-wrapper">
+                <Link to="/" className="header-logo-wrapper">
                     <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="header-logo"
                          alt="Logo"/>
-                </a>
-                <a href="/" className="header-selected">
+                </Link>
+                <Link to="/" className="header-selected">
                     <div>HOME</div>
-                </a>
-                <a href="/projects">
+                </Link>
+                <Link to="/Projects">
                     <div>PROJECTS</div>
-                </a>
-                <a href="/members">
+                </Link>
+                <Link to="/members">
                     <div>MEMBERS</div>
-                </a>
-                <a href="/about-us">
+                </Link>
+                <Link to="/about-us">
                     <div>ABOUT US</div>
-                </a>
+                </Link>
             </div>
             <div className="social-medias">
             </div>

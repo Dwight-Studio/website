@@ -1,12 +1,12 @@
 import '../base.css';
-import './Title.css';
+import './title.css';
 import down from './down.svg';
 
-function Title() {
+function Title({backgroundVideo}) {
     return (
         <div className="title-wrapper">
             <video autoPlay muted loop className="title-background-video">
-                <source src="/media/index.mp4" type="video/mp4"/>
+                <source src={backgroundVideo} type="video/mp4"/>
             </video>
             <div className="title-logo-wrapper">
                 <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="title-logo"
@@ -27,7 +27,6 @@ function Title() {
             </a>
         </div>
     )
-        ;
 }
 
 export default Title;
