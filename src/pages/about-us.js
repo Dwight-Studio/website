@@ -4,12 +4,12 @@ import React from "react";
 
 function AboutUs() {
     return (
-        <div className="projects-wrapper">
+        <div className="page-wrapper">
             <Title/>
             <Header selected={"about-us"}/>
 
-            <div id="content">
-                <div className="TestDiv"/>
+            <div id="content" className="content-wrapper">
+                <div className="test-content"/>
             </div>
         </div>
     )

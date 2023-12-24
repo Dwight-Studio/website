@@ -4,12 +4,12 @@ import React from "react";
 
 function Members() {
     return (
-        <div className="projects-wrapper">
+        <div className="page-wrapper">
             <Title/>
             <Header selected={"members"}/>
 
-            <div id="content">
-                <div className="TestDiv"/>
+            <div id="content" className="content-wrapper">
+                <div className="test-content"/>
             </div>
         </div>
     )

@@ -1,8 +1,15 @@
 import '../base.css';
 import './header.css';
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 function Header({selected}) {
+    const [show, setShow] = useState(false)
+
+    function handleShow() {
+        setShow(!show)
+    }
+
     return (
         <div className="header">
             <div className="nav">

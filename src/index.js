@@ -6,6 +6,7 @@ import Home from "./pages/home"
 import Projects from "./pages/projects"
 import Members from "./pages/members";
 import AboutUs from "./pages/about-us";
+import NotFound from "./pages/not-found";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,6 +18,7 @@ root.render(
                 <Route exact path='/projects' element={<Projects/>}/>
                 <Route exact path='/members' element={<Members/>}/>
                 <Route exact path='/about-us' element={<AboutUs/>}/>
+                <Route path='*' element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

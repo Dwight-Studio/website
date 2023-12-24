@@ -5,12 +5,12 @@ import React from "react";
 
 function Home() {
     return (
-        <div className="home-wrapper">
+        <div className="page-wrapper">
             <Title backgroundVideo={video}/>
             <Header selected={"home"}/>
 
-            <div id="content">
-                <div className="TestDiv"/>
+            <div id="content" className="content-wrapper">
+                <div className="test-content"/>
             </div>
         </div>
     )

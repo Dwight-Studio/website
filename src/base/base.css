@@ -12,6 +12,7 @@
     --deactivated: #4a4b4f;
 
     scroll-behavior: smooth;
+    background-color: var(--background);
 }
 
 ::selection {

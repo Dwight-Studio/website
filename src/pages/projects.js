@@ -4,12 +4,12 @@ import React from "react";
 
 function Projects() {
     return (
-        <div className="projects-wrapper">
+        <div className="page-wrapper">
             <Title/>
             <Header selected={"projects"}/>
 
-            <div id="content">
-                <div className="TestDiv"/>
+            <div id="content" className="content-wrapper">
+                <div className="test-content"/>
             </div>
         </div>
     )
