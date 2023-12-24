@@ -2,7 +2,7 @@ import '../base.css';
 import './header.css';
 import {Link} from "react-router-dom";
 
-function Header() {
+function Header({selected}) {
     return (
         <div className="header">
             <div className="nav">
@@ -10,16 +10,16 @@ function Header() {
                     <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="header-logo"
                          alt="Logo"/>
                 </Link>
-                <Link to="/" className="header-selected">
+                <Link to="/" className={selected === "home" ? "header-selected" : "header-unselected"}>
                     <div>HOME</div>
                 </Link>
-                <Link to="/Projects">
+                <Link to="/projects" className={selected === "projects" ? "header-selected" : "header-unselected"}>
                     <div>PROJECTS</div>
                 </Link>
-                <Link to="/members">
+                <Link to="/members" className={selected === "members" ? "header-selected" : "header-unselected"}>
                     <div>MEMBERS</div>
                 </Link>
-                <Link to="/about-us">
+                <Link to="/about-us" className={selected === "about-us" ? "header-selected" : "header-unselected"}>
                     <div>ABOUT US</div>
                 </Link>
             </div>

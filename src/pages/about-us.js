@@ -2,11 +2,11 @@ import Title from "../base/header/title";
 import Header from "../base/header/header";
 import React from "react";
 
-function Projects() {
+function AboutUs() {
     return (
         <div className="projects-wrapper">
             <Title/>
-            <Header selected={"projects"}/>
+            <Header selected={"about-us"}/>
 
             <div id="content">
                 <div className="TestDiv"/>
@@ -15,4 +15,4 @@ function Projects() {
     )
 }
 
-export default Projects;
+export default AboutUs;

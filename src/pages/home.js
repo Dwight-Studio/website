@@ -7,7 +7,7 @@ function Home() {
     return (
         <div className="home-wrapper">
             <Title backgroundVideo={video}/>
-            <Header/>
+            <Header selected={"home"}/>
 
             <div id="content">
                 <div className="TestDiv"/>
