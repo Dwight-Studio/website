@@ -1,4 +1,4 @@
-.header-wrapper {
+.header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -7,43 +7,139 @@
   background-color: var(--background-accent);
   box-sizing: border-box;
   box-shadow: 0 3px 10px 1px var(--background-accent);
-  justify-content: space-between;
   z-index: 98;
   display: flex;
+  overflow: visible;
 }
 
-.header-logo {
-  height: 4vmin;
+.header .nav .logo {
+  width: 10vw;
   padding: 0 2vmin;
+  display: block;
 }
 
-.header-logo-wrapper {
-  margin: 1%;
-  padding: 2vmin 0;
+.header .menu .logo-wrapper {
+  width: auto;
+  display: flex;
+  justify-content: center;
 }
 
-.nav-wrapper {
+.header .nav {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
 
-.nav-wrapper > * {
+.header .menu {
+  justify-content: space-between;
+}
+
+.header .menu.open {
+  visibility: visible;
+  left: 0;
+}
+
+.header .nav > * {
   padding: 2vmin 0;
   font-weight: 300;
   text-decoration: none;
 }
 
-.nav-wrapper > .header-selected > div {
+.header .nav > * > div {
+  color: var(--text);
+  transition: .2s;
+  padding: 5px 10px;
+}
+
+.header .nav > .link-selected > div {
   color: var(--background-accent);
   background-color: var(--text);
   border-radius: 1000px;
   font-weight: 700;
+  max-width: max-content;
 }
 
-.nav-wrapper > * > div {
-  color: var(--text);
-  transition: .2s;
-  padding: 5px 10px;
+#hamburger {
+  z-index: 98;
+  visibility: hidden;
+  width: 40px;
+  height: 45px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hamburger div {
+  width: 100%;
+  height: 15%;
+  margin: 4px 0;
+  background-color: var(--text);
+  transition: .4s;
+}
+
+#hamburger.open div:nth-child(1) {
+  width: 70%;
+  transform: rotateZ(-45deg) translateX(-10px);
+}
+
+#hamburger.open div:nth-child(3) {
+  width: 70%;
+  transform: rotateZ(45deg) translateX(-10px);
+}
+
+.header .mobile {
+  height: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  #hamburger {
+    visibility: visible;
+  }
+
+  .header .menu {
+    background-color: var(--background-accent);
+    padding: 0 30px;
+    position: absolute;
+    left: -100vh;
+    width: 60vw;
+    height: 100vh;
+    transition: .4s;
+  }
+
+  .header .menu > * > div {
+    padding: 5px 10px;
+    margin: 20px 0;
+  }
+
+  .header .menu .nav > * > div {
+    margin: 2vmin 1vmin;
+  }
+
+  .header .mobile {
+    height: 90px;
+  }
+
+  .header .menu .logo-wrapper {
+    width: 100%;
+  }
+
+  .header .menu .logo {
+    width: 50vw;
+    align-self: center;
+  }
+
+  .header .menu .nav {
+    display: block;
+    font-size: 2rem;
+    margin: 90px 0;
+  }
+
+  .header .menu .nav > * > div {
+    padding: 5px 10px;
+    margin: 4vmin 1vmin;
+  }
 }

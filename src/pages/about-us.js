@@ -1,6 +1,8 @@
 import Header from "../base/header/header";
 import React from "react";
 import Footer from "../base/footer/footer";
+import video from "../medias/dpt.mp4";
+import TitleHeader from "../base/header/title-header";
 
 function AboutUs() {
     return (

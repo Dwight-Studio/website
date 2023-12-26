@@ -1,36 +1,50 @@
 import '../base.css';
 import './header.css';
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import React, {useState} from "react";
 
-function Header({selected}) {
-    const [show, setShow] = useState(false)
+function Header(props) {
+    const hamburgerRef = React.useRef();
+    const menuRef = React.useRef();
 
-    function handleShow() {
-        setShow(!show)
+    function toggleHamburger() {
+        menuRef.current.classList.toggle("open");
+        hamburgerRef.current.classList.toggle("open");
     }
 
     return (
-        <div className="header-wrapper">
-            <div className="nav-wrapper">
-                <Link to="/" className="header-logo-wrapper">
-                    <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="header-logo"
-                         alt="Logo"/>
-                </Link>
-                <Link to="/" className={selected === "home" ? "header-selected" : "header-unselected"}>
-                    <div>HOME</div>
-                </Link>
-                <Link to="/projects" className={selected === "projects" ? "header-selected" : "header-unselected"}>
-                    <div>PROJECTS</div>
-                </Link>
-                <Link to="/members" className={selected === "members" ? "header-selected" : "header-unselected"}>
-                    <div>MEMBERS</div>
-                </Link>
-                <Link to="/about-us" className={selected === "about-us" ? "header-selected" : "header-unselected"}>
-                    <div>ABOUT US</div>
-                </Link>
+        <div className="header">
+            <div className="mobile">
+                <div id="hamburger" ref={hamburgerRef} onClick={() => toggleHamburger()}>
+                    <div/>
+                    <div/>
+                    <div/>
+                </div>
             </div>
-            <div className="social-medias">
+            <div className="menu" ref={menuRef}>
+                <div className="nav">
+                    <Link to="/" className="logo-wrapper">
+                        <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"
+                             className="logo"
+                             alt="Logo"/>
+                    </Link>
+                    <Link to="/" className={props.selected === "home" ? "link-selected" : "link-unselected"}>
+                        <div>HOME</div>
+                    </Link>
+                    <Link to="/projects"
+                          className={props.selected === "projects" ? "link-selected" : "link-unselected"}>
+                        <div>PROJECTS</div>
+                    </Link>
+                    <Link to="/members" className={props.selected === "members" ? "link-selected" : "link-unselected"}>
+                        <div>MEMBERS</div>
+                    </Link>
+                    <Link to="/about-us"
+                          className={props.selected === "about-us" ? "link-selected" : "link-unselected"}>
+                        <div>ABOUT US</div>
+                    </Link>
+                </div>
+                <div className="social-medias">
+                </div>
             </div>
         </div>
     )

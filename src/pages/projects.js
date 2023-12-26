@@ -1,12 +1,13 @@
-import Title from "../base/header/title";
+import TitleHeader from "../base/header/title-header";
 import Header from "../base/header/header";
 import React from "react";
 import Footer from "../base/footer/footer";
+import video from "../medias/dpt.mp4"
 
 function Projects() {
     return (
         <div className="page-wrapper">
-            <Title/>
+            <TitleHeader backgroundVideo={video}/>
             <Header selected={"projects"}/>
 
             <div id="content" className="content-wrapper">

@@ -7,7 +7,7 @@ import Projects from "./pages/projects"
 import Members from "./pages/members";
 import AboutUs from "./pages/about-us";
 import NotFound from "./pages/not-found";
-import ScrollToTop from "./base/ScrollToTop";
+import ScrollToTop from "./base/scroll-to-top";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

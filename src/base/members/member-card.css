@@ -1,0 +1,16 @@
+.member-card-wrapper {
+    display: flex;
+    border-radius: 1000px;
+    width: 300px;
+    overflow: hidden;
+    transition: .2s;
+    height: 90px;
+    background-color: var(--background-accent) !important;
+}
+
+.member-card .text {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

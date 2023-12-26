@@ -20,19 +20,50 @@ code {
 }
 
 @media (max-width: 600px) {
-  .screen-width-wrapper {
+  .screen-width-wrapper > * {
     padding-left: 10vw;
     padding-right: 10vw;
   }
 }
 
 @media (min-width: 600px) {
-  .screen-width-wrapper {
+  .screen-width-wrapper > * {
     padding-left: 15vw;
     padding-right: 15vw;
   }
 }
 
-.test-content {
+.content-wrapper .section {
+  background-color: var(--background);
+  color: var(--text);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content-wrapper .accented-section {
+  background-color: var(--background-accent);
+  color: var(--text-accent);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content-wrapper h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.content-wrapper h2 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-deactivated);
+}
+
+.content-wrapper p {
+  font-size: 1.5rem;
+}
+
+.content-wrapper .test-content {
   padding-bottom: 300%;
 }

@@ -1,0 +1,9 @@
+.round-button {
+    color: var(--background-accent);
+    background-color: var(--text);
+    border-radius: 1000px;
+    font-weight: 700;
+    padding: 8px 15px;
+    width: max-content;
+    font-size: 1.5rem;
+}

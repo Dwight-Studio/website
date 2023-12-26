@@ -1,15 +1,10 @@
-.mouse-logo {
-    height: 5vmin;
-    pointer-events: none;
-}
-
-.title-down-logo {
-    height: 1.5vmin;
+.title-header .down-logo {
+    height: 2vh;
     pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .title-logo {
+    .title-header .logo {
         height: 20vw;
         pointer-events: none;
         animation: drift-fadein-animation 1.5s ease-in-out 1 forwards;
@@ -17,16 +12,16 @@
         opacity: 0;
     }
 
-    .title-animation-wrapper {
+    .title-header .animation {
         position: absolute;
         bottom: 20px;
-        line-height: 2.5vmin;
+        line-height: 2.5vh;
         animation: fadein-animation 1.5s ease-in-out 1 forwards;
         animation-delay: 2s;
         opacity: 0;
     }
 
-    .title-down-logo-wrapper {
+    .title-header .down-logo-wrapper {
         animation: title-scroll-animation 3s infinite;
         opacity: 1;
     }
@@ -36,17 +31,17 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0));
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         animation: fadein-animation 1s ease-in-out forwards;
         opacity: 0;
     }
 }
 
-.title-down-logo-wrapper:nth-child(1) {animation-delay: 0s; }
-.title-down-logo-wrapper:nth-child(2) {animation-delay: 1s; }
-.title-down-logo-wrapper:nth-child(3) {animation-delay: 2s; }
+.title-header .down-logo-wrapper:nth-child(1) {animation-delay: 0s; }
+.title-header .down-logo-wrapper:nth-child(2) {animation-delay: 1s; }
+.title-header .down-logo-wrapper:nth-child(3) {animation-delay: 2s; }
 
-.title-wrapper {
+.title-header {
     background-color: var(--background-accent);
     min-height: 100vh;
     display: flex;
@@ -56,7 +51,7 @@
     justify-content: center;
 }
 
-.title-logo-wrapper {
+.title-header .logo-wrapper {
     align-items: center;
 }
 
