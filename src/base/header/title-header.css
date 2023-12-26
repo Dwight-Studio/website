@@ -19,6 +19,7 @@
         animation: fadein-animation 1.5s ease-in-out 1 forwards;
         animation-delay: 2s;
         opacity: 0;
+        width: 100vw;
     }
 
     .title-header .down-logo-wrapper {
@@ -46,7 +47,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     justify-content: center;
 }

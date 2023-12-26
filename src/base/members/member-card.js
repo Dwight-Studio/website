@@ -1,14 +1,27 @@
-import react from 'React';
+import React from "react";
+import './member-card.css'
+import {Link} from "react-router-dom";
 
-function TinyMemberCard(props) {
+export function TinyMemberCard(props) {
     return (
-        <div className="member-card-wrapper">
+        <Link to={props.member.getMemberURL()} className="tiny-member-card">
             <img src={props.member.logoURL} alt="Member logo"/>
             <div className="text">
-
+                <div className="pseudo">{props.member.pseudo}</div>
+                <div className="realname">{props.member.firstName + " " + props.member.lastName}</div>
             </div>
-        </div>
+        </Link>
     );
 }
 
-export default TinyMemberCard;
+export function LargeMemberCard(props) {
+    return (
+        <Link to={props.member.getMemberURL()} className="tiny-member-card">
+            <img src={props.member.logoURL} alt="Member logo"/>
+            <div className="text">
+                <div className="pseudo">{props.member.pseudo}</div>
+                <div className="realname">{props.member.firstName + " " + props.member.lastName}</div>
+            </div>
+        </Link>
+    );
+}

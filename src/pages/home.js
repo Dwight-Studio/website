@@ -3,6 +3,7 @@ import Header from "../base/header/header";
 import React from "react";
 import Footer from "../base/footer/footer";
 import RoundButton from "../base/buttons/round-button";
+import {Member} from "../data/member";
 
 function Home() {
     return (
@@ -25,9 +26,9 @@ function Home() {
                     <div className="accented-section">
                         <h1>The Team</h1>
                         <h2>The humans behind the computer.</h2>
-                        <p>
-                            There will be things here.
-                        </p>
+                        <div style={{display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap"}}>
+                            {Member.allMembers.map((item) => item.getTinyCard())}
+                        </div>
                     </div>
                     <div className="section">
                         <h1>Developer Collective</h1>

@@ -1,13 +1,11 @@
-import '../base.css';
 import './title-header.css';
 import down from './down.svg';
 import ScrollToTop from "../scroll-to-top";
 import React from "react";
 
-function TitleHeader(props) {
+export default function TitleHeader(props) {
     return (
         <div className="title-header">
-            <ScrollToTop/>
             <video autoPlay muted loop className="title-background-video">
                 <source src={props.backgroundVideo} type="video/mp4"/>
             </video>
@@ -31,5 +29,3 @@ function TitleHeader(props) {
         </div>
     )
 }
-
-export default TitleHeader;

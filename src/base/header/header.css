@@ -52,6 +52,12 @@
   padding: 5px 10px;
 }
 
+.header .nav > * > div:hover {
+  transition: .2s;
+  z-index: 100;
+  transform: scale(1.2);
+}
+
 .header .nav > .link-selected > div {
   color: var(--background-accent);
   background-color: var(--text);

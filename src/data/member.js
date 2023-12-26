@@ -1,3 +1,5 @@
+import {TinyMemberCard} from "../base/members/member-card";
+
 export class Member {
     constructor(logoURL, pseudo, firstName, lastName, shortDescription, longDescription) {
         if(!Member.allMembers) {Member.allMembers = []}
@@ -17,6 +19,10 @@ export class Member {
 
     getMemberURL() {
         return "/members/" + this.pseudo
+    }
+
+    getTinyCard() {
+        return (<TinyMemberCard member={this}/>)
     }
 }
 

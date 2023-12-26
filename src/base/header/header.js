@@ -1,9 +1,9 @@
-import '../base.css';
 import './header.css';
 import {Link} from "react-router-dom";
 import React, {useState} from "react";
+import ScrollToTop from "../scroll-to-top";
 
-function Header(props) {
+export default function Header(props) {
     const hamburgerRef = React.useRef();
     const menuRef = React.useRef();
 
@@ -14,6 +14,7 @@ function Header(props) {
 
     return (
         <div className="header">
+            <ScrollToTop/>
             <div className="mobile">
                 <div id="hamburger" ref={hamburgerRef} onClick={() => toggleHamburger()}>
                     <div/>
@@ -49,5 +50,3 @@ function Header(props) {
         </div>
     )
 }
-
-export default Header;
