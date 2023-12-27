@@ -54,6 +54,7 @@ code {
   min-width: 100%;
   max-width: 100%;
   overflow: clip;
+  transition: 1s;
 }
 
 @media (max-width: 600px) {

@@ -8,7 +8,7 @@ import {Member} from "../data/member";
 function Home() {
     return (
         <div className="page-wrapper">
-            <TitleHeader/>
+            <TitleHeader logo={"https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"}/>
             <Header selected={"home"}/>
 
             <div id="content" className="content-wrapper">
@@ -29,9 +29,6 @@ function Home() {
                         <div style={{display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap", margin: "30px 0"}}>
                             {Member.allMembers.map((item) => item.getTinyCard())}
                         </div>
-                        <center>
-                            <RoundButton text={"Who are those people"} link={"/members"}/>
-                        </center>
                     </div>
                     <div className="section">
                         <h1>Developer Collective</h1>

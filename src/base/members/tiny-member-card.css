@@ -1,0 +1,43 @@
+.tiny-member-card {
+    display: flex;
+    border-radius: 1000px;
+    width: 300px;
+    overflow: hidden;
+    transition: .2s;
+    height: 90px;
+    cursor: pointer;
+    background-color: var(--background);
+    text-decoration: none;
+}
+
+.tiny-member-card:hover {
+    transition: .2s;
+    z-index: 100;
+    transform: scale(1.2);
+}
+
+.tiny-member-card img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+.tiny-member-card .text {
+    width: 100%;
+    padding-right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tiny-member-card .text .pseudo {
+    font-size: 20px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.tiny-member-card .text .realname {
+    font-size: 16px;
+    font-weight: 200;
+    align-self: center;
+}

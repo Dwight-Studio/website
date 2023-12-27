@@ -10,7 +10,7 @@ export default function TitleHeader(props) {
                 <source src={props.backgroundVideo} type="video/mp4"/>
             </video>
             <div className="logo-wrapper">
-                <img src="https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg" className="logo"
+                <img src={props.logo} className="logo"
                      alt="TitleHeader logo"/>
             </div>
             <a href="#content">
