@@ -1,4 +1,4 @@
-import {TinyMemberCard} from "../base/members/member-card";
+import {LargeMemberCard, TinyMemberCard} from "../base/members/member-card";
 
 export class Member {
     constructor(logoURL, pseudo, firstName, lastName, shortDescription, longDescription) {
@@ -23,6 +23,10 @@ export class Member {
 
     getTinyCard() {
         return (<TinyMemberCard member={this}/>)
+    }
+
+    getLargeCard() {
+        return (<LargeMemberCard member={this}/>)
     }
 }
 

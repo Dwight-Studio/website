@@ -26,9 +26,12 @@ function Home() {
                     <div className="accented-section">
                         <h1>The Team</h1>
                         <h2>The humans behind the computer.</h2>
-                        <div style={{display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap"}}>
+                        <div style={{display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap", margin: "30px 0"}}>
                             {Member.allMembers.map((item) => item.getTinyCard())}
                         </div>
+                        <center>
+                            <RoundButton text={"Who are those people"} link={"/members"}/>
+                        </center>
                     </div>
                     <div className="section">
                         <h1>Developer Collective</h1>
