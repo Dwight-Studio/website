@@ -1,7 +1,6 @@
 import React from "react";
 import './tiny-member-card.css'
 import {Link} from "react-router-dom";
-import RoundButton from "../buttons/round-button";
 
 export function TinyMemberCard(props) {
     return (

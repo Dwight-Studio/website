@@ -1,10 +1,14 @@
-export class project {
-    constructor(logoURL, bannerURL, titleVideoURL, projectName, shortDescription, longDescription) {
-        this.logoURL = logoURL;
-        this.bannerURL = bannerURL
-        this.titleVideoURL = titleVideoURL;
+export class Project {
+    constructor(logo, cardBanner, titleVideo, projectName, shortDescription, longDescription, contributors) {
+        if(!Project.allProjects) {Project.allProjects = []}
+        Project.allProjects.push(this)
+
+        this.logo = logo;
+        this.cardBanner = cardBanner
+        this.titleVideo = titleVideo;
         this.projectName = projectName;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
+        this.contributors = contributors;
     }
 }

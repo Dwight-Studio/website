@@ -1,18 +1,17 @@
-import TitleHeader from "../base/header/title-header";
-import Header from "../base/header/header";
+import TitleHeader from "../elements/header/title-header";
+import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../base/footer/footer";
-import RoundButton from "../base/buttons/round-button";
+import Footer from "../elements/footer/footer";
+import RoundButton from "../elements/buttons/round-button";
 import {Member} from "../data/member";
 
-function Home() {
+export default function Home() {
     return (
         <div className="page-wrapper">
             <TitleHeader logo={"https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"}/>
             <Header selected={"home"}/>
 
             <div id="content" className="content-wrapper">
-                <div className="screen-width-wrapper">
                     <div className="section">
                         <h1>Our Projects</h1>
                         <p>
@@ -20,7 +19,7 @@ function Home() {
                             Minecraft mods.
                         </p>
                         <center>
-                            <RoundButton text={"Discover our projects"} link={"/projects"}/>
+                            <RoundButton text={"Discover all our projects"} link={"/projects"}/>
                         </center>
                     </div>
                     <div className="accented-section">
@@ -41,12 +40,9 @@ function Home() {
                             <RoundButton text={"Learn more about us"} link={"/about-us"}/>
                         </center>
                     </div>
-                </div>
             </div>
 
             <Footer/>
         </div>
     )
 }
-
-export default Home;

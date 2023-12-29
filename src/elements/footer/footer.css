@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    background-color: var(--background-accent);
+    background-color: var(--accent-black);
 }
 
 .footer .columns {
@@ -23,7 +23,7 @@
 
 .footer .bottom {
     text-align: center;
-    color: var(--text-deactivated);
+    color: var(--deactivated-light);
 }
 
 .footer .section {

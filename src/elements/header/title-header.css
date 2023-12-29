@@ -44,7 +44,7 @@
 .title-header .down-logo-wrapper:nth-child(3) {animation-delay: 2s; }
 
 .title-header {
-    background-color: var(--background-accent);
+    background-color: var(--accent-black);
     min-height: 100vh;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,24 @@
+.header-member-card {
+    background-color: var(--accent-black);
+    border-radius: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-member-card .projects {
+    min-width: 50%;
+}
+
+.header-member-card .projects .title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-member-card {
+        flex-direction: column;
+    }
+}

@@ -1,10 +1,10 @@
-import Header from "../base/header/header";
+import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../base/footer/footer";
+import Footer from "../elements/footer/footer";
 import video from "../medias/dpt.mp4";
-import TitleHeader from "../base/header/title-header";
+import TitleHeader from "../elements/header/title-header";
 
-function AboutUs() {
+export default function AboutUs() {
     return (
         <div className="page-wrapper">
             <Header selected={"about-us"}/>
@@ -17,5 +17,3 @@ function AboutUs() {
         </div>
     )
 }
-
-export default AboutUs;

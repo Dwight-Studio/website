@@ -8,29 +8,14 @@
 }
 
 .error-title {
-    font-size: 5vw;
-    margin-bottom: 0;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .error-subtitle {
-    font-size: 3vw;
-    color: var(--background-accent);
-    background-color: var(--text-deactivated);
+    font-size: 1rem;
+    color: var(--accent-black);
+    background-color: var(--deactivated-light);
     padding: 1vmin 2vmin;
     border-radius: 1000px;
-}
-
-@media only screen and (max-width: 600px) {
-    .error-title {
-        font-size: 15vw;
-        margin-bottom: 0;
-    }
-
-    .error-subtitle {
-        font-size: 8vw;
-        color: var(--background-accent);
-        background-color: var(--text-deactivated);
-        padding: 1vmin 2vmin;
-        border-radius: 1000px;
-    }
 }

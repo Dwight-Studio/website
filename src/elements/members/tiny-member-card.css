@@ -6,12 +6,11 @@
     transition: .2s;
     height: 90px;
     cursor: pointer;
-    background-color: var(--background);
+    background-color: var(--normal-black);
     text-decoration: none;
 }
 
 .tiny-member-card:hover {
-    transition: .2s;
     z-index: 100;
     transform: scale(1.2);
 }
@@ -28,16 +27,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .tiny-member-card .text .pseudo {
     font-size: 20px;
     font-weight: 700;
-    align-self: center;
 }
 
 .tiny-member-card .text .realname {
     font-size: 16px;
     font-weight: 200;
-    align-self: center;
 }

@@ -1,11 +1,11 @@
-import TitleHeader from "../base/header/title-header";
-import Header from "../base/header/header";
+import TitleHeader from "../elements/header/title-header";
+import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../base/footer/footer";
+import Footer from "../elements/footer/footer";
 import video from "../medias/dpt.mp4"
 import logo from "../medias/dpt.png"
 
-function Projects() {
+export default function Projects() {
     return (
         <div className="page-wrapper">
             <TitleHeader logo={logo} backgroundVideo={video}/>
@@ -19,5 +19,3 @@ function Projects() {
         </div>
     )
 }
-
-export default Projects;

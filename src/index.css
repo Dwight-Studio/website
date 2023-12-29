@@ -1,38 +1,42 @@
 :root {
   /* Normal */
-  --background: #16191c;
-  --text: #eee;
+  --normal-black: #16191c;
+  --normal-white: #eee;
 
   /* Accent */
-  --background-accent: black;
-  --text-accent: #e51a1a;
+  --accent-black: black;
+  --accent-red: #e51a1a;
 
   /* Deactivated */
-  --text-deactivated: #7f8285;
-  --deactivated: #4a4b4f;
+  --deactivated-light: #7f8285;
+  --deactivated-dark: #4a4b4f;
 
   scroll-behavior: smooth;
-  background-color: var(--background);
+  background-color: var(--normal-black);
   overflow-x: clip;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
-  background: var(--deactivated);
+  background: var(--deactivated-dark);
   width: 0.8vw;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-deactivated);
+  background: var(--deactivated-light);
   border-radius: 1000px;
 }
 
 ::selection {
-  background-color: var(--text);
-  color: var(--background);
+  background-color: var(--normal-white);
+  color: var(--normal-black);
 }
 
 * {
-  color: var(--text);
+  color: var(--normal-white);
 }
 
 body {
@@ -57,30 +61,30 @@ code {
   transition: 1s;
 }
 
-@media (max-width: 600px) {
-  .screen-width-wrapper > * {
+@media (max-width: 1000px) {
+  .content-wrapper > * {
     padding-left: 10vw;
     padding-right: 10vw;
   }
 }
 
-@media (min-width: 600px) {
-  .screen-width-wrapper > * {
+@media (min-width: 1000px) {
+  .content-wrapper > * {
     padding-left: 15vw;
     padding-right: 15vw;
   }
 }
 
 .content-wrapper .section {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--normal-black);
+  color: var(--normal-white);
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .content-wrapper .accented-section {
-  background-color: var(--background-accent);
-  color: var(--text-accent);
+  background-color: var(--accent-black);
+  color: var(--accent-red);
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -95,7 +99,7 @@ code {
   margin-top: 0;
   font-weight: 700;
   font-size: 2rem;
-  color: var(--text-deactivated);
+  color: var(--deactivated-light);
 }
 
 .content-wrapper p {

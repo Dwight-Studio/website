@@ -1,16 +1,15 @@
 .round-button {
-    color: var(--background-accent);
-    background-color: var(--text);
+    color: var(--accent-black);
+    background-color: var(--normal-white);
     border-radius: 1000px;
     font-weight: 700;
-    padding: 8px 15px;
+    padding: 0.5em 1em;
     width: max-content;
     font-size: 1.5rem;
     transition: .2s;
 }
 
 .round-button:hover {
-    transition: .2s;
     z-index: 100;
     transform: scale(1.2);
 }

@@ -1,12 +1,11 @@
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
   padding: 0 1%;
-  background-color: var(--background-accent);
+  background-color: var(--accent-black);
   box-sizing: border-box;
-  box-shadow: 0 3px 10px 1px var(--background-accent);
+  box-shadow: 0 3px 10px 1px var(--accent-black);
   z-index: 98;
   overflow: visible;
 }
@@ -34,6 +33,12 @@
   font-size: 2rem;
   margin: 0 1vmin;
   display: block;
+  transition: .2s;
+}
+
+.header .social-medias a:hover {
+  z-index: 100;
+  transform: scale(1.2);
 }
 
 .header .menu {
@@ -53,20 +58,19 @@
 }
 
 .header .nav > * > div {
-  color: var(--text);
+  color: var(--normal-white);
   transition: .2s;
   padding: 5px 10px;
 }
 
 .header .nav > * > div:hover {
-  transition: .2s;
   z-index: 100;
   transform: scale(1.2);
 }
 
 .header .nav > .link-selected > div {
-  color: var(--background-accent);
-  background-color: var(--text);
+  color: var(--accent-black);
+  background-color: var(--normal-white);
   border-radius: 1000px;
   font-weight: 700;
   max-width: max-content;
@@ -89,7 +93,7 @@
   width: 100%;
   height: 15%;
   margin: 3px 0;
-  background-color: var(--text);
+  background-color: var(--normal-white);
   transition: .4s;
 }
 
@@ -113,14 +117,15 @@
   }
 
   .header .menu {
-    background-color: var(--background-accent);
+    background-color: var(--accent-black);
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 5vh;
     position: absolute;
-    left: -100vh;
+    left: -100vw;
+    top: 0;
     width: 60vw;
-    height: 85vh;
+    height: 100vh;
     transition: .4s;
     flex-direction: column;
   }
@@ -144,6 +149,7 @@
 
   .header .menu .logo {
     width: 50vw;
+    max-height: 20vh;
     align-self: center;
   }
 
@@ -156,10 +162,11 @@
   .header .social-medias {
     justify-content: space-around;
     width: 100%;
+    margin: 30px 0;
   }
 
   .header .social-medias a {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .header .menu .nav > * > div {
