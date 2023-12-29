@@ -1,8 +1,6 @@
 import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
-import video from "../medias/dpt.mp4";
-import TitleHeader from "../elements/header/title-header";
 
 export default function AboutUs() {
     return (

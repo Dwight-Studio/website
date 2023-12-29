@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import React from "react";
 import ScrollToTop from "../scroll-to-top";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faYoutube, faDiscord, faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faDiscord, faGithub, faYoutube} from "@fortawesome/free-brands-svg-icons";
 
 export default function Header(props) {
     const hamburgerRef = React.useRef();

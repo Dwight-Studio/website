@@ -1,6 +1,5 @@
 import './title-header.css';
 import down from './down.svg';
-import ScrollToTop from "../scroll-to-top";
 import React from "react";
 
 export default function TitleHeader(props) {

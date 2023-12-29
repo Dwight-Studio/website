@@ -1,4 +1,3 @@
-import TitleHeader from "../elements/header/title-header";
 import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
