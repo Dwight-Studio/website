@@ -1,15 +1,17 @@
+import React from "react";
 import {TinyMemberCard} from "../elements/members/tiny-member-card";
 import {LargeMemberCard} from "../elements/members/large-member-card";
 import {HeaderMemberCard} from "../elements/members/header-member-card";
 import {faGithub, faLinkedin, faLinux, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import GamerMine from "./members/gamermine";
+import Yinx from "./members/yinx";
+import Deleranax from "./members/deleranax";
+import {getAllProjects} from "./project";
 
 export class Member {
-    constructor(logo, accentColor, pseudo, firstName, lastName, shortDescription, longDescription, socials) {
-        if(!Member.allMembers) {Member.allMembers = []}
-        Member.allMembers.push(this);
-
-        this.logoURL = logo;
+    constructor(logo, accentColor, pseudo, firstName, lastName, shortDescription, longDescription, socials, pageContent) {
+        this.logo = logo;
         this.accentColor = accentColor
         this.pseudo = pseudo;
         this.firstName = firstName;
@@ -17,6 +19,7 @@ export class Member {
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
         this.socials = socials;
+        this.pageContent = pageContent;
     }
 
     getEmail() {
@@ -39,10 +42,14 @@ export class Member {
         return (<HeaderMemberCard member={this}/>)
     }
 
+    getMemberProjects() {
+        return getAllProjects().filter(project => project.isContributor(this));
+    }
+
     getSocials() {
         return (
             <div>
-                {this.socials.map((item) => {
+                {this.socials.map(item => {
                     let icon = null;
                     switch (new URL(item).hostname) {
                         case "twitter.com":
@@ -85,37 +92,6 @@ export class Contributor {
     }
 }
 
-export const GamerMine = new Member(
-    "https://static.dwightstudio.fr/dwightstudio/PERSONAL/GamerMine/LOGO.png",
-    "#d05539",
-    "GamerMine",
-    "Maxime",
-    "Savary",
-    "Student at IUT of Le Havre",
-    "I did not write my description. I am a bad boy.",
-    []
-);
-
-export const Yinx = new Member(
-    "https://static.dwightstudio.fr/dwightstudio/PERSONAL/Yinx/LOGO.png",
-    "#3985d0",
-    "Yinx",
-    "Kévin",
-    "Tollemer",
-    "Student at INSA of Rennes",
-    "I did not write my description. I am a bad boy.",
-    []
-);
-
-export const Deleranax = new Member(
-    "https://static.dwightstudio.fr/dwightstudio/PERSONAL/Deleranax/LOGO.png",
-    "#D8D8D8",
-    "Deleranax",
-    "Alexandre",
-    "Leconte",
-    "Student at INSA of Rennes",
-    "Currently a student at the INSA engineering school in rennes, specializing in cloud computing. I " +
-    "was introduced to programming through the development of mods and plugins for Mincraft back in 2019. Since then, " +
-    "I've maintained a certain affection for Java, its power and portability.",
-    ["https://github.com/Deleranax", "https://www.youtube.com/@deleranax", "https://twitter.com/Deleranax"]
-);
+export function getAllMembers() {
+    return [GamerMine(), Yinx(), Deleranax()];
+}

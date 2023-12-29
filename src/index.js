@@ -7,9 +7,10 @@ import Projects from "./pages/projects"
 import Members from "./pages/members";
 import AboutUs from "./pages/about-us";
 import NotFound from "./pages/not-found";
-import Deleranax from "./pages/members/deleranax";
-import GamerMine from "./pages/members/gamermine";
-import Yinx from "./pages/members/yinx";
+import {getAllMembers} from "./data/member";
+import Member from "./pages/member";
+import {getAllProjects} from "./data/project";
+import Project from "./pages/project";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -23,10 +24,11 @@ root.render(
                 <Route exact path='/members' element={<Members/>}/>
                 <Route exact path='/about-us' element={<AboutUs/>}/>
 
-                {/* Personal pages */}
-                <Route exact path='/members/gamermine' element={<GamerMine/>}/>
-                <Route exact path='/members/yinx' element={<Yinx/>}/>
-                <Route exact path='/members/deleranax' element={<Deleranax/>}/>
+                {/* Member pages */}
+                {getAllMembers().map(member => <Route exact path={member.getMemberURL()} element={<Member member={member}/>}/>)}
+
+                {/* Projects pages */}
+                {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
 
                 {/* 404 */}
                 <Route path='*' element={<NotFound/>}/>

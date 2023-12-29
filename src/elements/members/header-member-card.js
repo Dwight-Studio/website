@@ -8,6 +8,7 @@ export function HeaderMemberCard(props) {
             <LargeMemberCard member={props.member} noButton/>
             <div className="projects">
                 <div className="title">Projects</div>
+                {/*props.member.getMemberProjects().map(project => project.getEmbeddedCard())*/}
             </div>
         </div>
     );

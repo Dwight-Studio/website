@@ -1,18 +1,25 @@
-import TitleHeader from "../elements/header/title-header";
 import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
-import video from "../medias/dpt.mp4"
-import logo from "../medias/dpt.png"
+import {getAllProjects} from "../data/project";
 
 export default function Projects() {
     return (
         <div className="page-wrapper">
-            <TitleHeader logo={logo} backgroundVideo={video}/>
             <Header selected={"projects"}/>
 
             <div id="content" className="content-wrapper">
-                <div className="test-content"/>
+                <div className="section">
+                    <div style={{
+                        display: "flex",
+                        gap: "50px",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        margin: "30px 0"
+                    }}>
+                        {getAllProjects().map(project => project.getLargeCard())}
+                    </div>
+                </div>
             </div>
 
             <Footer/>

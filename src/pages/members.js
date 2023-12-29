@@ -1,7 +1,7 @@
 import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
-import {Member} from "../data/member";
+import {getAllMembers} from "../data/member";
 
 
 export default function Members() {
@@ -18,7 +18,7 @@ export default function Members() {
                         flexWrap: "wrap",
                         margin: "30px 0"
                     }}>
-                        {Member.allMembers.map((item) => item.getLargeCard())}
+                        {getAllMembers().map(member => member.getLargeCard())}
                     </div>
                 </div>
             </div>

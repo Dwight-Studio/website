@@ -6,6 +6,7 @@
   /* Accent */
   --accent-black: black;
   --accent-red: #e51a1a;
+  --accent-yellow: #e5b61a;
 
   /* Deactivated */
   --deactivated-light: #7f8285;
@@ -54,7 +55,7 @@ code {
 }
 
 .content-wrapper {
-  min-height: 100%;
+  min-height: 80vh;
   min-width: 100%;
   max-width: 100%;
   overflow: clip;
@@ -104,8 +105,4 @@ code {
 
 .content-wrapper p {
   font-size: 1.5rem;
-}
-
-.content-wrapper .test-content {
-  padding-bottom: 300%;
 }

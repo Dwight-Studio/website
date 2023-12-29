@@ -7,7 +7,7 @@ export function LargeMemberCard(props) {
         <div className="large-member-card">
             <div className="card-header" style={{backgroundColor: props.member.accentColor}}>
                 <div className="logo-wrapper">
-                    <img src={props.member.logoURL} alt="Member logo"/>
+                    <img src={props.member.logo} alt="Member logo"/>
                 </div>
                 <div className="text">
                     <div className="pseudo">{props.member.pseudo}</div>

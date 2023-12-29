@@ -1,7 +1,8 @@
 import React from "react";
 import './footer.css'
 import {Link} from "react-router-dom";
-import {Member} from "../../data/member";
+import {getAllMembers, Member} from "../../data/member";
+import {getAllProjects} from "../../data/project";
 
 export default function Footer() {
     return (
@@ -16,7 +17,11 @@ export default function Footer() {
                 </div>
                 <div className="section">
                     <div className="title">MEMBERS</div>
-                    {Member.allMembers.map((item) => <Link to={item.getMemberURL()}>{item.pseudo}</Link>)}
+                    {getAllMembers().map(member => <Link to={member.getMemberURL()}>{member.pseudo}</Link>)}
+                </div>
+                <div className="section">
+                    <div className="title">PROJECTS</div>
+                    {getAllProjects().map(project => <Link to={project.getProjectURL()}>{project.projectName}</Link>)}
                 </div>
             </div>
             <div className="bottom">

@@ -3,7 +3,7 @@ import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
 import RoundButton from "../elements/buttons/round-button";
-import {Member} from "../data/member";
+import {getAllMembers} from "../data/member";
 
 export default function Home() {
     return (
@@ -26,7 +26,7 @@ export default function Home() {
                         <h1>The Team</h1>
                         <h2>The humans behind the computer.</h2>
                         <div style={{display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap", margin: "30px 0"}}>
-                            {Member.allMembers.map((item) => item.getTinyCard())}
+                            {getAllMembers().map(member => member.getTinyCard())}
                         </div>
                     </div>
                     <div className="section">
@@ -34,7 +34,7 @@ export default function Home() {
                         <h2>Create. Share. Enjoy.</h2>
                         <p>
                             Dwight Studio is a developer collective composed of computer science students, friends,
-                            who collaborate to offer free, open source, software.
+                            who collaborate to offer free, open source software.
                         </p>
                         <center>
                             <RoundButton text={"Learn more about us"} link={"/about-us"}/>
