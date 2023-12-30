@@ -32,9 +32,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(2px);
+    filter: blur(5px);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    animation: fadein-animation 1s ease-in-out forwards;
+    animation: fadein-blur-animation 4s ease-in-out forwards;
     opacity: 0;
 }
 
@@ -79,6 +79,28 @@
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein-blur-animation {
+    0% {
+        filter: blur(0px);
+        opacity: 0;
+    }
+
+    25% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    50% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    100% {
+        filter: blur(5px);
         opacity: 1;
     }
 }
