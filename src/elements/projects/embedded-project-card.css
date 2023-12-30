@@ -1,4 +1,5 @@
 .embedded-project-card {
+    background-color: var(--normal-black);
     position: relative;
     border-radius: 25px;
     width: 250px;
