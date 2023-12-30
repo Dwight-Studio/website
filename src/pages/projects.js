@@ -2,6 +2,7 @@ import Header from "../elements/header/header";
 import React from "react";
 import Footer from "../elements/footer/footer";
 import {getAllProjects} from "../data/project";
+import "./pages.css"
 
 export default function Projects() {
     return (
@@ -10,13 +11,7 @@ export default function Projects() {
 
             <div id="content" className="content-wrapper">
                 <div className="section">
-                    <div style={{
-                        display: "flex",
-                        gap: "50px",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                        margin: "30px 0"
-                    }}>
+                    <div className="projects">
                         {getAllProjects().map(project => project.getLargeCard())}
                     </div>
                 </div>

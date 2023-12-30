@@ -1,6 +1,6 @@
 import Header from "../elements/header/header";
 import React from "react";
-import "./not-found.css"
+import "./pages.css"
 import Footer from "../elements/footer/footer";
 
 export default function NotFound() {

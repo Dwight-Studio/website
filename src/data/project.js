@@ -5,10 +5,10 @@ import JArmEmu from "./projects/jarmemu";
 import EmbeddedProjectCard from "../elements/projects/embedded-project-card";
 
 export class Project {
-    constructor(logo, cardBanner, titleVideo, projectName, shortDescription, longDescription, outdated, contributors, pageContent) {
+    constructor(logo, cardBanner, titleBackground, projectName, shortDescription, longDescription, outdated, contributors, pageContent) {
         this.logo = logo;
         this.cardBanner = cardBanner
-        this.titleVideo = titleVideo;
+        this.titleBackground = titleBackground;
         this.projectName = projectName;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;

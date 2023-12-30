@@ -78,6 +78,7 @@
     padding: 0.5em 0.8em;
     border-radius: 1000px;
     transition: 0.4s ease;
+    margin-top: 10px;
 }
 
 .large-project-card .short-description-inverted {

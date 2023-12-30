@@ -78,6 +78,7 @@
     padding: 0.5em 0.8em;
     border-radius: 1000px;
     transition: 0.4s;
+    margin-top: 10px;
 }
 
 .embedded-project-card .short-description-inverted {

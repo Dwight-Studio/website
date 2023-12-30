@@ -6,7 +6,7 @@ import TitleHeader from "../elements/header/title-header";
 export default function Project(props) {
     return (
         <div className="page-wrapper">
-            <TitleHeader logo={props.project.logo} backgroundVideo={props.project.titleVideo}/>
+            <TitleHeader logo={props.project.logo} background={props.project.titleBackground}/>
             <Header selected={"projects"}/>
 
             <div id="content" className="content-wrapper">
