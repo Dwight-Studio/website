@@ -11,6 +11,7 @@ import {getAllMembers} from "./data/member";
 import Member from "./pages/member";
 import {getAllProjects} from "./data/project";
 import Project from "./pages/project";
+import Sitemap from "./pages/sitemap";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -30,6 +31,9 @@ root.render(
             {/* Projects pages */}
             {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
             {getAllProjects().map(project => <Route exact path={project.getURLFriendlyName()} element={<Navigate to={project.getProjectURL()} replace />}/>)}
+
+            {/* Sitemap */}
+            <Route exact path='/sitemap' element={<Sitemap/>}/>
 
             {/* 404 */}
             <Route path='*' element={<NotFound/>}/>
