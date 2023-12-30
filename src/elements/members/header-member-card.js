@@ -6,10 +6,7 @@ export function HeaderMemberCard(props) {
     return (
         <div className="header-member-card">
             <LargeMemberCard member={props.member} noButton/>
-            <div className="projects">
-                <div className="title">Projects</div>
-                {/*props.member.getMemberProjects().map(project => project.getEmbeddedCard())*/}
-            </div>
+            {props.member.getProjectsCarousel()}
         </div>
     );
 }

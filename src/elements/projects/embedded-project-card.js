@@ -2,10 +2,18 @@ import RoundButton from "../buttons/round-button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTriangleExclamation} from "@fortawesome/free-solid-svg-icons";
 import "./embedded-project-card.css"
+import {useRef} from "react";
 
 export default function EmbeddedProjectCard(props) {
+    const cardRef = useRef()
+
+    function handleClick() {
+        document.getElementsByClassName("embedded-project-card selected").item(0).classList.toggle("selected")
+        cardRef.current.classList.toggle("selected");
+    }
+
     return (
-        <div className="embedded-project-card">
+        <div className={"embedded-project-card" + (props.selected ? " selected" : "")} onClick={handleClick} ref={cardRef}>
             <img className="background" src={props.project.cardBanner} alt="Project banner"/>
             <div className="logo-wrapper">
                 <img className="logo" src={props.project.logo} alt="Project logo"/>

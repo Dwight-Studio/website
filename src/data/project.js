@@ -25,8 +25,8 @@ export class Project {
         return (<LargeProjectCard project={this}/>)
     }
 
-    getEmbeddedCard() {
-        return (<EmbeddedProjectCard project={this}/>)
+    getEmbeddedCard(selected) {
+        return (<EmbeddedProjectCard project={this} selected={selected}/>)
     }
 
     isContributor(member) {

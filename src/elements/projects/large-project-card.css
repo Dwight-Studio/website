@@ -4,7 +4,7 @@
     width: 250px;
     height: 350px;
     overflow: hidden;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .large-project-card:hover {
@@ -23,7 +23,7 @@
     font-size: 0;
     padding: 0.5em 0.8em;
     border-radius: 1000px;
-    transition: 0.4s;
+    transition: 0.4s ease;
     height: 1em;
     width: 1em;
 }
@@ -77,7 +77,7 @@
     font-size: 0;
     padding: 0.5em 0.8em;
     border-radius: 1000px;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .large-project-card .short-description-inverted {
@@ -87,7 +87,7 @@
 
 .large-project-card .round-button {
     font-size: 0;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .large-project-card:hover .round-button {

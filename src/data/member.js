@@ -8,6 +8,7 @@ import GamerMine from "./members/gamermine";
 import Yinx from "./members/yinx";
 import Deleranax from "./members/deleranax";
 import {getAllProjects} from "./project";
+import ProjectCardCarousel from "../elements/projects/project-card-carousel";
 
 export class Member {
     constructor(logo, accentColor, pseudo, firstName, lastName, shortDescription, longDescription, socials, pageContent) {
@@ -44,6 +45,12 @@ export class Member {
 
     getMemberProjects() {
         return getAllProjects().filter(project => project.isContributor(this));
+    }
+
+    getProjectsCarousel() {
+        return (
+            <ProjectCardCarousel projects={this.getMemberProjects()}/>
+        )
     }
 
     getSocials() {

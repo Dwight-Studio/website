@@ -1,10 +1,14 @@
 .embedded-project-card {
     position: relative;
     border-radius: 25px;
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 350px;
     overflow: hidden;
     transition: 0.4s;
+}
+
+.embedded-project-card.selected {
+    width: 80%;
 }
 
 .embedded-project-card .outdated-warning {
@@ -16,7 +20,7 @@
     gap: 1em;
     top: 5%;
     right: 5%;
-    font-size: 0.8rem;
+    font-size: 0;
     padding: 0.5em 0.8em;
     border-radius: 1000px;
     transition: 0.4s;
@@ -24,7 +28,11 @@
     width: 1em;
 }
 
-.embedded-project-card:hover .outdated-warning:hover {
+.embedded-project-card.selected .outdated-warning {
+    font-size: 0.8rem;
+}
+
+.embedded-project-card.selected .outdated-warning:hover {
     width: 7em;
 }
 
@@ -66,7 +74,7 @@
     max-width: 75%;
     background-image: linear-gradient(to bottom right, var(--normal-black), rgba(0, 0, 0, 0));
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0;
     padding: 0.5em 0.8em;
     border-radius: 1000px;
     transition: 0.4s;
@@ -78,9 +86,17 @@
 }
 
 .embedded-project-card .round-button {
+    font-size: 0;
+    transition: 0.4s;
+}
+
+.embedded-project-card.selected .round-button {
     font-size: 0.8rem;
     margin-top: 20px;
-    transition: 0.4s;
+}
+
+.embedded-project-card.selected .short-description, .embedded-project-card .short-description-inverted {
+    font-size: 0.8rem;
 }
 
 .embedded-project-card .logo {
