@@ -8,7 +8,7 @@ export default function Member(props) {
         <div className="page-wrapper">
             <Header selected={"members"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
                 <div className="section">
                     <HeaderMemberCard member={props.member}/>
                 </div>

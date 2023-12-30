@@ -2,7 +2,7 @@ import "./header-project-card.css"
 
 export default function HeaderProjectCard(props) {
     return (
-        <div className="header-project-card">
+        <div id="header-card" className="header-project-card">
             <div className="downloads">
                 {props.children}
             </div>

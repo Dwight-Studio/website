@@ -8,7 +8,7 @@ export default function NotFound() {
         <div className="page-wrapper">
             <Header/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
                 <div className="notfound-wrapper">
                     <div className="error-title">Nothing's here!</div>
                     <div className="error-subtitle">Error 404: Not Found</div>

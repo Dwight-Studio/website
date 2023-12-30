@@ -7,7 +7,7 @@ export default function AboutUs() {
         <div className="page-wrapper">
             <Header selected={"about-us"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
 
             </div>
 

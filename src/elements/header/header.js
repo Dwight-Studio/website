@@ -15,7 +15,7 @@ export default function Header(props) {
     }
 
     return (
-        <div className="header">
+        <div id="header" className="header">
             <ScrollToTop/>
             <div className="mobile">
                 <div id="hamburger" ref={hamburgerRef} onClick={() => toggleHamburger()}>

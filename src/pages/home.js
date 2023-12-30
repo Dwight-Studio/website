@@ -11,7 +11,7 @@ export default function Home() {
             <TitleHeader logo={"https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"}/>
             <Header selected={"home"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
                     <div className="section">
                         <h1>Our Projects</h1>
                         <p>

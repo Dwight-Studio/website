@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="page-wrapper">
             <Header selected={"projects"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
                 <div className="section">
                     <div className="projects">
                         {getAllProjects().map(project => project.getLargeCard())}

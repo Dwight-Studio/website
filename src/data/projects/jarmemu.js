@@ -15,7 +15,7 @@ export default function JArmEmu() {
         "Simple ARMv7 simulator written in Java, intended for educational purpose",
         false,
         [new Contributor(Deleranax(), "UX/UI designer"), new Contributor(Yinx(), "Backend developer")],
-        [],
+        <div/>,
         <div>
             <div className="section">
                 <h1>Discover </h1>

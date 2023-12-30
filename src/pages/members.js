@@ -10,7 +10,7 @@ export default function Members() {
         <div className="page-wrapper">
             <Header selected={"members"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
                 <div className="section">
                     <div className="members">
                         {getAllMembers().map(member => member.getLargeCard())}

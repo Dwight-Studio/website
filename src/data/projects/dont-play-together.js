@@ -65,7 +65,7 @@ export default function DontPlayTogether() {
                     your own levels with ease, thanks to the easy-to-use level editor! </p>
                 <p>Please note that the game is still in development, so bugs and crashes are to be expected! If this
                     happens, please let us know on the Dwight Studio Discord.</p>
-                <center><RoundButton text="Download" link="#content"/></center>
+                <center><RoundButton text="Download" link="#header-card"/></center>
             </div>
         </div>
     )

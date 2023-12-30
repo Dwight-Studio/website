@@ -12,7 +12,7 @@ export default function Project(props) {
             <TitleHeader logo={props.project.logo} background={props.project.titleBackground}/>
             <Header selected={"projects"}/>
 
-            <div id="content" className="content-wrapper">
+            <div className="content-wrapper">
 
                 {props.project.outdated ? <div>
                     <div className="outdated-message">
