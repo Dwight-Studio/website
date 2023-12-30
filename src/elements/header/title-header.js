@@ -5,9 +5,7 @@ import React from "react";
 export default function TitleHeader(props) {
     return (
         <div className="title-header">
-            <video autoPlay muted loop className="title-background-video">
-                <source src={props.backgroundVideo} type="video/mp4"/>
-            </video>
+            <video autoPlay muted loop className="title-background-video" src={props.backgroundVideo}/>
             <div className="logo-wrapper">
                 <img src={props.logo} className="logo"
                      alt="TitleHeader logo"/>

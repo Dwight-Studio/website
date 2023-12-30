@@ -15,24 +15,22 @@ import Project from "./pages/project";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                {/* Main pages */}
-                <Route exact path='/' element={<Home/>}/>
-                <Route exact path='/projects' element={<Projects/>}/>
-                <Route exact path='/members' element={<Members/>}/>
-                <Route exact path='/about-us' element={<AboutUs/>}/>
+    <BrowserRouter>
+        <Routes>
+            {/* Main pages */}
+            <Route exact path='/' element={<Home/>}/>
+            <Route exact path='/projects' element={<Projects/>}/>
+            <Route exact path='/members' element={<Members/>}/>
+            <Route exact path='/about-us' element={<AboutUs/>}/>
 
-                {/* Member pages */}
-                {getAllMembers().map(member => <Route exact path={member.getMemberURL()} element={<Member member={member}/>}/>)}
+            {/* Member pages */}
+            {getAllMembers().map(member => <Route exact path={member.getMemberURL()} element={<Member member={member}/>}/>)}
 
-                {/* Projects pages */}
-                {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
+            {/* Projects pages */}
+            {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
 
-                {/* 404 */}
-                <Route path='*' element={<NotFound/>}/>
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+            {/* 404 */}
+            <Route path='*' element={<NotFound/>}/>
+        </Routes>
+    </BrowserRouter>
 );
