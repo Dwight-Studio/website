@@ -11,13 +11,13 @@ export default function GamerMine() {
         "Student at IUT of Le Havre",
         "I did not write my description. I am a bad boy.",
         [],
-        [
+        <div>
             <div className="section">
                 <h1>Welcome to my page</h1>
                 <p>
                     I must fill this page, which is empty for now.
                 </p>
             </div>
-        ]
+        </div>
     )
 }

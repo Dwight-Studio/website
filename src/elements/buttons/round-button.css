@@ -1,4 +1,5 @@
 .round-button {
+    display: flex;
     color: var(--accent-black);
     background-color: var(--normal-white);
     border-radius: 1000px;
@@ -7,6 +8,7 @@
     width: max-content;
     font-size: 1.5rem;
     transition: .2s;
+    gap: 10px;
 }
 
 .round-button:hover {

@@ -23,6 +23,7 @@
 }
 
 .header .nav, .header .social-medias {
+  color: var(--normal-white);
   display: flex;
   align-items: center;
   flex-wrap: nowrap;

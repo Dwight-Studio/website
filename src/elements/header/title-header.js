@@ -1,5 +1,5 @@
 import './title-header.css';
-import down from './down.svg';
+import down from '../../medias/down.svg';
 import React from "react";
 
 export default function TitleHeader(props) {

@@ -13,7 +13,7 @@ export default function Member(props) {
                     <HeaderMemberCard member={props.member}/>
                 </div>
 
-                {props.member.pageContent}
+                {props.member.pageContent.props.children}
             </div>
 
             <Footer/>

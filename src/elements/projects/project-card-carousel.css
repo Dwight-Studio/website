@@ -21,6 +21,33 @@
     position: absolute;
     visibility: hidden;
     transition: 0.4s ease;
+    z-index: 5;
+}
+
+.project-card-carousel .down-arrow {
+    position: absolute;
+    height: 2vh;
+    transform: translateY(200px);
+    z-index: 8;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.project-card-carousel .up-arrow {
+    position: absolute;
+    transform: rotate(0.5turn) translateY(200px);
+    height: 2vh;
+    z-index: 8;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.project-card-carousel .embedded-project-card.selected + .down-arrow {
+    transform: translateY(0px);
+}
+
+.project-card-carousel .up-arrow:has(+ .embedded-project-card.selected) {
+    transform: rotate(0.5turn) translateY(0px);
 }
 
 .project-card-carousel .embedded-project-card:has(+ .embedded-project-card.selected) {

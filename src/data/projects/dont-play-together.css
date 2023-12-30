@@ -1,0 +1,15 @@
+.image {
+    background-color: var(--normal-black);
+    color: var(--normal-white);
+    width: 100%;
+    box-shadow: 0 0 30px 5px var(--accent-black);
+    object-fit: cover;
+    border-radius: 45px;
+}
+
+@media screen and (max-width: 1000px) {
+    .image {
+        border-radius: 15px;
+        height: 180px;
+    }
+}
