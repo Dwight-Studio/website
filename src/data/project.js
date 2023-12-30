@@ -17,8 +17,12 @@ export class Project {
         this.pageContent = pageContent;
     }
 
+    getURLFriendlyName() {
+        return this.projectName.replaceAll(" ", "-").replaceAll("'", '')
+    }
+
     getProjectURL() {
-        return "/projects/" + this.projectName.replaceAll(" ", "-").replaceAll("'", '');
+        return "/projects/" + this.getURLFriendlyName();
     }
 
     getLargeCard() {

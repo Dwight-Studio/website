@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from "./pages/home"
@@ -25,9 +25,11 @@ root.render(
 
             {/* Member pages */}
             {getAllMembers().map(member => <Route exact path={member.getMemberURL()} element={<Member member={member}/>}/>)}
+            {getAllMembers().map(member => <Route exact path={member.pseudo} element={<Navigate to={member.getMemberURL()} replace />}/>)}
 
             {/* Projects pages */}
             {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
+            {getAllProjects().map(project => <Route exact path={project.getURLFriendlyName()} element={<Navigate to={project.getProjectURL()} replace />}/>)}
 
             {/* 404 */}
             <Route path='*' element={<NotFound/>}/>
