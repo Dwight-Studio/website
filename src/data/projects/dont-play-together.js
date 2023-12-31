@@ -40,9 +40,9 @@ export default function DontPlayTogether() {
         <div>
             <div className="accented-section">
                 <h1>Discover Don't Play Together</h1>
-                <p>Don't Play Together is a vote-based interactive game in which you have to survive the various
-                    malus/bonus that votes have. It's free, open-source and made using the Pygame library on Python.
-                    The game took 2.5 months to develop and is subject to various changes.</p>
+                <p>Don't Play Together is a vote-based interactive game in which you have to complete various platform
+                    level while tackling the obstacles that other players put in your way. It's free, open-source and
+                    made using the Pygame library on Python. The game was developed in 2.5 months, back in 2020.</p>
             </div>
             <div className="section">
                 <img className="image" src={editor} alt="DPT Editor"/>
