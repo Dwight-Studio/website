@@ -2,7 +2,7 @@ import React from "react";
 import {TinyMemberCard} from "../elements/members/tiny-member-card";
 import {LargeMemberCard} from "../elements/members/large-member-card";
 import {HeaderMemberCard} from "../elements/members/header-member-card";
-import {faGithub, faLinkedin, faLinux, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin, faLinux, faTwitch, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import GamerMine from "./members/gamermine";
 import Yinx from "./members/yinx";
@@ -80,6 +80,10 @@ export class Member {
                         case "www.linkedin.com":
                             icon = faLinkedin;
                             break;
+
+                        case "twitch.tv":
+                        case "www.twitch.tv":
+                            icon = faTwitch;
 
                         default:
                             icon = faLinux;
