@@ -14,6 +14,7 @@ export default function ScrollToTop() {
         if (hash) {
             let element = document.getElementById(removeHashCharacter(hash));
             if (element) {
+                console.log(location.pathname)
                 return {element: element, path: location.pathname};
             } else {
                 return null;
