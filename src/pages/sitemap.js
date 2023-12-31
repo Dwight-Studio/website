@@ -4,7 +4,7 @@ import {getAllProjects} from "../data/project";
 export default function Sitemap() {
     const base = "https://www.dwightstudio.fr";
 
-    function link(... args) {
+    function link(...args) {
         return (
             <div>
                 {args.map(item => <div>{base + item}<br/></div>)}

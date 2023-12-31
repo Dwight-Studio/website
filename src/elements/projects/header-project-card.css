@@ -18,6 +18,7 @@
     width: 50%;
     box-sizing: border-box;
 }
+
 .header-project-card .downloads {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 import {useEffect, useMemo} from 'react';
-import {Link, redirect, useLocation} from 'react-router-dom';
+import {redirect, useLocation} from 'react-router-dom';
 
 export default function ScrollToTop() {
     let location = useLocation();

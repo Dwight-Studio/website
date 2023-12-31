@@ -12,11 +12,17 @@ import Member from "./pages/member";
 import {getAllProjects} from "./data/project";
 import Project from "./pages/project";
 import Sitemap from "./pages/sitemap";
+import {Helmet} from "react-helmet";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
+        <Helmet>
+            <title>Dwight Studio: Developer Collective</title>
+            <meta name="description" content="Dwight Studio is a developer collective composed of computer science students, friends,
+                            who collaborate to offer free, open source software."/>
+        </Helmet>
         <Routes>
             {/* Main pages */}
             <Route exact path='/' element={<Home/>}/>
@@ -25,12 +31,16 @@ root.render(
             <Route exact path='/about-us' element={<AboutUs/>}/>
 
             {/* Member pages */}
-            {getAllMembers().map(member => <Route exact path={member.getMemberURL()} element={<Member member={member}/>}/>)}
-            {getAllMembers().map(member => <Route exact path={member.pseudo} element={<Navigate to={member.getMemberURL()} replace />}/>)}
+            {getAllMembers().map(member => <Route exact path={member.getMemberURL()}
+                                                  element={<Member member={member}/>}/>)}
+            {getAllMembers().map(member => <Route exact path={member.pseudo}
+                                                  element={<Navigate to={member.getMemberURL()} replace/>}/>)}
 
             {/* Projects pages */}
-            {getAllProjects().map(project => <Route exact path={project.getProjectURL()} element={<Project project={project}/>}/>)}
-            {getAllProjects().map(project => <Route exact path={project.getURLFriendlyName()} element={<Navigate to={project.getProjectURL()} replace />}/>)}
+            {getAllProjects().map(project => <Route exact path={project.getProjectURL()}
+                                                    element={<Project project={project}/>}/>)}
+            {getAllProjects().map(project => <Route exact path={project.getURLFriendlyName()}
+                                                    element={<Navigate to={project.getProjectURL()} replace/>}/>)}
 
             {/* Sitemap */}
             <Route exact path='/sitemap' element={<Sitemap/>}/>

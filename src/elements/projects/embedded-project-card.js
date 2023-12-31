@@ -13,7 +13,8 @@ export default function EmbeddedProjectCard(props) {
     }
 
     return (
-        <div className={"embedded-project-card" + (props.selected ? " selected" : "")} onClick={handleClick} ref={cardRef}>
+        <div className={"embedded-project-card" + (props.selected ? " selected" : "")} onClick={handleClick}
+             ref={cardRef}>
             <img className="background" src={props.project.cardBanner} alt="Project banner"/>
             <div className="logo-wrapper">
                 <img className="logo" src={props.project.logo} alt="Project logo"/>

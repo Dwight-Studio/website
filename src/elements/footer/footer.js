@@ -1,7 +1,7 @@
 import React from "react";
 import './footer.css'
 import {Link} from "react-router-dom";
-import {getAllMembers, Member} from "../../data/member";
+import {getAllMembers} from "../../data/member";
 import {getAllProjects} from "../../data/project";
 
 export default function Footer() {

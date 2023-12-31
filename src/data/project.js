@@ -3,7 +3,6 @@ import React from "react";
 import LargeProjectCard from "../elements/projects/large-project-card";
 import JArmEmu from "./projects/jarmemu";
 import EmbeddedProjectCard from "../elements/projects/embedded-project-card";
-import {getAllMembers} from "./member";
 import ContributorCard from "../elements/members/contributor-card";
 import HeaderProjectCard from "../elements/projects/header-project-card";
 

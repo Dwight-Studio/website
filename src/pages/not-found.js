@@ -2,10 +2,15 @@ import Header from "../elements/header/header";
 import React from "react";
 import "./pages.css"
 import Footer from "../elements/footer/footer";
+import {Helmet} from "react-helmet";
 
 export default function NotFound() {
     return (
         <div className="page-wrapper">
+            <Helmet>
+                <title>Error - Dwight Studio: Developer Collective</title>
+            </Helmet>
+
             <Header/>
 
             <div className="content-wrapper">

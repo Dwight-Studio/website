@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./project-card-carousel.css"
 import down from "../../medias/down.svg"
 

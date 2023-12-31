@@ -17,6 +17,7 @@
     .header-member-card {
         flex-direction: column;
     }
+
     .header-member-card > * {
         min-width: 100%;
         max-width: 100%;
