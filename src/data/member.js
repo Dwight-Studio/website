@@ -84,6 +84,7 @@ export class Member {
                         case "twitch.tv":
                         case "www.twitch.tv":
                             icon = faTwitch;
+                            break;
 
                         default:
                             icon = faLinux;
