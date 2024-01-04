@@ -145,7 +145,8 @@ export default function JArmEmu() {
                             <img src={iconColor} alt="JArmEmu Icon" className="logo-color"/>
                         </div>
                         <div className="title">Free and Open Source</div>
-                        <div className="description">Made with <span className="heart">❤</span> in Open Source, as every other project of Dwight Studio
+                        <div className="description">Made with <span className="heart">❤</span> in Open Source, as every
+                            other project of Dwight Studio
                         </div>
                     </div>
                 </div>
@@ -153,11 +154,12 @@ export default function JArmEmu() {
             <div className="section">
                 <img src={top} alt="JArmEmu Editor" className="image"/>
                 <h1>Learn by doing</h1>
-                <p>With JArmEmu, you can discover and learn the basis of ARMv7 Assembly by writing and testing your code
-                directly in the software. JArmEmu only features a portion of the currently available instruction. You
-                can consult the list of implemented instructions on GitHub.</p>
+                <p>With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and testing your
+                    code directly in the software. JArmEmu only features a portion of the available instructions. You
+                    can consult the list of implemented instructions on GitHub.</p>
                 <div className="center">
-                    <RoundButton text="See instructions" link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
+                    <RoundButton text="See instructions"
+                                 link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
                     <RoundButton text="Download" link="#header-card"/>
                 </div>
                 <img src={bottom} alt="JArmEmu Editor" className="image"/>
