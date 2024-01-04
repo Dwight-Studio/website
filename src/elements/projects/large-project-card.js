@@ -1,7 +1,6 @@
 import "./large-project-card.css"
 import RoundButton from "../buttons/round-button";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTriangleExclamation} from "@fortawesome/free-solid-svg-icons";
+import {FaExclamationTriangle} from "react-icons/fa";
 
 export default function LargeProjectCard(props) {
     return (
@@ -16,7 +15,7 @@ export default function LargeProjectCard(props) {
             </div>
             {props.project.outdated ? <div className="outdated-warning">
                 <div className="text">OUTDATED</div>
-                <FontAwesomeIcon icon={faTriangleExclamation}/>
+                <FaExclamationTriangle/>
             </div> : <div/>}
         </div>
     )

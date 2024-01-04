@@ -37,6 +37,10 @@
     width: 7em;
 }
 
+.embedded-project-card .outdated-warning svg {
+    overflow: visible;
+}
+
 .embedded-project-card .outdated-warning .text {
     padding: 0;
     margin: 0;

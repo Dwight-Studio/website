@@ -18,9 +18,9 @@ export default function Home() {
                         We're developing a range of projects, from retro console emulators to Arm learning tools and
                         Minecraft mods.
                     </p>
-                    <center>
+                    <div className="center">
                         <RoundButton text={"Discover all our projects"} link={"/projects"}/>
-                    </center>
+                    </div>
                 </div>
                 <div className="accented-section">
                     <h1>The Team</h1>
@@ -42,9 +42,9 @@ export default function Home() {
                         Dwight Studio is a developer collective composed of computer science students, friends,
                         who collaborate to offer free, open source software.
                     </p>
-                    <center>
+                    <div className="center">
                         <RoundButton text={"Learn more about us"} link={"/about-us"}/>
-                    </center>
+                    </div>
                 </div>
             </div>
 

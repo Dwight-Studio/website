@@ -11,8 +11,8 @@ import save from "../../medias/index_save_DPT.jpg";
 import play from "../../medias/index_play_DPT.jpg";
 import RoundButton from "../../elements/buttons/round-button";
 import "./dont-play-together.css"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faDebian, faGithub, faWindows} from "@fortawesome/free-brands-svg-icons";
+import {FaDebian} from "react-icons/fa6";
+import {FaGithub, FaWindows} from "react-icons/fa";
 
 export default function DontPlayTogether() {
     return new Project(
@@ -26,14 +26,14 @@ export default function DontPlayTogether() {
         <div>
             <div className="title">Download</div>
             <div className="buttons">
-                <RoundButton leftGraphic={<FontAwesomeIcon icon={faDebian}/>} text="Debian"
+                <RoundButton leftGraphic={<FaDebian/>} text="Debian"
                              link="https://github.com/Dwight-Studio/DPT-Client/releases/latest/download/DPT-Debian-based.deb"/>
-                <RoundButton leftGraphic={<FontAwesomeIcon icon={faWindows}/>} text="Windows"
+                <RoundButton leftGraphic={<FaWindows/>} text="Windows"
                              link="https://github.com/Dwight-Studio/DPT-Client/releases/latest/download/DPT-Windows.exe"/>
             </div>
             <div className="title">Source Code</div>
             <div className="buttons">
-                <RoundButton leftGraphic={<FontAwesomeIcon icon={faGithub}/>} text="GitHub"
+                <RoundButton leftGraphic={<FaGithub/>} text="GitHub"
                              link="https://github.com/Dwight-Studio/DPT-Client/"/>
             </div>
         </div>,
@@ -65,7 +65,7 @@ export default function DontPlayTogether() {
                     your own levels with ease, thanks to the easy-to-use level editor! </p>
                 <p>Please note that the game is still in development, so bugs and crashes are to be expected! If this
                     happens, please let us know on the Dwight Studio Discord.</p>
-                <center><RoundButton text="Download" link="#header-card"/></center>
+                <div className="center"><RoundButton text="Download" link="#header-card"/></div>
             </div>
         </div>
     )

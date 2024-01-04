@@ -1,5 +1,5 @@
 .large-project-card {
-    background-color: var(--normal-black);
+    background-color: var(--accent-black);
     position: relative;
     border-radius: 25px;
     width: 250px;
@@ -18,15 +18,16 @@
     position: absolute;
     display: flex;
     justify-content: end;
+    flex-wrap: nowrap;
     gap: 1em;
     top: 5%;
     right: 5%;
-    font-size: 0;
     padding: 0.5em 0.8em;
     border-radius: 1000px;
     transition: 0.4s ease;
     height: 1em;
     width: 1em;
+    font-size: 0;
 }
 
 .large-project-card:hover .outdated-warning {
@@ -35,6 +36,10 @@
 
 .large-project-card:hover .outdated-warning:hover {
     width: 7em;
+}
+
+.large-project-card .outdated-warning svg {
+    overflow: visible;
 }
 
 .large-project-card .outdated-warning .text {

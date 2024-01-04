@@ -2,8 +2,7 @@ import './header.css';
 import {Link} from "react-router-dom";
 import React from "react";
 import ScrollToTop from "../scroll-to-top";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faDiscord, faGithub, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {FaDiscord, FaGithub, FaYoutube} from "react-icons/fa";
 
 export default function Header(props) {
     const hamburgerRef = React.useRef();
@@ -48,13 +47,13 @@ export default function Header(props) {
                 </div>
                 <div className="social-medias">
                     <a href="https://www.youtube.com/@dwightstudio">
-                        <FontAwesomeIcon icon={faYoutube}/>
+                        <FaYoutube/>
                     </a>
                     <a href="https://discord.gg/Eqake7q">
-                        <FontAwesomeIcon icon={faDiscord}/>
+                        <FaDiscord/>
                     </a>
                     <a href="https://github.com/Dwight-Studio">
-                        <FontAwesomeIcon icon={faGithub}/>
+                        <FaGithub/>
                     </a>
                 </div>
             </div>

@@ -23,7 +23,7 @@
 
 .title-header .down-logo-wrapper {
     animation: title-scroll-animation 3s infinite;
-    opacity: 1;
+    opacity: 0.1;
 }
 
 .title-background {
@@ -64,6 +64,9 @@
 }
 
 @keyframes title-scroll-animation {
+    25% {
+        opacity: 1;
+    }
     50% {
         opacity: 0.1;
     }

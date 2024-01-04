@@ -3,9 +3,8 @@ import Footer from "../elements/footer/footer";
 import React from "react";
 import TitleHeader from "../elements/header/title-header";
 import "./project.css"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTriangleExclamation} from "@fortawesome/free-solid-svg-icons";
 import {Helmet} from "react-helmet";
+import {FaExclamationTriangle} from "react-icons/fa";
 
 export default function Project(props) {
     return (
@@ -23,7 +22,7 @@ export default function Project(props) {
 
                 {props.project.outdated ? <div>
                     <div className="outdated-message">
-                        <FontAwesomeIcon icon={faTriangleExclamation}/>
+                        <FaExclamationTriangle/>
                         <div>This project is outdated and unlikely to be updated again. It may not work as expected or
                             may
                             contain out-of-date information.

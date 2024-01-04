@@ -104,6 +104,13 @@ code {
     font-size: 1.5rem;
 }
 
+.content-wrapper .center {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
 @media (max-width: 1000px) {
     .content-wrapper .section-image {
         min-height: 25vh;

@@ -7,7 +7,7 @@
     transition: .2s;
     height: 90px;
     cursor: pointer;
-    background-color: var(--accent-black);
+    background-image: linear-gradient(to right bottom, var(--accent-red) -30%, var(--accent-black));
     text-decoration: none;
 }
 
