@@ -109,6 +109,7 @@ code {
     justify-content: center;
     gap: 30px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1000px) {
