@@ -15,11 +15,16 @@ export default function Deleranax() {
         "soft spot for Java.",
         ["https://github.com/Deleranax", "https://www.youtube.com/@deleranax", "https://twitter.com/Deleranax"],
         <div>
-            <div className="section">
+            <div className="accented-section">
                 <h1>Led by passion</h1>
                 <p>
                     For me, coding is a hobby, a pastime that I practice with particular dedication. My projects cover a
                     wide range of subjects and technologies, as long as they're interesting and rewarding for me.
+                </p>
+                <p>
+                    My past project include multiple modding experiences (essentially mods and plugin for Minecraft),
+                    game development, experimentation with IA and ML (solving simple games like TicTacToe or Connect4),
+                    graphical design (simulation of a Slime), software and tool development...
                 </p>
             </div>
             <div className="section">
