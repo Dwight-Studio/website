@@ -12,7 +12,11 @@ export default function Deleranax() {
         "Currently a student at the INSA Engineering School of Rennes, specializing in cloud computing. I " +
         "was introduced to programming through the development of mods and plugins for Minecraft back in 2019. Since then, " +
         "I've maintained a certain affection for Java, its power and portability.",
-        ["https://github.com/Deleranax", "https://www.youtube.com/@deleranax", "https://twitter.com/Deleranax"],
+        [
+            "https://github.com/Deleranax",
+            "https://www.youtube.com/@deleranax",
+            "https://twitter.com/Deleranax"
+        ],
         <div>
             <div className="section">
                 <h1>Welcome to my page</h1>

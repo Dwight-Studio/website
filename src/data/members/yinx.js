@@ -9,8 +9,12 @@ export default function Yinx() {
         "Kévin",
         "Tollemer",
         "Student at INSA of Rennes",
-        "I did not write my description. I am a bad boy.",
-        [],
+        "I did not write my description. I am a naughty boy.",
+        [
+            "https://github.com/FoxYinx",
+            "https://twitter.com/YinxFox",
+            "https://www.reddit.com/user/WhiteR3d"
+        ],
         <div>
             <div className="section">
                 <h1>Welcome to my page</h1>
