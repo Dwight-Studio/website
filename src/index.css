@@ -17,7 +17,7 @@
     overflow-x: clip;
 }
 
-:-webkit-any-link {
+:any-link {
     text-decoration: none;
     color: currentColor;
 }
