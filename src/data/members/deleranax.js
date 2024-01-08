@@ -10,12 +10,11 @@ export default function Deleranax() {
         "Alexandre",
         "Leconte",
         "Student at INSA of Rennes",
-        "Portal 2 fanatic, currently a student at the INSA Engineering School of Rennes, specializing" +
-        " in cloud computing. My interests range from game modding to simulation software development. I've got a" +
-        "soft spot for Java.",
+        "Portal 2 fanatic since 2013. Bit of a coffee enjoyer, if it has Abstract Classes. Currently a student at " +
+        "the INSA Engineering School of Rennes, specializing in cloud computing.",
         ["https://github.com/Deleranax", "https://www.youtube.com/@deleranax", "https://twitter.com/Deleranax"],
         <div>
-            <div className="accented-section">
+            <div className="accented-section justified">
                 <h1>Led by passion</h1>
                 <p>
                     For me, coding is a hobby, a pastime that I practice with particular dedication. My projects cover a
@@ -27,7 +26,7 @@ export default function Deleranax() {
                     graphical design (simulation of a Slime), software and tool development...
                 </p>
             </div>
-            <div className="section">
+            <div className="section justified">
                 <h1>Have you ever heard of Java? <FaJava/></h1>
                 <p>
                     I was introduced to programming through the development of mods and plugins for Minecraft back in

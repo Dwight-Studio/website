@@ -104,6 +104,10 @@ code {
     font-size: 1.5rem;
 }
 
+.content-wrapper .justified {
+    text-align: justify;
+}
+
 .content-wrapper .center {
     display: flex;
     justify-content: center;

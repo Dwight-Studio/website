@@ -8,7 +8,7 @@ import Deleranax from "./members/deleranax";
 import {getAllProjects} from "./project";
 import ProjectCardCarousel from "../elements/projects/project-card-carousel";
 import {FaXTwitter} from "react-icons/fa6";
-import {FaGithub, FaLinkedin, FaTwitch, FaYoutube} from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaReddit, FaTwitch, FaYoutube} from "react-icons/fa";
 import {CiLink} from "react-icons/ci";
 
 export class Member {
@@ -85,6 +85,11 @@ export class Member {
                         case "twitch.tv":
                         case "www.twitch.tv":
                             icon = <FaTwitch/>;
+                            break;
+
+                        case "reddit.com":
+                        case "www.reddit.com":
+                            icon = <FaReddit/>
                             break;
 
                         default:

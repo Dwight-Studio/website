@@ -38,7 +38,7 @@ export default function DontPlayTogether() {
             </div>
         </div>,
         <div>
-            <div className="accented-section">
+            <div className="accented-section justified">
                 <h1>Discover Don't Play Together</h1>
                 <p>Don't Play Together is a vote-based interactive game in which you have to complete various platform
                     level while tackling the obstacles that other players put in your way. It's free, open-source and
@@ -55,7 +55,7 @@ export default function DontPlayTogether() {
                 <p>Once you've edited your level, you can save it using the shortcut CTRL+S, so you can play it again
                     and again, or edit it over and over again...</p>
             </div>
-            <div className="section">
+            <div className="section justified">
                 <img className="image" src={play} alt="DPT Level playing"/>
                 <h1>Play now!</h1>
                 <p>The rules of the game are simple: get to the flag at the end of the level before the set time without
