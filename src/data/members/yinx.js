@@ -4,7 +4,7 @@ import {Member} from "../member";
 export default function Yinx() {
     return new Member(
         "https://static.dwightstudio.fr/dwightstudio/PERSONAL/Yinx/LOGO.png",
-        "#3985d0",
+        "#6e39d0",
         "Yinx",
         "Kévin",
         "Tollemer",
