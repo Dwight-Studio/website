@@ -4,7 +4,7 @@
 }
 
 .title-header .logo {
-    width: 80vw;
+    width: 50vw;
     pointer-events: none;
     animation: drift-fadein-animation 1.5s ease-in-out 1 forwards;
     animation-delay: 1s;
@@ -61,6 +61,12 @@
 
 .title-header .logo-wrapper {
     align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .title-header .logo {
+        width: 90vw;
+    }
 }
 
 @keyframes title-scroll-animation {
