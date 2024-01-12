@@ -17,12 +17,6 @@ export default function GamerMine() {
             "https://www.twitch.tv/gamermine55"
         ],
         <div>
-            <div className="section">
-                <h1>Welcome to my page</h1>
-                <p>
-                    I must fill this page, which is empty for now.
-                </p>
-            </div>
         </div>
     )
 }
