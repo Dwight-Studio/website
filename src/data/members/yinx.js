@@ -18,12 +18,6 @@ export default function Yinx() {
             "https://www.reddit.com/user/WhiteR3d"
         ],
         <div>
-            <div className="section">
-                <h1>Welcome to my page</h1>
-                <p>
-                    I must fill this page, which is empty for now.
-                </p>
-            </div>
         </div>
     );
 }
