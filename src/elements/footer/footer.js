@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             <div className="bottom">
                 <div className="text">
-                    © 2023 Dwight Studio (Maxime SAVARY, Kevin TOLLEMER & Alexandre LECONTE)
+                    © 2023-{new Date().getFullYear()} Dwight Studio (Maxime SAVARY, Kevin TOLLEMER & Alexandre LECONTE)
                 </div>
             </div>
         </div>
