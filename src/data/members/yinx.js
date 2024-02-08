@@ -14,7 +14,6 @@ export default function Yinx() {
         "out Advent of Code.",
         [
             "https://github.com/FoxYinx",
-            "https://twitter.com/YinxFox",
             "https://www.reddit.com/user/WhiteR3d"
         ],
         <div>
