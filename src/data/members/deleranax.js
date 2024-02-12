@@ -10,8 +10,8 @@ export default function Deleranax() {
         "Alexandre",
         "Leconte",
         "Student at INSA of Rennes",
-        "Portal 2 fanatic since 2013. Bit of a coffee enjoyer, if it has Abstract Classes. Currently a student at " +
-        "the INSA Engineering School of Rennes, specializing in cloud computing.",
+        "Portal 2 fanatic and bit of a coffee enjoyer, but only if it has Abstract Classes. Currently a student at " +
+        "the INSA Engineering School of Rennes, specializing in Cyber-Security and Cloud Computing.",
         ["https://github.com/Deleranax", "https://www.youtube.com/@deleranax", "https://twitter.com/Deleranax"],
         <div>
             <div className="accented-section justified">
