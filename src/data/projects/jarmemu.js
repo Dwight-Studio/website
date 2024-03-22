@@ -1,5 +1,4 @@
 import {Project} from "../project";
-import logo from "../../medias/jarmemu-text.svg"
 import video from "../../medias/jarmemu-video.webm"
 import banner from "../../medias/jarmemu-banner.png"
 import Deleranax from "../members/deleranax";
@@ -18,8 +17,6 @@ import {TbCodeAsterix, TbWaveSawTool} from "react-icons/tb";
 import {PiHandsClappingFill} from "react-icons/pi";
 import {BsFillMenuButtonWideFill} from "react-icons/bs";
 import {MdMemory} from "react-icons/md";
-import icon from "../../medias/jarmemu-logo-mono.png"
-import iconColor from "../../medias/jarmemu-logo.png"
 import top from "../../medias/jarmemu-top.png"
 import bottom from "../../medias/jarmemu-bottom.png"
 
@@ -87,7 +84,7 @@ function Download() {
 
 export default function JArmEmu() {
     return new Project(
-        logo,
+        "https://static.dwightstudio.fr/jarmemu/LOGO_TEXT.svg",
         banner,
         video,
         "JArmEmu",
@@ -141,8 +138,8 @@ export default function JArmEmu() {
                     </div>
                     <div className="card" id="logo-card">
                         <div className="logo-wrapper">
-                            <img src={icon} alt="JArmEmu Icon" className="logo"/>
-                            <img src={iconColor} alt="JArmEmu Icon" className="logo-color"/>
+                            <img src="https://static.dwightstudio.fr/jarmemu/LOGO_MONO.svg" alt="JArmEmu Icon" className="logo"/>
+                            <img src="https://static.dwightstudio.fr/jarmemu/LOGO.svg" alt="JArmEmu Icon" className="logo-color"/>
                         </div>
                         <div className="title">Free and Open Source</div>
                         <div className="description">Made with <span className="heart">❤</span> in Open Source, as every

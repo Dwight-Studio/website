@@ -10,12 +10,13 @@
 .error-title {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: var(--normal-white);
 }
 
 .error-subtitle {
     font-size: 1rem;
     color: var(--accent-black);
-    background-color: var(--deactivated-light);
+    background-image: linear-gradient(to right bottom, var(--accent-red), var(--normal-black));
     padding: 1vmin 2vmin;
     border-radius: 1000px;
 }

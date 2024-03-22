@@ -21,8 +21,12 @@ export default function AboutUs() {
                     <p>
                         Dwight Studio is a developer collective composed of computer science students, friends,
                         who collaborate to offer free, open source software. It was created back in 2019 as structure to
-                        host
-                        our personal projects, and promote our work.
+                        host our personal projects, and promote our work.
+                    </p>
+                    <p>
+                        Dwight Studio is an association under French law, governed by the law of July 1, 1901 and the
+                        decree of August 16, 1901. Its aim is to promote and develop free and open source software as
+                        an independent collective of developers.
                     </p>
                 </div>
                 <div className="accented-section">
