@@ -125,7 +125,7 @@ export default function JArmEmu() {
                     </div>
                     <div className="card">
                         <TbCodeAsterix size={100}/>
-                        <div className="title">Syntactic Colorimetry</div>
+                        <div className="title">Syntax Highlighting</div>
                         <div className="description">Includes a code highlighting system for better code
                             intelligibility
                         </div>
