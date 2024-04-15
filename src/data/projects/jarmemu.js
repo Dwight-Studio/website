@@ -1,6 +1,5 @@
 import {Project} from "../project";
 import video from "../../medias/jarmemu-video.webm"
-import banner from "../../medias/jarmemu-banner.png"
 import Deleranax from "../members/deleranax";
 import Yinx from "../members/yinx";
 import {Contributor} from "../member";
@@ -85,7 +84,7 @@ function Download() {
 export default function JArmEmu() {
     return new Project(
         "https://static.dwightstudio.fr/jarmemu/LOGO_TEXT.svg",
-        banner,
+        "https://static.dwightstudio.fr/jarmemu/SPLASH_BACKGROUND.svg",
         video,
         "JArmEmu",
         "Simple ARMv7 simulator written in Java, intended for educational purpose",
