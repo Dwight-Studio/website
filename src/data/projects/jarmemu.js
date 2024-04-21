@@ -33,7 +33,6 @@ async function fetchAssets() {
 
 function Download() {
     const {data: response, isLoading, isError} = useQuery('data', fetchAssets)
-
     if (!isLoading) {
         if (isError) {
 
