@@ -9,7 +9,7 @@ import {Suspense} from "react";
 import {PuffLoader} from "react-spinners";
 import {FaFedora, FaFileArchive, FaGithub, FaWindows} from "react-icons/fa";
 import {FaDebian} from "react-icons/fa6";
-import {SiArchlinux, SiFlathub} from "react-icons/si";
+import {SiArchlinux, SiChocolatey, SiFedora, SiFlathub} from "react-icons/si";
 import {useQuery} from "react-query";
 import "./jarmemu.css"
 import {TbCodeAsterix, TbWaveSawTool} from "react-icons/tb";
@@ -20,9 +20,7 @@ import top from "../../medias/jarmemu-top.png"
 import bottom from "../../medias/jarmemu-bottom.png"
 
 async function fetchAssets() {
-    const octokit = new Octokit({
-        auth: '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'
-    })
+    const octokit = new Octokit()
 
     const assetsID = await octokit.request('GET /repos/Dwight-Studio/JArmEmu/releases/latest')
         .then(response => response.data.id)
@@ -39,8 +37,12 @@ function Download() {
             return [
                 <div className="title">Install</div>,
                 <div className="buttons">
+                    <RoundButton leftGraphic={<SiChocolatey/>} text="Chocolatey"
+                                 link="https://community.chocolatey.org/packages/fr.dwightstudio.JArmEmu/"/>
                     <RoundButton leftGraphic={<SiFlathub/>} text="FlatPak"
                                  link="https://flathub.org/fr/apps/fr.dwightstudio.JArmEmu"/>
+                    <RoundButton leftGraphic={<SiFedora/>} text="Fedora"
+                                 link="https://copr.fedorainfracloud.org/coprs/dwight-studio/JArmEmu/"/>
                     <RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
                                  link="https://aur.archlinux.org/packages/jarmemu"/>
                 </div>,
@@ -52,12 +54,7 @@ function Download() {
                                 <RoundButton leftGraphic={<FaWindows/>} text="Windows"
                                              link={asset.browser_download_url}/>
                             )
-                        } else if (asset.name.endsWith(".rpm")) {
-                            return (
-                                <RoundButton leftGraphic={<FaFedora/>} text="Fedora"
-                                             link={asset.browser_download_url}/>
-                            )
-                        } else if (asset.name.endsWith(".portable.zip")) {
+                        } else if (asset.name.endsWith(".zip")) {
                             return (
                                 <RoundButton leftGraphic={<FaFileArchive/>} text="Portable"
                                              link={asset.browser_download_url}/>
