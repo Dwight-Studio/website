@@ -2,6 +2,7 @@ import DontPlayTogether from "./projects/dont-play-together";
 import React from "react";
 import LargeProjectCard from "../elements/projects/large-project-card";
 import JArmEmu from "./projects/jarmemu";
+import DeMuG from "./projects/demug";
 import EmbeddedProjectCard from "../elements/projects/embedded-project-card";
 import ContributorCard from "../elements/members/contributor-card";
 import HeaderProjectCard from "../elements/projects/header-project-card";
@@ -65,5 +66,5 @@ export class Project {
 }
 
 export function getAllProjects() {
-    return [JArmEmu(), DontPlayTogether()]
+    return [JArmEmu(), DontPlayTogether(), DeMuG()]
 }
