@@ -31,7 +31,7 @@ export default function Project(props) {
                 </div> : <div/>}
 
                 <div className="section">
-                    {props.project.getHeaderCard(props.project.download)}
+                    {props.project.getHeaderCard()}
                 </div>
 
                 {props.project.pageContent.props.children}

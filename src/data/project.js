@@ -7,7 +7,17 @@ import ContributorCard from "../elements/members/contributor-card";
 import HeaderProjectCard from "../elements/projects/header-project-card";
 
 export class Project {
-    constructor(logo, cardBanner, titleBackground, projectName, shortDescription, outdated, contributors, download, pageContent) {
+    constructor(logo,
+                cardBanner,
+                titleBackground,
+                projectName,
+                shortDescription,
+                outdated,
+                contributors,
+                githubIdentifier,
+                repositories,
+                pageContent) {
+
         this.logo = logo;
         this.cardBanner = cardBanner
         this.titleBackground = titleBackground;
@@ -15,7 +25,8 @@ export class Project {
         this.shortDescription = shortDescription;
         this.outdated = outdated;
         this.contributors = contributors;
-        this.download = download;
+        this.githubIdentifier = githubIdentifier;
+        this.repositories = repositories;
         this.pageContent = pageContent;
     }
 
@@ -35,8 +46,8 @@ export class Project {
         return (<EmbeddedProjectCard project={this} selected={selected}/>)
     }
 
-    getHeaderCard(dl) {
-        return (<HeaderProjectCard project={this}>{dl.props.children}</HeaderProjectCard>)
+    getHeaderCard() {
+        return (<HeaderProjectCard project={this}/>)
     }
 
     isContributor(member) {
