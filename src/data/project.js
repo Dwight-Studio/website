@@ -66,5 +66,5 @@ export class Project {
 }
 
 export function getAllProjects() {
-    return [JArmEmu(), DontPlayTogether(), DeMuG()]
+    return [JArmEmu(), DeMuG(), DontPlayTogether()]
 }
