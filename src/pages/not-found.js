@@ -1,8 +1,6 @@
 import Header from "../elements/header/header";
 import React from "react";
 import "./pages.css"
-import Footer from "../elements/footer/footer";
-import {Helmet} from "react-helmet";
 import {Page, PageContent} from "../elements/base";
 
 export default function NotFound() {

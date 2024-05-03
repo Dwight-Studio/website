@@ -1,7 +1,7 @@
 import RoundButton from "../buttons/round-button";
 import "./embedded-project-card.css"
 import {useRef} from "react";
-import {FaExclamationTriangle} from "react-icons/fa";
+import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 
 export default function EmbeddedProjectCard(props) {
     const cardRef = useRef()
@@ -9,6 +9,32 @@ export default function EmbeddedProjectCard(props) {
     function handleClick() {
         document.getElementsByClassName("embedded-project-card selected").item(0).classList.toggle("selected")
         cardRef.current.classList.toggle("selected");
+    }
+
+    let flag;
+    switch (props.project.flag) {
+        case "outdated":
+            flag = (
+                <div className="warning outdated">
+                    <div className="text">OUTDATED</div>
+                    <FaExclamationTriangle/>
+                </div>
+            )
+            break;
+
+        case "preview":
+            flag = (
+                <div className="warning preview">
+                    <div className="text">PREVIEW</div>
+                    <FaCode/>
+                </div>
+            )
+            break;
+
+        default:
+            flag = (
+                <div/>
+            )
     }
 
     return (
@@ -22,10 +48,7 @@ export default function EmbeddedProjectCard(props) {
             <div className="button-wrapper">
                 <RoundButton text="Learn more" link={props.project.getProjectURL()}/>
             </div>
-            {props.project.outdated ? <div className="outdated-warning">
-                <div className="text">OUTDATED</div>
-                <FaExclamationTriangle/>
-            </div> : <div/>}
+            {flag}
         </div>
     )
 }

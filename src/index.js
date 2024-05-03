@@ -12,7 +12,6 @@ import Member from "./pages/member";
 import {getAllProjects} from "./data/project";
 import Project from "./pages/project";
 import Sitemap from "./pages/sitemap";
-import {Helmet} from "react-helmet";
 import {QueryClient, QueryClientProvider} from "react-query";
 import Legal from "./pages/legal";
 

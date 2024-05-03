@@ -1,7 +1,6 @@
-.outdated-message {
+.flag-message {
     margin: 40px;
     display: flex;
-    background-color: var(--accent-yellow);
     align-items: center;
     text-align: center;
     border-radius: 1000px;
@@ -10,12 +9,20 @@
     gap: 10px;
 }
 
-.outdated-message svg {
+.flag-message.outdated {
+    background-color: var(--accent-yellow);
+}
+
+.flag-message.preview {
+    background-color: var(--accent-blue);
+}
+
+.flag-message svg {
     font-size: 2.4rem;
 }
 
 @media screen and (max-width: 1000px) {
-    .outdated-message {
+    .flag-message {
         margin: 40px 0 0;
         flex-direction: column;
         border-radius: 45px;

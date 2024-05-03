@@ -11,6 +11,7 @@ import {BsFillMenuButtonWideFill} from "react-icons/bs";
 import {MdMemory} from "react-icons/md";
 import top from "../../medias/jarmemu-top.png"
 import bottom from "../../medias/jarmemu-bottom.png"
+import {AccentedSection, Center, Section, Subtitle, Title} from "../../elements/base";
 
 export default function JArmEmu() {
     return new Project(
@@ -19,7 +20,7 @@ export default function JArmEmu() {
         video,
         "JArmEmu",
         "Simple ARMv7 simulator written in Java, intended for educational purpose",
-        false,
+        "",
         [new Contributor(Deleranax(), "UX/UI designer"), new Contributor(Yinx(), "Backend developer")],
         "Dwight-Studio/JArmEmu",
         [
@@ -30,11 +31,11 @@ export default function JArmEmu() {
         ],
         (
             <div>
-                <div className="accented-section">
-                    <h1>A Simple ARMv7 simulator written in Java, intended for educational purpose</h1>
-                    <h2>JArmEmu is a simple simulator with a graphical interface that offers basic control and
+                <AccentedSection>
+                    <Title>A Simple ARMv7 simulator written in Java, intended for educational purpose</Title>
+                    <Subtitle>JArmEmu is a simple simulator with a graphical interface that offers basic control and
                         information
-                        about a simulated ARMv7 architecture.</h2>
+                        about a simulated ARMv7 architecture.</Subtitle>
                     <div className="features-grid">
                         <div className="card">
                             <TbWaveSawTool size={100}/>
@@ -87,21 +88,21 @@ export default function JArmEmu() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="section">
+                </AccentedSection>
+                <Section>
                     <img src={top} alt="JArmEmu Editor" className="image"/>
-                    <h1>Learn by doing</h1>
+                    <Title>Learn by doing</Title>
                     <p>With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and testing your
                         code directly in the software. JArmEmu only features a portion of the available instructions.
                         You
                         can consult the list of implemented instructions on GitHub.</p>
-                    <div className="center">
+                    <Center>
                         <RoundButton text="See instructions"
                                      link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
                         <RoundButton text="Download" link="#header-card"/>
-                    </div>
+                    </Center>
                     <img src={bottom} alt="JArmEmu Editor" className="image"/>
-                </div>
+                </Section>
             </div>
         )
     )

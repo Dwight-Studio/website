@@ -11,8 +11,6 @@ import save from "../../medias/index_save_DPT.jpg";
 import play from "../../medias/index_play_DPT.jpg";
 import RoundButton from "../../elements/buttons/round-button";
 import "./dont-play-together.css"
-import {FaDebian} from "react-icons/fa6";
-import {FaGithub, FaWindows} from "react-icons/fa";
 
 export default function DontPlayTogether() {
     return new Project(
@@ -21,7 +19,7 @@ export default function DontPlayTogether() {
         video,
         "Don't Play Together",
         "Anti-collaborative Game",
-        true,
+        "outdated",
         [new Contributor(GamerMine(), "Fullstack developer"), new Contributor(Yinx(), "Fullstack developer"), new Contributor(Deleranax(), "Fullstack developer")],
         "Dwight-Studio/DPT-Client",
         [],

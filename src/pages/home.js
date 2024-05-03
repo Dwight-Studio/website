@@ -1,10 +1,9 @@
 import TitleHeader from "../elements/header/title-header";
 import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../elements/footer/footer";
 import RoundButton from "../elements/buttons/round-button";
 import {getAllMembers} from "../data/member";
-import {AccentedSection, Center, PageContent, Page, Section, Subtitle, Title} from "../elements/base";
+import {AccentedSection, Center, Page, PageContent, Section, Subtitle, Title} from "../elements/base";
 
 export default function Home() {
     return (

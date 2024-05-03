@@ -1,9 +1,7 @@
 import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../elements/footer/footer";
 import {getAllMembers} from "../data/member";
 import "./pages.css"
-import {Helmet} from "react-helmet";
 import {Page, PageContent, Section} from "../elements/base";
 
 

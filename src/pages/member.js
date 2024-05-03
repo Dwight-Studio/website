@@ -1,8 +1,6 @@
 import Header from "../elements/header/header";
 import {HeaderMemberCard} from "../elements/members/header-member-card";
-import Footer from "../elements/footer/footer";
 import React from "react";
-import {Helmet} from "react-helmet";
 import {Page, PageContent, Section} from "../elements/base";
 
 export default function Member(props) {

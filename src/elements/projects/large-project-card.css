@@ -12,8 +12,7 @@
     width: 500px;
 }
 
-.large-project-card .outdated-warning {
-    background-color: var(--accent-yellow);
+.large-project-card .warning {
     overflow: hidden;
     position: absolute;
     display: flex;
@@ -30,19 +29,27 @@
     font-size: 0;
 }
 
-.large-project-card:hover .outdated-warning {
+.large-project-card .warning.outdated {
+    background-color: var(--accent-yellow);
+}
+
+.large-project-card .warning.preview {
+    background-color: var(--accent-blue);
+}
+
+.large-project-card:hover .warning {
     font-size: 0.8rem;
 }
 
-.large-project-card:hover .outdated-warning:hover {
+.large-project-card:hover .warning:hover {
     width: 7em;
 }
 
-.large-project-card .outdated-warning svg {
+.large-project-card .warning svg {
     overflow: visible;
 }
 
-.large-project-card .outdated-warning .text {
+.large-project-card .warning .text {
     padding: 0;
     margin: 0;
     white-space: nowrap;

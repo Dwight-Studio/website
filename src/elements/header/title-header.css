@@ -12,6 +12,8 @@
 }
 
 .title-header .animation {
+    color: var(--normal-white);
+    font-size: 4vh;
     position: absolute;
     bottom: 20px;
     line-height: 2.5vh;

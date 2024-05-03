@@ -1,7 +1,5 @@
-import {Helmet} from "react-helmet";
 import React from "react";
 import Header from "../elements/header/header";
-import Footer from "../elements/footer/footer";
 import {AccentedSection, Page, PageContent, Section, Subtitle, Title} from "../elements/base";
 
 export default function Legal(props) {

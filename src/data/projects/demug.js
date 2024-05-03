@@ -12,7 +12,7 @@ export default function DeMuG() {
         video,
         "DeMuG",
         "Cross platform GameBoy emulator written in C++",
-        false,
+        "preview",
         [new Contributor(GamerMine(), "Fullstack developer")],
         "GamerMine/DeMuG",
         [],

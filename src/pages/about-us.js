@@ -1,9 +1,6 @@
 import Header from "../elements/header/header";
 import React from "react";
-import Footer from "../elements/footer/footer";
 import {Helmet} from "react-helmet";
-import RoundButton from "../elements/buttons/round-button";
-import {BiHeart} from "react-icons/bi";
 import {AccentedSection, Page, PageContent, Section, Subtitle, Title} from "../elements/base";
 
 export default function AboutUs() {

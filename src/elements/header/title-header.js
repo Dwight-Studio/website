@@ -1,6 +1,6 @@
 import './title-header.css';
-import down from '../../medias/down.svg';
 import React from "react";
+import {FaAngleDown} from "react-icons/fa";
 
 export default function TitleHeader(props) {
     return (
@@ -11,15 +11,15 @@ export default function TitleHeader(props) {
                      alt="TitleHeader logo"/>
             </div>
             <a href="#header">
-                <div vertical layout className="animation">
+                <div className="animation">
                     <div className="down-logo-wrapper">
-                        <img src={down} className="down-logo" alt="Down"/>
+                        <FaAngleDown />
                     </div>
                     <div className="down-logo-wrapper">
-                        <img src={down} className="down-logo" alt="Down"/>
+                        <FaAngleDown />
                     </div>
                     <div className="down-logo-wrapper">
-                        <img src={down} className="down-logo" alt="Down"/>
+                        <FaAngleDown />
                     </div>
                 </div>
             </a>

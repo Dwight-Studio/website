@@ -13,7 +13,7 @@ export class Project {
                 titleBackground,
                 projectName,
                 shortDescription,
-                outdated,
+                flag,
                 contributors,
                 githubIdentifier,
                 repositories,
@@ -24,7 +24,7 @@ export class Project {
         this.titleBackground = titleBackground;
         this.projectName = projectName;
         this.shortDescription = shortDescription;
-        this.outdated = outdated;
+        this.flag = flag;
         this.contributors = contributors;
         this.githubIdentifier = githubIdentifier;
         this.repositories = repositories;
