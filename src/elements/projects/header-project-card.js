@@ -29,19 +29,19 @@ function Repositories(props) {
 
                         if (link.includes("chocolatey")) {
                             return (<RoundButton leftGraphic={<SiChocolatey/>} text="Chocolatey"
-                                                 link={link}/>)
+                                                 link={url}/>)
                         } else if (link.includes("flathub")) {
                             return (<RoundButton leftGraphic={<SiFlathub/>} text="FlatPak"
-                                                 link={link}/>)
+                                                 link={url}/>)
                         } else if (link.includes("copr")) {
                             return (<RoundButton leftGraphic={<SiFedora/>} text="Fedora"
-                                                 link={link}/>)
+                                                 link={url}/>)
                         } else if (link.includes("aur")) {
                             return (<RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
-                                                 link={link}/>)
+                                                 link={url}/>)
                         } else if (link.includes("apt")) {
                             return (<RoundButton leftGraphic={<SiDebian/>} text="Debian"
-                                                 link={link}/>)
+                                                 link={url}/>)
                         }
                     })
                 }
