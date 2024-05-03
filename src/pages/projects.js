@@ -1,7 +1,7 @@
 import Header from "../elements/header/header";
 import React from "react";
 import {getAllProjects} from "../data/project";
-import "./pages.css"
+import "./projects.css"
 import {Page, PageContent, Section} from "../elements/base";
 
 export default function Projects() {

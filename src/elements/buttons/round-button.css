@@ -11,6 +11,10 @@
     gap: 10px;
 }
 
+.round-button svg {
+    font-size: 2rem;
+}
+
 .round-button:hover {
     z-index: 100;
     transform: scale(1.2);

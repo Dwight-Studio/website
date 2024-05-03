@@ -1,7 +1,7 @@
 import Header from "../elements/header/header";
 import React from "react";
 import {getAllMembers} from "../data/member";
-import "./pages.css"
+import "./members.css"
 import {Page, PageContent, Section} from "../elements/base";
 
 

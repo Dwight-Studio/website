@@ -1,0 +1,22 @@
+.notfound-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.error-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--normal-white);
+}
+
+.error-subtitle {
+    font-size: 1rem;
+    color: var(--accent-black);
+    background-image: linear-gradient(to right bottom, var(--accent-red), var(--normal-black));
+    padding: 1vmin 2vmin;
+    border-radius: 1000px;
+}
