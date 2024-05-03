@@ -3,7 +3,7 @@ import {Octokit} from "octokit";
 import {useQuery} from "react-query";
 import RoundButton from "../buttons/round-button";
 import {SiArchlinux, SiChocolatey, SiDebian, SiFedora, SiFlathub} from "react-icons/si";
-import {FaFileArchive, FaGithub, FaWindows} from "react-icons/fa";
+import {FaApple, FaFileArchive, FaGithub, FaWindows} from "react-icons/fa";
 import {FaDebian} from "react-icons/fa6";
 import {PuffLoader} from "react-spinners";
 
@@ -82,6 +82,11 @@ function Files(props) {
                                     <RoundButton leftGraphic={<FaDebian/>} text="Debian"
                                                  link={asset.browser_download_url}/>
                                 )
+                            } else if (asset.name.endsWith(".dmg")) {
+                                return (
+                                    <RoundButton leftGraphic={<FaApple/>} text="Debian"
+                                                 link={asset.browser_download_url}/>
+                                )
                             }
                         })
                     }
@@ -105,7 +110,7 @@ function Files(props) {
             return (
                 [
                     <div className="title">Download</div>,
-                    <div className="error-subtitle">Can't fetch files</div>
+                    <div>The files are temporarily unavailable, access them directly from GitHub</div>
                 ]
             )
         } else {
