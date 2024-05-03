@@ -3,56 +3,67 @@ import {Octokit} from "octokit";
 import {useQuery} from "react-query";
 import RoundButton from "../buttons/round-button";
 import {SiArchlinux, SiChocolatey, SiDebian, SiFedora, SiFlathub} from "react-icons/si";
-import {FaFileArchive, FaGithub, FaWindows} from "react-icons/fa";
+import {FaApple, FaFileArchive, FaGithub, FaWindows} from "react-icons/fa";
 import {FaDebian} from "react-icons/fa6";
 import {PuffLoader} from "react-spinners";
 
 function fetchAssets(project) {
     const octokit = new Octokit();
+
     return octokit.request("GET /repos/" + project.githubIdentifier + "/releases/latest")
-        .then(response => response.data.id)
-        .then(assetsID => octokit.request("GET /repos/" + project.githubIdentifier + "/releases/{assetsURL}/assets", {assetsURL: assetsID}))
+        .then(response => response.data.id, () => null)
+        .then(assetsID => {
+            if (assetsID != null) return octokit.request("GET /repos/" + project.githubIdentifier + "/releases/{assetsURL}/assets", {assetsURL: assetsID})
+            else return {data: {}};
+        })
 }
 
-function Downloads(props) {
-    const {data: response, isLoading, isError} = useQuery('data', () => fetchAssets(props.project))
+function Repositories(props) {
+    if (props.project.repositories.length > 0) {
+        return [
+            <div className="title">Install</div>,
+            <div className="buttons">
+                {
+                    props.project.repositories.map(url => {
+                        const link = url.toLowerCase();
 
-    function Repositories() {
-        if (props.project.repositories.length > 0) {
-            return [
-                <div className="title">Install</div>,
-                <div className="buttons">
-                    {
-                        props.project.repositories.map(url => {
-                            const link = url.toLowerCase();
-
-                            if (link.includes("chocolatey")) {
-                                return (<RoundButton leftGraphic={<SiChocolatey/>} text="Chocolatey"
-                                                     link={link}/>)
-                            } else if (link.includes("flathub")) {
-                                return (<RoundButton leftGraphic={<SiFlathub/>} text="FlatPak"
-                                                     link={link}/>)
-                            } else if (link.includes("copr")) {
-                                return (<RoundButton leftGraphic={<SiFedora/>} text="Fedora"
-                                                     link={link}/>)
-                            } else if (link.includes("aur")) {
-                                return (<RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
-                                                     link={link}/>)
-                            } else if (link.includes("apt")) {
-                                return (<RoundButton leftGraphic={<SiDebian/>} text="Debian"
-                                                     link={link}/>)
-                            }
-                        })
-                    }
-                </div>
-            ]
-        }
+                        if (link.includes("chocolatey")) {
+                            return (<RoundButton leftGraphic={<SiChocolatey/>} text="Chocolatey"
+                                                 link={link}/>)
+                        } else if (link.includes("flathub")) {
+                            return (<RoundButton leftGraphic={<SiFlathub/>} text="FlatPak"
+                                                 link={link}/>)
+                        } else if (link.includes("copr")) {
+                            return (<RoundButton leftGraphic={<SiFedora/>} text="Fedora"
+                                                 link={link}/>)
+                        } else if (link.includes("aur")) {
+                            return (<RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
+                                                 link={link}/>)
+                        } else if (link.includes("apt")) {
+                            return (<RoundButton leftGraphic={<SiDebian/>} text="Debian"
+                                                 link={link}/>)
+                        }
+                    })
+                }
+            </div>
+        ]
     }
+}
 
-    function Files() {
-        if (response.data.length > 0) {
-            return [
-                <div className="title">Download</div>,
+function Files(props) {
+    const {
+        data: response,
+        isLoading,
+        isError
+    } = useQuery({
+        queryKey: 'data',
+        queryFn: () => fetchAssets(props.project),
+        keepPreviousData: true
+    })
+
+    function FilesButtons(props) {
+        if (props.data.length > 0) {
+            return (
                 <div className="buttons">
                     {
                         response.data.map(asset => {
@@ -71,39 +82,42 @@ function Downloads(props) {
                                     <RoundButton leftGraphic={<FaDebian/>} text="Debian"
                                                  link={asset.browser_download_url}/>
                                 )
+                            } else if (asset.name.endsWith(".dmg")) {
+                                return (
+                                    <RoundButton leftGraphic={<FaApple/>} text="Debian"
+                                                 link={asset.browser_download_url}/>
+                                )
                             }
                         })
                     }
                 </div>
-            ]
-        }
-    }
-
-    if (isLoading) {
-        return (
-            <div className="downloads">
-                <PuffLoader color="#ffffff"/>
-            </div>
-        )
-    } else {
-        if (isError) {
-            return (
-                <div className="downloads">
-                    <div className="title">Error :(</div>
-                </div>
             )
         } else {
             return (
-                <div className="downloads">
-                    <Repositories/>
-                    <Files/>
-                    <div className="title">Source Code</div>
-                    <div className="buttons">
-                        <RoundButton leftGraphic={<FaGithub/>} text="GitHub"
-                                     link={"https://github.com/" + props.project.githubIdentifier + "/"}/>
-                    </div>
-                </div>
+                <div>No file currently available for this project</div>
             )
+        }
+    }
+
+
+    if (isLoading) {
+        return [
+            <div className="title">Download</div>,
+            <PuffLoader color="#ffffff"/>
+        ]
+    } else {
+        if (isError) {
+            return (
+                [
+                    <div className="title">Download</div>,
+                    <div>The files are temporarily unavailable, access them directly from GitHub</div>
+                ]
+            )
+        } else {
+            return [
+                <div className="title">Download</div>,
+                <FilesButtons data={response.data}/>
+            ]
         }
     }
 }
@@ -111,7 +125,15 @@ function Downloads(props) {
 export default function HeaderProjectCard(props) {
     return (
         <div id="header-card" className="header-project-card">
-            <Downloads project={props.project}/>
+            <div className="downloads">
+                <Repositories project={props.project}/>
+                <Files project={props.project}/>
+                <div className="title">Source Code</div>
+                <div className="buttons">
+                    <RoundButton leftGraphic={<FaGithub/>} text="GitHub"
+                                 link={"https://github.com/" + props.project.githubIdentifier + "/"}/>
+                </div>
+            </div>
             <div className="contributors">
                 <div className="title">Contributors</div>
                 {props.project.getContributorCards()}

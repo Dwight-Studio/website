@@ -5,21 +5,16 @@ import TitleHeader from "../elements/header/title-header";
 import "./project.css"
 import {Helmet} from "react-helmet";
 import {FaExclamationTriangle} from "react-icons/fa";
+import {Page, PageContent, Section} from "../elements/base";
 
 export default function Project(props) {
     return (
-        <div className="page-wrapper">
-            <Helmet>
-                <title>{props.project.projectName + ": " + props.project.shortDescription} - Dwight Studio: Developer
-                    Collective</title>
-                <meta name="description" content={props.project.shortDescription}/>
-            </Helmet>
-
+        <Page selected="projects" title={props.project.projectName} description={props.project.shortDescription}>
             <TitleHeader logo={props.project.logo} background={props.project.titleBackground}/>
+
             <Header selected={"projects"}/>
 
-            <div className="content-wrapper">
-
+            <PageContent>
                 {props.project.outdated ? <div>
                     <div className="outdated-message">
                         <FaExclamationTriangle/>
@@ -30,14 +25,12 @@ export default function Project(props) {
                     </div>
                 </div> : <div/>}
 
-                <div className="section">
+                <Section>
                     {props.project.getHeaderCard()}
-                </div>
+                </Section>
 
                 {props.project.pageContent.props.children}
-            </div>
-
-            <Footer/>
-        </div>
+            </PageContent>
+        </Page>
     )
 }

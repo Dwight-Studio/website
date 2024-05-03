@@ -17,6 +17,7 @@ export default function Sitemap() {
         "/projects",
         "/members",
         "/about-us",
+        "/legal",
         ...getAllMembers().map(member => member.getMemberURL()),
         ...getAllProjects().map(member => member.getProjectURL())
     )

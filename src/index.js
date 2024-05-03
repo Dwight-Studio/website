@@ -14,6 +14,7 @@ import Project from "./pages/project";
 import Sitemap from "./pages/sitemap";
 import {Helmet} from "react-helmet";
 import {QueryClient, QueryClientProvider} from "react-query";
+import Legal from "./pages/legal";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,17 +23,13 @@ const queryClient = new QueryClient()
 root.render(
     <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-            <Helmet>
-                <title>Dwight Studio: Developer Collective</title>
-                <meta name="description" content="Dwight Studio is a developer collective composed of computer science students, friends,
-                            who collaborate to offer free, open source software."/>
-            </Helmet>
             <Routes>
                 {/* Main pages */}
                 <Route exact path='/' element={<Home/>}/>
                 <Route exact path='/projects' element={<Projects/>}/>
                 <Route exact path='/members' element={<Members/>}/>
                 <Route exact path='/about-us' element={<AboutUs/>}/>
+                <Route exact path='/legal' element={<Legal/>}/>
 
                 {/* Member pages */}
                 {getAllMembers().map(member => <Route exact path={member.getMemberURL()}
