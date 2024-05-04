@@ -9,8 +9,8 @@ export default function GamerMine() {
         "Maxime",
         "Savary",
         "Student at IUT of Le Havre",
-        "Currently in work-study at Capgemini, I worked and still works on various projects. I am open to " +
-        "every type of projects and still wants to improve my experiences and skills.",
+        "Currently in work-study at Capgemini, I worked and still work on various projects. I am open " +
+        "to every type of projects and still want to improve my experiences and skills.",
         [
             "https://github.com/GamerMine",
             "https://www.youtube.com/channel/UCjtjzedWxrnQwRkdSRVccUg",
