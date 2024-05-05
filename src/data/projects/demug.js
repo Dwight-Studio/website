@@ -1,5 +1,5 @@
 import {Project} from "../project";
-import video from "../../medias/demug.webm"
+import video from "../../medias/demug/video.webm"
 import GamerMine from "../members/gamermine";
 import {Contributor} from "../member";
 import "./demug.css"
