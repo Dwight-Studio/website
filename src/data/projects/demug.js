@@ -2,8 +2,8 @@ import {Project} from "../project";
 import video from "../../medias/demug.webm"
 import GamerMine from "../members/gamermine";
 import {Contributor} from "../member";
-import RoundButton from "../../elements/buttons/round-button";
 import "./demug.css"
+import {AccentedSection, Subtitle, Title} from "../../elements/base";
 
 export default function DeMuG() {
     return new Project(
@@ -20,9 +20,10 @@ export default function DeMuG() {
             <div>
                 <AccentedSection>
                     <Title>A Cross platform GameBoy emulator written in C++</Title>
-                    <Subtitle>DeMug is a GameBoy emulator, allowing you to play your favorite GameBoy games on all platforms.</Subtitle>
+                    <Subtitle>DeMug is a GameBoy emulator, allowing you to play your favorite GameBoy games on all
+                        platforms.</Subtitle>
                 </AccentedSection>
             </div>
         )
-    )
+    );
 }
