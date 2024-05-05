@@ -1,16 +1,17 @@
 import {Project} from "../project";
-import logo from "../../medias/dpt-logo.png"
-import video from "../../medias/dpt.mp4"
-import banner from "../../medias/dpt-banner.jpeg"
+import logo from "../../medias/dpt/logo.png"
+import video from "../../medias/dpt/video.mp4"
+import banner from "../../medias/dpt/banner.jpeg"
 import GamerMine from "../members/gamermine";
 import Deleranax from "../members/deleranax";
 import Yinx from "../members/yinx";
 import {Contributor} from "../member";
-import editor from "../../medias/index_editor_DPT.jpg";
-import save from "../../medias/index_save_DPT.jpg";
-import play from "../../medias/index_play_DPT.jpg";
+import editor from "../../medias/dpt/editor.jpg";
+import save from "../../medias/dpt/save.jpg";
+import play from "../../medias/dpt/play.jpg";
 import RoundButton from "../../elements/buttons/round-button";
 import "./dont-play-together.css"
+import {AccentedSection, Center, Image, Justified, Section, Title} from "../../elements/base";
 
 export default function DontPlayTogether() {
     return new Project(
@@ -24,42 +25,50 @@ export default function DontPlayTogether() {
         "Dwight-Studio/DPT-Client",
         [],
         (<div>
-                <div className="accented-section justified">
-                    <h1>Discover Don't Play Together</h1>
-                    <p>Don't Play Together is a vote-based interactive game in which you have to complete various
-                        platform
-                        level while tackling the obstacles that other players put in your way. It's free, open-source
-                        and
-                        made using the Pygame library on Python. The game was developed in 2.5 months, back in 2020.</p>
-                </div>
-                <div className="section">
-                    <img className="image" src={editor} alt="DPT Editor"/>
-                    <h1>Create your own levels!</h1>
+                <AccentedSection>
+                    <Title>Discover Don't Play Together</Title>
+                    <Justified>
+                        <p>Don't Play Together is a vote-based interactive game in which you have to complete various
+                            platform
+                            level while tackling the obstacles that other players put in your way. It's free,
+                            open-source
+                            and
+                            made using the Pygame library on Python. The game was developed in 2.5 months, back in
+                            2020.</p>
+                    </Justified>
+                </AccentedSection>
+                <Section>
+                    <Image src={editor} alt="DPT Editor"/>
+                    <Title>Create your own levels!</Title>
                     <p>With our built-in editor, you can create an infinite number of custom levels!</p>
-                </div>
-                <div className="accented-section">
-                    <img className="image" src={save} alt="DPT Editor saving"/>
-                    <h1>Save your creations!</h1>
+                </Section>
+                <AccentedSection>
+                    <Image src={save} alt="DPT Editor saving"/>
+                    <Title>Save your creations!</Title>
                     <p>Once you've edited your level, you can save it using the shortcut CTRL+S, so you can play it
                         again
                         and again, or edit it over and over again...</p>
-                </div>
-                <div className="section justified">
-                    <img className="image" src={play} alt="DPT Level playing"/>
-                    <h1>Play now!</h1>
-                    <p>The rules of the game are simple: get to the flag at the end of the level before the set time
-                        without
-                        dying. However, players can vote between 2 choices to prevent you from winning the game so
-                        quickly.
-                        You only have 2 life points, so be careful! </p>
-                    <p>The game is limitless: you can create your own addons to add content to the game! You can also
-                        create
-                        your own levels with ease, thanks to the easy-to-use level editor! </p>
-                    <p>Please note that the game is still in development, so bugs and crashes are to be expected! If
-                        this
-                        happens, please let us know on the Dwight Studio Discord.</p>
-                    <div className="center"><RoundButton text="Download" link="#header-card"/></div>
-                </div>
+                </AccentedSection>
+                <Section>
+                    <Image src={play} alt="DPT Level playing"/>
+                    <Title>Play now!</Title>
+                    <Justified>
+                        <p>The rules of the game are simple: get to the flag at the end of the level before the set time
+                            without
+                            dying. However, players can vote between 2 choices to prevent you from winning the game so
+                            quickly.
+                            You only have 2 life points, so be careful! </p>
+                        <p>The game is limitless: you can create your own addons to add content to the game! You can also
+                            create
+                            your own levels with ease, thanks to the easy-to-use level editor! </p>
+                        <p>Please note that the game is still in development, so bugs and crashes are to be expected! If
+                            this
+                            happens, please let us know on the Dwight Studio Discord.</p>
+                    </Justified>
+                    <Center>
+                        <RoundButton text="Download" link="#header-card"/>
+                    </Center>
+                </Section>
             </div>
         )
     )

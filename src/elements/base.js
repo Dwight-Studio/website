@@ -2,6 +2,7 @@ import "./base.css"
 import Footer from "./footer/footer";
 import React from "react";
 import {Helmet} from "react-helmet";
+import editor from "../medias/jarmemu/editor.png";
 
 export function Page(props) {
     return (
@@ -70,5 +71,33 @@ export function Justified(props) {
 export function Center(props) {
     return (
         <p className="center">{props.children}</p>
+    )
+}
+
+export function Image(props) {
+    if (props.children == null) {
+        return (
+            <div className="image-wrapper">
+                <img src={props.src} alt={props.alt} className="image"/>
+            </div>
+        )
+    }
+    return (
+        <div className="image-wrapper">
+            <img src={props.src} alt={props.alt} className="image"/>
+            <div className="cover">
+                {props.children}
+            </div>
+        </div>
+    )
+}
+
+export function CenteredCover(props) {
+    return (
+        <div className="centered-cover">
+            <Center>
+                {props.children}
+            </Center>
+        </div>
     )
 }

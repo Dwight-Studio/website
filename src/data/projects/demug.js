@@ -18,10 +18,10 @@ export default function DeMuG() {
         [],
         (
             <div>
-                <div className="accented-section">
-                    <h1>A Cross platform GameBoy emulator written in C++</h1>
-                    <h2>DeMug is a GameBoy emulator, allowing you to play your favorite GameBoy games on all platforms.</h2>
-                </div>
+                <AccentedSection>
+                    <Title>A Cross platform GameBoy emulator written in C++</Title>
+                    <Subtitle>DeMug is a GameBoy emulator, allowing you to play your favorite GameBoy games on all platforms.</Subtitle>
+                </AccentedSection>
             </div>
         )
     )

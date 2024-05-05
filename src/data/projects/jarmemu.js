@@ -1,5 +1,5 @@
 import {Project} from "../project";
-import video from "../../medias/jarmemu-video.webm"
+import video from "../../medias/jarmemu/video.webm"
 import Deleranax from "../members/deleranax";
 import Yinx from "../members/yinx";
 import {Contributor} from "../member";
@@ -9,9 +9,8 @@ import {TbCodeAsterix, TbWaveSawTool} from "react-icons/tb";
 import {PiHandsClappingFill} from "react-icons/pi";
 import {BsFillMenuButtonWideFill} from "react-icons/bs";
 import {MdMemory} from "react-icons/md";
-import top from "../../medias/jarmemu-top.png"
-import bottom from "../../medias/jarmemu-bottom.png"
-import {AccentedSection, Center, Section, Subtitle, Title} from "../../elements/base";
+import editor from "../../medias/jarmemu/editor.png"
+import {AccentedSection, Center, CenteredCover, Image, Justified, Section, Subtitle, Title} from "../../elements/base";
 
 export default function JArmEmu() {
     return new Project(
@@ -34,23 +33,21 @@ export default function JArmEmu() {
                 <AccentedSection>
                     <Title>A Simple ARMv7 simulator written in Java, intended for educational purpose</Title>
                     <Subtitle>JArmEmu is a simple simulator with a graphical interface that offers basic control and
-                        information
-                        about a simulated ARMv7 architecture.</Subtitle>
+                        information about a simulated ARMv7 architecture.</Subtitle>
+                    <br/>
                     <div className="features-grid">
                         <div className="card">
                             <TbWaveSawTool size={100}/>
-                            <div className="title">Smart Interpreter</div>
+                            <div className="title">Custom Interpreter</div>
                             <div className="description">Powered by an ARMv7 custom interpreter, with manual and
-                                automatic
-                                breakpoint system
+                                automatic breakpoint system
                             </div>
                         </div>
                         <div className="card">
                             <PiHandsClappingFill size={100}/>
                             <div className="title">User Friendly</div>
                             <div className="description">Designed for performance and ease of use, with extensive
-                                execution
-                                details
+                                execution details
                             </div>
                         </div>
                         <div className="card">
@@ -62,9 +59,9 @@ export default function JArmEmu() {
                         </div>
                         <div className="card">
                             <TbCodeAsterix size={100}/>
-                            <div className="title">Syntax Highlighting</div>
-                            <div className="description">Includes a code highlighting system for better code
-                                intelligibility
+                            <div className="title">Smart Editor</div>
+                            <div className="description">Includes a code highlighting system with contextual
+                                auto-completion features
                             </div>
                         </div>
                         <div className="card">
@@ -90,18 +87,18 @@ export default function JArmEmu() {
                     </div>
                 </AccentedSection>
                 <Section>
-                    <img src={top} alt="JArmEmu Editor" className="image"/>
-                    <Title>Learn by doing</Title>
-                    <p>With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and testing your
-                        code directly in the software. JArmEmu only features a portion of the available instructions.
-                        You
-                        can consult the list of implemented instructions on GitHub.</p>
-                    <Center>
-                        <RoundButton text="See instructions"
-                                     link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
-                        <RoundButton text="Download" link="#header-card"/>
-                    </Center>
-                    <img src={bottom} alt="JArmEmu Editor" className="image"/>
+                    <Image src={editor} alt="JArmEmu Editor">
+                        <CenteredCover>
+                            <Title>Learn by doing</Title>
+                            <Center>
+                                With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and
+                                testing your code directly in the software.
+                            </Center>
+                            <RoundButton text="See instructions"
+                                         link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
+                            <RoundButton text="Download" link="#header-card"/>
+                        </CenteredCover>
+                    </Image>
                 </Section>
             </div>
         )
