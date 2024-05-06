@@ -88,6 +88,11 @@
     z-index: 50;
 }
 
+.features-grid .card:hover ::selection {
+    background-color: var(--normal-black);
+    color: var(--normal-white);
+}
+
 .features-grid #logo-card:hover {
     background-image: url("https://static.dwightstudio.fr/jarmemu/SPLASH_BACKGROUND.svg");
     background-size: cover;
