@@ -101,3 +101,21 @@ export function CenteredCover(props) {
         </div>
     )
 }
+
+export function Video(props) {
+    if (props.children == null) {
+        return (
+            <div className="image-wrapper">
+                <video src={props.src} autoPlay loop muted className="image"/>
+            </div>
+        )
+    }
+    return (
+        <div className="image-wrapper">
+            <video src={props.src} autoPlay loop muted className="image"/>
+            <div className="cover">
+                {props.children}
+            </div>
+        </div>
+    )
+}

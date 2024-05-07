@@ -1,5 +1,6 @@
 import {Project} from "../project";
 import video from "../../medias/jarmemu/video.webm"
+import autocompletionVideo from "../../medias/jarmemu/autocompletion.webm"
 import Deleranax from "../members/deleranax";
 import Yinx from "../members/yinx";
 import {Contributor} from "../member";
@@ -10,7 +11,17 @@ import {PiHandsClappingFill} from "react-icons/pi";
 import {BsFillMenuButtonWideFill} from "react-icons/bs";
 import {MdMemory} from "react-icons/md";
 import editor from "../../medias/jarmemu/editor.png"
-import {AccentedSection, Center, CenteredCover, Image, Justified, Section, Subtitle, Title} from "../../elements/base";
+import {
+    AccentedSection,
+    Center,
+    CenteredCover,
+    Image,
+    Justified,
+    Section,
+    Subtitle,
+    Title,
+    Video
+} from "../../elements/base";
 
 export default function JArmEmu() {
     return new Project(
@@ -100,6 +111,17 @@ export default function JArmEmu() {
                         </CenteredCover>
                     </Image>
                 </Section>
+                <AccentedSection>
+                    <Video src={autocompletionVideo}>
+                        <CenteredCover>
+                            <Title>Context aware</Title>
+                            <Center>
+                                JArmEmu has a context-aware auto-completion and dynamic highlighting system that helps
+                                you to write syntactically correct code efficiently
+                            </Center>
+                        </CenteredCover>
+                    </Video>
+                </AccentedSection>
             </div>
         )
     )

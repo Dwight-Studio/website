@@ -1,6 +1,6 @@
 import {Project} from "../project";
 import logo from "../../medias/dpt/logo.png"
-import video from "../../medias/dpt/video.mp4"
+import video from "../../medias/dpt/video.webm"
 import banner from "../../medias/dpt/banner.jpeg"
 import GamerMine from "../members/gamermine";
 import Deleranax from "../members/deleranax";
