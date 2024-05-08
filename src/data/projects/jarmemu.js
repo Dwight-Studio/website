@@ -16,7 +16,6 @@ import {
     Center,
     CenteredCover,
     Image,
-    Justified,
     Section,
     Subtitle,
     Title,
@@ -98,19 +97,6 @@ export default function JArmEmu() {
                     </div>
                 </AccentedSection>
                 <Section>
-                    <Image src={editor} alt="JArmEmu Editor">
-                        <CenteredCover>
-                            <Title>Learn by doing</Title>
-                            <Center>
-                                With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and
-                                testing your code directly in the software.
-                            </Center>
-                            <RoundButton text="See instructions"
-                                         link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
-                        </CenteredCover>
-                    </Image>
-                </Section>
-                <AccentedSection>
                     <Video src={autocompletionVideo} align="left">
                         <CenteredCover>
                             <Title>Context aware editor</Title>
@@ -120,7 +106,31 @@ export default function JArmEmu() {
                             </Center>
                         </CenteredCover>
                     </Video>
-                </AccentedSection>
+                </Section>
+                <Section>
+                    <Video src={video} align="left">
+                        <CenteredCover>
+                            <Title>Extensive execution details</Title>
+                            <Center>
+                                Follow all the details of the execution, with altered values highlighting along with
+                                stack and memory monitoring
+                            </Center>
+                        </CenteredCover>
+                    </Video>
+                </Section>
+                <Section>
+                    <Image src={editor} alt="JArmEmu Editor">
+                        <CenteredCover>
+                            <Title>Learn by doing</Title>
+                            <Center>
+                                With JArmEmu, you can discover and learn the basics of ARMv7 Assembly by writing and
+                                testing your code directly in the software
+                            </Center>
+                            <RoundButton text="See instructions"
+                                         link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
+                        </CenteredCover>
+                    </Image>
+                </Section>
             </div>
         )
     )
