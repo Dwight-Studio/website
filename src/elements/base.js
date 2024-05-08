@@ -78,13 +78,13 @@ export function Image(props) {
     if (props.children == null) {
         return (
             <div className="image-wrapper">
-                <img src={props.src} alt={props.alt} className="image"/>
+                <img src={props.src} alt={props.alt} className={"image" + (props.align != null ? " " + props.align : "")}/>
             </div>
         )
     }
     return (
         <div className="image-wrapper">
-            <img src={props.src} alt={props.alt} className="image"/>
+            <img src={props.src} alt={props.alt} className={"image" + (props.align != null ? " " + props.align : "")}/>
             <div className="cover">
                 {props.children}
             </div>
@@ -103,16 +103,17 @@ export function CenteredCover(props) {
 }
 
 export function Video(props) {
+
     if (props.children == null) {
         return (
             <div className="image-wrapper">
-                <video src={props.src} autoPlay loop muted className="image"/>
+                <video src={props.src} autoPlay loop muted className={"image" + (props.align != null ? " " + props.align : "")}/>
             </div>
         )
     }
     return (
         <div className="image-wrapper">
-            <video src={props.src} autoPlay loop muted className="image"/>
+            <video src={props.src} autoPlay loop muted className={"image" + (props.align != null ? " " + props.align : "")}/>
             <div className="cover">
                 {props.children}
             </div>

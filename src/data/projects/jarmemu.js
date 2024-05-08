@@ -107,14 +107,13 @@ export default function JArmEmu() {
                             </Center>
                             <RoundButton text="See instructions"
                                          link="https://github.com/Dwight-Studio/JArmEmu/blob/main/Instructions.md"/>
-                            <RoundButton text="Download" link="#header-card"/>
                         </CenteredCover>
                     </Image>
                 </Section>
                 <AccentedSection>
-                    <Video src={autocompletionVideo}>
+                    <Video src={autocompletionVideo} align="left">
                         <CenteredCover>
-                            <Title>Context aware</Title>
+                            <Title>Context aware editor</Title>
                             <Center>
                                 JArmEmu has a context-aware auto-completion and dynamic highlighting system that helps
                                 you to write syntactically correct code efficiently

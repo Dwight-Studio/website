@@ -105,4 +105,12 @@
     .content-wrapper .centered-cover > .center  {
         width: 80%;
     }
+
+    .content-wrapper .image-wrapper .image.right {
+        object-position: right;
+    }
+
+    .content-wrapper .image-wrapper .image.left {
+        object-position: left;
+    }
 }
