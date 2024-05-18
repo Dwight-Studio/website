@@ -39,7 +39,7 @@ function Repositories(props) {
                         } else if (link.includes("aur")) {
                             return (<RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
                                                  link={url}/>)
-                        } else if (link.includes("apt")) {
+                        } else if (link.includes("deb")) {
                             return (<RoundButton leftGraphic={<SiDebian/>} text="Debian"
                                                  link={url}/>)
                         }
