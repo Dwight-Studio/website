@@ -17,6 +17,7 @@
 
                     .subtitle { font-size: 2em; margin-bottom: 20px; text-align: center }
                     .block { padding: 20px; display: flex; flex-direction: column; background-color: rgba(255, 255, 255, 0.5); border-radius: 10px; }
+                    .code-line::before { content: "$ " }
 
                     #code-wrapper { display: flex; flex-direction: column; margin-bottom: 40px; }
                     #code { color: #155C79; font-family: source-code-pro, monospace; font-size: 1.3vw; }
@@ -129,7 +130,7 @@
                     <div class="subtitle">Installation</div>
                     <div id="code-wrapper">
                         <div id="code" class="block">
-                            <div>$ sudo wget -O - https://deb.dwightstudio.fr/install-repository.sh | sudo bash</div>
+                            <div class="code-line">sudo wget -O - https://deb.dwightstudio.fr/install-repository.sh | sudo bash</div>
                             <div id="install"></div>
                         </div>
                         <div id="comment">Enter this command in your favorite shell to install it.</div>
@@ -185,7 +186,10 @@
                     const urlParams = new URLSearchParams(queryString);
                     const install = urlParams.get('install');
 
-                    if (install != null) document.getElementById("install").innerHTML = "$ sudo apt update &amp;&amp; sudo apt install " + install;
+                    if (install != null) {
+                        document.getElementById("install").innerHTML = "sudo apt update &amp;&amp; sudo apt install " + install;
+                    document.getElementById("install").classList.add('code-line');
+                    }
                 </script>
             </body>
         </html>
