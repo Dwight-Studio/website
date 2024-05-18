@@ -130,7 +130,7 @@
                     <div class="subtitle">Installation</div>
                     <div id="code-wrapper">
                         <div id="code" class="block">
-                            <div class="code-line">sudo wget -O - https://deb.dwightstudio.fr/install-repository.sh | sudo bash</div>
+                            <div class="code-line">sudo wget -q -O - https://deb.dwightstudio.fr/install-repository.sh | sudo bash</div>
                             <div id="install"></div>
                         </div>
                         <div id="comment">Enter this command in your favorite shell to install it.</div>
