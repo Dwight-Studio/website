@@ -19,7 +19,7 @@
                     .block { padding: 20px; display: flex; flex-direction: column; background-color: rgba(255, 255, 255, 0.5); border-radius: 10px; }
 
                     #code-wrapper { display: flex; flex-direction: column; margin-bottom: 40px; }
-                    #code { color: #155C79 font-family: source-code-pro, monospace; font-size: 1.5vw; }
+                    #code { color: #155C79; font-family: source-code-pro, monospace; font-size: 1.3vw; }
                     #comment { font-size: 1vw; font-style: italic; align-self: end; text-align: left; }
 
                     /* Originated from Nginx-Autoindex, Copyright (c) 2019 Kuba Pilecki (MIT License) */

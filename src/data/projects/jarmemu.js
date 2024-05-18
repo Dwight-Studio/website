@@ -37,7 +37,7 @@ export default function JArmEmu() {
             "https://flathub.org/fr/apps/fr.dwightstudio.JArmEmu",
             "https://copr.fedorainfracloud.org/coprs/dwight-studio/JArmEmu/",
             "https://aur.archlinux.org/packages/jarmemu",
-            "https://deb.dwightstudio.fr/?=jarmemu"
+            "https://deb.dwightstudio.fr/?install=jarmemu"
         ],
         (
             <div>
