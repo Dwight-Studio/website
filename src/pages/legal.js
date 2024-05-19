@@ -48,6 +48,9 @@ export default function Legal(props) {
                         Register under number 537 407 926, with its registered office at 2, rue Kellermann, 59100
                         Roubaix.
                     </p>
+                    <p>
+                        This site does not use cookies and does not collect any personal data.
+                    </p>
                 </AccentedSection>
             </PageContent>
         </Page>
