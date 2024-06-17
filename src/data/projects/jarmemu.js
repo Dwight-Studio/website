@@ -33,7 +33,7 @@ export default function JArmEmu() {
         [new Contributor(Deleranax(), "UX/UI designer"), new Contributor(Yinx(), "Backend developer")],
         "Dwight-Studio/JArmEmu",
         [
-            "https://community.chocolatey.org/packages/fr.dwightstudio.JArmEmu/",
+            "https://community.chocolatey.org/packages/JArmEmu",
             "https://flathub.org/fr/apps/fr.dwightstudio.JArmEmu",
             "https://copr.fedorainfracloud.org/coprs/dwight-studio/JArmEmu/",
             "https://aur.archlinux.org/packages/jarmemu",
