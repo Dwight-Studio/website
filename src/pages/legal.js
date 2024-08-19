@@ -51,6 +51,7 @@ export default function Legal(props) {
                     <p>
                         This site does not use cookies and does not collect any personal data.
                     </p>
+                    {/* Ajouter le certificat green web fondation */}
                 </AccentedSection>
             </PageContent>
         </Page>
