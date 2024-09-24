@@ -4,19 +4,13 @@ import Header from "@/lib/elements/header/header";
 import {AccentedSection, Center, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 import {getAllMembers} from "@/lib/data/member";
 import RoundButton from "@/lib/elements/buttons/round-button";
+import {getAllProjects} from "@/lib/data/project";
 
-export default function IndexPage(
-    {
-        params
-    } : {
-        params: {
-            lang: string
-        }
-    }) {
+export default function IndexPage({params: {lang}} : {params: {lang: string}}) {
     return (
         <>
             <TitleHeader logo={"https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"}/>
-            <Header/>
+            <Header lang={lang}/>
             <PageContent>
                 <Section>
                     <h1>Our Projects</h1>
@@ -25,7 +19,7 @@ export default function IndexPage(
                         Minecraft mods.
                     </p>
                     <div className="center">
-                        <RoundButton text={"Discover all our projects"} link={"/projects"}/>
+                        <RoundButton text={"Discover all our projects"} link={"/" + lang + "/projects"}/>
                     </div>
                 </Section>
                 <AccentedSection>
@@ -38,7 +32,7 @@ export default function IndexPage(
                         flexWrap: "wrap",
                         margin: "30px 0"
                     }}>
-                        {getAllMembers().map(member => member.getTinyCard())}
+                        {getAllMembers().map(member => member.getTinyCard(lang))}
                     </div>
                 </AccentedSection>
                 <Section>
@@ -49,7 +43,7 @@ export default function IndexPage(
                         who collaborate to offer free, open source software.
                     </p>
                     <Center>
-                        <RoundButton text={"Learn more about us"} link={"/about-us"}/>
+                        <RoundButton text={"Learn more about us"} link={"/" + lang + "/about-us"}/>
                     </Center>
                 </Section>
             </PageContent>

@@ -42,25 +42,25 @@ export class Member {
         return "/members/" + this.pseudo
     }
 
-    getTinyCard() {
-        return (<TinyMemberCard member={this} key={this.pseudo}/>)
+    getTinyCard(lang: string) {
+        return (<TinyMemberCard member={this} lang={lang} key={this.pseudo}/>)
     }
 
-    getLargeCard() {
-        return (<LargeMemberCard member={this} key={this.pseudo}/>)
+    getLargeCard(lang: string) {
+        return (<LargeMemberCard member={this} lang={lang}/>)
     }
 
-    getHeaderCard() {
-        return (<HeaderMemberCard member={this} key={this.pseudo}/>)
+    getHeaderCard(lang: string) {
+        return (<HeaderMemberCard member={this} lang={lang}/>)
     }
 
     getMemberProjects() {
         return getAllProjects().filter(project => project.isContributor(this));
     }
 
-    getProjectsCarousel() {
+    getProjectsCarousel(lang: string) {
         return (
-            <ProjectCardCarousel projects={this.getMemberProjects()}/>
+            <ProjectCardCarousel projects={this.getMemberProjects()} lang={lang}/>
         )
     }
 

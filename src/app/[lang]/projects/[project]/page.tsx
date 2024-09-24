@@ -6,56 +6,49 @@ import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 import {PageContent, Section} from "@/lib/elements/base";
 import {getAllProjects, getProject, Project, ProjectFlag} from "@/lib/data/project";
 import {Metadata} from "next";
+import {notFound} from "next/navigation";
 
-export default function ProjectPage(
-    {
-        params: {
-            lang,
-            project
-        }
-    } : {
-        params: {
-            lang: string,
-            project: string
-        }
-    }) {
+export default function ProjectPage({params: {lang, project}} : {params: {lang: string, project: string}}) {
     let flag;
     let projectInstance = getProject(project);
 
-    switch (projectInstance.flag) {
-        case ProjectFlag.OUTDATED:
-            flag = (
-                <div className="flag-message outdated">
-                    <FaExclamationTriangle/>
-                    <div>
-                        This project is outdated and unlikely to be updated again. It may not work as expected or
-                        may contain out-of-date information.
+    if (projectInstance) {
+
+        switch (projectInstance.flag) {
+            case ProjectFlag.OUTDATED:
+                flag = (
+                    <div className="flag-message outdated">
+                        <FaExclamationTriangle/>
+                        <div>
+                            This project is outdated and unlikely to be updated again. It may not work as expected or
+                            may contain out-of-date information.
+                        </div>
                     </div>
-                </div>
-            )
-            break;
+                )
+                break;
 
-        case ProjectFlag.PREVIEW:
-            flag = (
-                <div className="flag-message preview">
-                    <FaCode/>
-                    <div>
-                        This project is a preview of a software under development. It should be used with caution as it may be unstable.
+            case ProjectFlag.PREVIEW:
+                flag = (
+                    <div className="flag-message preview">
+                        <FaCode/>
+                        <div>
+                            This project is a preview of a software under development. It should be used with caution as
+                            it may be unstable.
+                        </div>
                     </div>
-                </div>
-            )
-            break;
+                )
+                break;
 
-        default:
-            flag = (
-                <div/>
-            )
-    }
+            default:
+                flag = (
+                    <div/>
+                )
+        }
 
-    return (
+        return (
             <>
                 <TitleHeader logo={projectInstance.logo} background={projectInstance.titleBackground}/>
-                <Header/>
+                <Header lang={lang}/>
                 <PageContent>
                     <div>
                         {flag}
@@ -64,11 +57,14 @@ export default function ProjectPage(
                     {projectInstance.pageContent}
 
                     <Section>
-                        {projectInstance.getFooterCard()}
+                        {projectInstance.getFooterCard(lang)}
                     </Section>
                 </PageContent>
             </>
-    )
+        )
+    } else {
+        return notFound();
+    }
 }
 
 export async function generateMetadata(
@@ -86,12 +82,16 @@ export async function generateMetadata(
 
     let projectInstance = getProject(project);
 
-    return {
-        title: projectInstance.projectName,
-        description: projectInstance.shortDescription
+    if (projectInstance) {
+        return {
+            title: projectInstance.projectName,
+            description: projectInstance.shortDescription
+        }
+    } else {
+        return {}
     }
 }
 
 export async function generateStaticParams() {
-    return getAllProjects().map(project => project.getURLFriendlyName());
+    return getAllProjects().map(project => ({project: project.getURLFriendlyName()}));
 }

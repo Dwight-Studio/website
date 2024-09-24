@@ -2,10 +2,10 @@ import React from "react";
 import Header from "@/lib/elements/header/header";
 import {AccentedSection, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 
-export default function LegalPage() {
+export default function LegalPage({params: {lang}} : {params: {lang: string}}) {
     return (
         <>
-            <Header />
+            <Header lang={lang} />
             <PageContent>
                 <Section>
                     <Title>Legal information</Title>
@@ -49,7 +49,7 @@ export default function LegalPage() {
                     <p>
                         This site does not use cookies and does not collect any personal data.
                     </p>
-                    {/* Ajouter le certificat green web fondation */}
+                    {/* TODO: Ajouter le certificat green web fondation */}
                 </AccentedSection>
             </PageContent>
         </>

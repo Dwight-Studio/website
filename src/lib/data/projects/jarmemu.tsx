@@ -16,7 +16,7 @@ export default function JArmEmu() {
     return new Project(
         "https://static.dwightstudio.fr/jarmemu/LOGO_TEXT.svg",
         "https://static.dwightstudio.fr/jarmemu/SPLASH_BACKGROUND.svg",
-        "/medias/jarmemu/jarmemu.webm",
+        "/medias/jarmemu/video.webm",
         "JArmEmu",
         "Simple ARMv7 simulator written in Java, intended for educational purpose",
         ProjectFlag.NONE,
@@ -99,7 +99,7 @@ export default function JArmEmu() {
                     </Video>
                 </Section>
                 <Section>
-                    <Video src="/medias/jarmemu/jarmemu.webm" align="left">
+                    <Video src="/medias/jarmemu/video.webm" align="left">
                         <CenteredCover>
                             <Title>Extensive execution details</Title>
                             <Center>
@@ -110,7 +110,7 @@ export default function JArmEmu() {
                     </Video>
                 </Section>
                 <Section>
-                    <Image src={editor} alt="JArmEmu Editor">
+                    <Image src="/medias/jarmemu/editor.png" alt="JArmEmu Editor">
                         <CenteredCover>
                             <Title>Learn by doing</Title>
                             <Center>

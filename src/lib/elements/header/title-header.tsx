@@ -1,7 +1,7 @@
 import './title-header.css';
 import React from "react";
 import {FaAngleDown} from "react-icons/fa";
-import {StaticImageData} from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 export default function TitleHeader({logo, background} : {logo: string | StaticImageData, background?: string}) {
     return (

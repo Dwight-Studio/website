@@ -1,7 +1,7 @@
 .round-button {
     display: flex;
-    color: var(--deactivated-light);
-    border-color: var(--deactivated-light);
+    color: var(--normal-white);
+    border-color: var(--normal-white);
     background-color: transparent;
     border-style: solid;
     border-radius: 1000px;
@@ -18,8 +18,7 @@
     font-size: 2rem;
 }
 
-.round-button:hover {
+.round-button:hover, .round-button.focused {
     background-color: var(--normal-white);
-    border-color: var(--normal-white);
     color: var(--accent-black);
 }

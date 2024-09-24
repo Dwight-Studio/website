@@ -33,19 +33,19 @@ function Repositories({project} : {project: Project}) {
 
                         if (link.includes("chocolatey")) {
                             return (<RoundButton leftGraphic={<SiChocolatey/>} text="Chocolatey"
-                                                 link={url}/>)
+                                                 link={url} key={"chocolatey"}/>)
                         } else if (link.includes("flathub")) {
                             return (<RoundButton leftGraphic={<SiFlathub/>} text="FlatPak"
-                                                 link={url}/>)
+                                                 link={url} key={"flathub"}/>)
                         } else if (link.includes("copr")) {
                             return (<RoundButton leftGraphic={<SiFedora/>} text="Fedora"
-                                                 link={url}/>)
+                                                 link={url} key={"copr"}/>)
                         } else if (link.includes("aur")) {
                             return (<RoundButton leftGraphic={<SiArchlinux/>} text="ArchLinux"
-                                                 link={url}/>)
+                                                 link={url} key={"aur"}/>)
                         } else if (link.includes("deb")) {
                             return (<RoundButton leftGraphic={<SiDebian/>} text="Debian"
-                                                 link={url}/>)
+                                                 link={url} key={"deb"}/>)
                         }
                     })
                 }
@@ -108,7 +108,7 @@ function Files({project} : {project: Project}) {
     )
 }
 
-export default function HeaderProjectCard({project} : {project: Project}) {
+export default function HeaderProjectCard({project, lang} : {project: Project, lang: string}) {
     return (
         <div id="header-card" className="header-project-card">
             <div className="downloads">
@@ -122,7 +122,7 @@ export default function HeaderProjectCard({project} : {project: Project}) {
             </div>
             <div className="contributors">
                 <div className="title">Contributors</div>
-                {project.getContributorCards()}
+                {project.getContributorCards(lang)}
             </div>
         </div>
     )

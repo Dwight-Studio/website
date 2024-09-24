@@ -4,10 +4,10 @@ import Header from "@/lib/elements/header/header";
 import {AccentedSection, Center, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 import RoundButton from "@/lib/elements/buttons/round-button";
 
-export default function AboutUsPage() {
+export default function AboutUsPage({params: {lang}} : {params: {lang: string}}) {
     return (
         <>
-            <Header/>
+            <Header lang={lang}/>
             <PageContent>
                 <Section>
                     <Title>Developer Collective</Title>

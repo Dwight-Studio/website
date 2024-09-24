@@ -1,12 +1,13 @@
 import "./large-project-card.css"
 import RoundButton from "@/lib/elements/buttons/round-button";
 import {FaCode, FaExclamationTriangle} from "react-icons/fa";
-import {Project} from "@/lib/data/project";
+import {Project, ProjectFlag} from "@/lib/data/project";
+import Image from "next/image";
 
-export default function LargeProjectCard({project} : {project: Project}) {
+export default function LargeProjectCard({project, lang} : {project: Project, lang: string}) {
     let flag;
     switch (project.flag) {
-        case "outdated":
+        case ProjectFlag.OUTDATED:
             flag = (
                 <div className="warning outdated">
                     <div className="text">OUTDATED</div>
@@ -15,7 +16,7 @@ export default function LargeProjectCard({project} : {project: Project}) {
             )
             break;
 
-        case "preview":
+        case ProjectFlag.PREVIEW:
             flag = (
                 <div className="warning preview">
                     <div className="text">PREVIEW</div>
@@ -31,14 +32,14 @@ export default function LargeProjectCard({project} : {project: Project}) {
     }
 
     return (
-        <div className="large-project-card">
+        <div className="large-project-card" key={project.getURLFriendlyName()}>
             <img className="background" src={project.cardBanner} alt="Project banner"/>
             <div className="logo-wrapper">
                 <img className="logo" src={project.logo} alt="Project logo"/>
                 <div className="short-description">{project.shortDescription}</div>
             </div>
             <div className="button-wrapper">
-                <RoundButton text="Learn more" link={project.getProjectURL()}/>
+                <RoundButton text="Learn more" link={"/" + lang + project.getProjectURL()}/>
             </div>
             {flag}
         </div>

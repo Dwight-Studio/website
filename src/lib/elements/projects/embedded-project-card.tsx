@@ -6,7 +6,7 @@ import React from "react";
 import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 import {Project, ProjectFlag} from "@/lib/data/project";
 
-export default function EmbeddedProjectCard({project, selected}: {project: Project, selected: boolean}) {
+export default function EmbeddedProjectCard({project, selected, lang}: {project: Project, selected: boolean, lang: string}) {
     const cardRef = React.useRef<HTMLDivElement>(null)
 
     function handleClick() {
@@ -54,7 +54,7 @@ export default function EmbeddedProjectCard({project, selected}: {project: Proje
                 <div className="short-description">{project.shortDescription}</div>
             </div>
             <div className="button-wrapper">
-                <RoundButton text="Learn more" link={project.getProjectURL()}/>
+                <RoundButton text="Learn more" link={"/" + lang + project.getProjectURL()}/>
             </div>
             {flag}
         </div>

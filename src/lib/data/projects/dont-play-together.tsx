@@ -1,21 +1,16 @@
 import {Project, ProjectFlag} from "@/lib/data/project";
-import logo from "@/medias/dpt/logo.png"
-import banner from "@/medias/dpt/banner.jpeg"
 import GamerMine from "@/lib/data/members/gamermine";
 import Deleranax from "@/lib/data/members/deleranax";
 import Yinx from "@/lib/data/members/yinx";
 import {Contributor} from "@/lib/data/member";
-import editor from "@/medias/dpt/editor.jpg";
-import save from "@/medias/dpt/save.jpg";
-import play from "@/medias/dpt/play.jpg";
 import RoundButton from "@/lib/elements/buttons/round-button";
 import "./dont-play-together.css"
 import {AccentedSection, Center, Image, Justified, Section, Title} from "../../elements/base";
 
 export default function DontPlayTogether() {
     return new Project(
-        logo,
-        banner,
+        "/medias/dpt/logo.jpg",
+        "/medias/dpt/banner.jpg",
         "/medias/dpt/video.webm",
         "Don't Play Together",
         "Anti-collaborative Game",
@@ -37,19 +32,19 @@ export default function DontPlayTogether() {
                     </Justified>
                 </AccentedSection>
                 <Section>
-                    <Image src={editor} alt="DPT Editor"/>
+                    <img src="/medias/dpt/editor.jpg" alt="DPT Editor"/>
                     <Title>Create your own levels!</Title>
                     <p>With our built-in editor, you can create an infinite number of custom levels!</p>
                 </Section>
                 <AccentedSection>
-                    <Image src={save} alt="DPT Editor saving"/>
+                    <img src="/medias/dpt/save.jpg" alt="DPT Editor saving"/>
                     <Title>Save your creations!</Title>
                     <p>Once you've edited your level, you can save it using the shortcut CTRL+S, so you can play it
                         again
                         and again, or edit it over and over again...</p>
                 </AccentedSection>
                 <Section>
-                    <Image src={play} alt="DPT Level playing"/>
+                    <img src="/medias/dpt/play.jpg" alt="DPT Level playing"/>
                     <Title>Play now!</Title>
                     <Justified>
                         <p>The rules of the game are simple: get to the flag at the end of the level before the set time

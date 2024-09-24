@@ -5,8 +5,9 @@ import Link from 'next/link';
 import React from "react";
 import {FaDiscord, FaGithub, FaYoutube} from "react-icons/fa";
 import {useParams, usePathname} from 'next/navigation'
+import Image from "next/image";
 
-export default function Header() {
+export default function Header({lang}: {lang: string}) {
     const hamburgerRef = React.useRef<HTMLDivElement>(null);
     const menuRef = React.useRef<HTMLDivElement>(null);
 
@@ -21,7 +22,6 @@ export default function Header() {
     }
 
     const pathname = usePathname();
-    const {lang}: {lang: string} = useParams();
 
     return (
         <div id="header" className="header">
@@ -39,19 +39,19 @@ export default function Header() {
                              className="logo"
                              alt="Logo"/>
                     </Link>
-                    <Link href={"/" + lang} className={pathname === "/home" ? "link-selected" : "link-unselected"}>
+                    <Link href={"/" + lang} className={pathname === "/" + lang ? "link-selected" : "link-unselected"}>
                         <div>HOME</div>
                     </Link>
                     <Link href={"/" + lang + "/projects"}
-                          className={pathname === "/projects" ? "link-selected" : "link-unselected"}>
+                          className={pathname === "/" + lang +  "/projects" ? "link-selected" : "link-unselected"}>
                         <div>PROJECTS</div>
                     </Link>
                     <Link href={"/" + lang + "/members"}
-                          className={pathname === "/members" ? "link-selected" : "link-unselected"}>
+                          className={pathname === "/" + lang + "/members" ? "link-selected" : "link-unselected"}>
                         <div>MEMBERS</div>
                     </Link>
                     <Link href={"/" + lang + "/about-us"}
-                          className={pathname === "/about-us" ? "link-selected" : "link-unselected"}>
+                          className={pathname === "/" + lang + "/about-us" ? "link-selected" : "link-unselected"}>
                         <div>ABOUT US</div>
                     </Link>
                 </div>

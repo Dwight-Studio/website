@@ -54,16 +54,16 @@ export class Project {
         return "/projects/" + this.getURLFriendlyName();
     }
 
-    getLargeCard() {
-        return (<LargeProjectCard project={this}/>)
+    getLargeCard(lang: string) {
+        return (<LargeProjectCard project={this} lang={lang} key={this.getURLFriendlyName()}/>)
     }
 
-    getEmbeddedCard(selected: boolean) {
-        return (<EmbeddedProjectCard project={this} selected={selected}/>)
+    getEmbeddedCard(selected: boolean, lang: string) {
+        return (<EmbeddedProjectCard project={this} selected={selected} lang={lang}/>)
     }
 
-    getFooterCard() {
-        return (<FooterProjectCard project={this}/>)
+    getFooterCard(lang: string) {
+        return (<FooterProjectCard project={this} lang={lang} key={this.getURLFriendlyName()}/>)
     }
 
     isContributor(member: Member) {
@@ -75,8 +75,8 @@ export class Project {
         return rtn;
     }
 
-    getContributorCards() {
-        return this.contributors.map(contributor => <ContributorCard contributor={contributor}/>)
+    getContributorCards(lang: string) {
+        return this.contributors.map(contributor => <ContributorCard contributor={contributor} lang={lang} key={contributor.member.pseudo + ":" + contributor.role}/>)
     }
 }
 
@@ -91,6 +91,6 @@ export function getAllProjects() {
 }
 
 export function getProject(name: String) {
-    return getAllProjects().filter(project => project.getURLFriendlyName() == name)[0];
+    return getAllProjects().filter(project => project.getURLFriendlyName() === name).at(0);
 }
 

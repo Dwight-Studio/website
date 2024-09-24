@@ -40,18 +40,18 @@ export function Subtitle({children} : {children: React.ReactNode}) {
 
 export function Justified({children} : {children: React.ReactNode}) {
     return (
-        <p className="justified">{children}</p>
+        <div className="justified">{children}</div>
     )
 }
 
 export function Center({children} : {children: React.ReactNode}) {
     return (
-        <p className="center">{children}</p>
+        <div className="center">{children}</div>
     )
 }
 
 // @ts-ignore
-export function Image({children, src, alt, align} : {children?: React.ReactNode, src: string | StaticImageData, alt: string, align?: string}) {
+export function Image({children, src, alt, align} : {children?: React.ReactNode, src: string, alt: string, align?: string}) {
     if (children == null) {
         return (
             <div className="image-wrapper">
