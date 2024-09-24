@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="D">
-    <xsl:output method="html" encoding="UTF-8" />
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" exclude-result-prefixes="D">
+    <xsl:output method="html" encoding="UTF-8"/>
 
     <xsl:template match="/list">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
@@ -11,12 +11,15 @@
                 <title>Dwight Studio's Repository</title>
                 <script src="https://kit.fontawesome.com/55eb9c16a8.js"></script>
                 <style>
-                    body { background-image: linear-gradient(135deg, #4BAE6F, #155C79); color: white; font-family: Helvetica, sans-serif; width: 100vw; height: 100vh; overflow: hidden; }
-                    #wrapper { display: flex; flex-direction: column; justify-content: center; justify-items: center; align-items: center; margin: 10vh 10vw; }
+                    body { background-image: linear-gradient(135deg, #4BAE6F, #155C79); color: white; font-family:
+                    Helvetica, sans-serif; width: 100vw; height: 100vh; overflow: hidden; }
+                    #wrapper { display: flex; flex-direction: column; justify-content: center; justify-items: center;
+                    align-items: center; margin: 10vh 10vw; }
                     #title { font-size: 4em; margin-bottom: 40px; text-align: center; }
 
                     .subtitle { font-size: 2em; margin-bottom: 20px; text-align: center }
-                    .block { padding: 20px; display: flex; flex-direction: column; background-color: rgba(255, 255, 255, 0.5); border-radius: 10px; }
+                    .block { padding: 20px; display: flex; flex-direction: column; background-color: rgba(255, 255, 255,
+                    0.5); border-radius: 10px; }
                     .code-line::before { content: "$ " }
 
                     #code-wrapper { display: flex; flex-direction: column; margin-bottom: 40px; }
@@ -25,10 +28,13 @@
 
                     /* Originated from Nginx-Autoindex, Copyright (c) 2019 Kuba Pilecki (MIT License) */
 
-                    table#contents td a { text-decoration: none; display: block; padding: 10px 30px 10px 30px; pointer: default; }
-                    table#contents { width: 50%; margin-left: auto; margin-right: auto; border-collapse: collapse; border-width: 0px; }
+                    table#contents td a { text-decoration: none; display: block; padding: 10px 30px 10px 30px; pointer:
+                    default; }
+                    table#contents { width: 50%; margin-left: auto; margin-right: auto; border-collapse: collapse;
+                    border-width: 0px; }
                     table#contents td { padding: 0px; word-wrap: none; white-space: nowrap; }
-                    table#contents td.icon, table td.size, table td.mtime, table td.actions { width: 1px; white-space: nowrap; }
+                    table#contents td.icon, table td.size, table td.mtime, table td.actions { width: 1px; white-space:
+                    nowrap; }
                     table#contents td.icon a { padding-left: 0px; padding-right: 5px; }
                     table#contents td.name a { padding-left: 5px; }
                     table#contents td.size a { color: #2b633f }
@@ -39,23 +45,31 @@
                     table#contents tr.directory.go-up td.icon i { color: #BF8EF3 !important; }
                     table#contents tr.separator td { padding: 10px 30px 10px 30px }
                     table#contents tr.separator td hr { display: none; }
-                    table#contents tr td.actions ul { list-style-type: none; margin: 0px; padding: 0px; visibility: hidden; }
+                    table#contents tr td.actions ul { list-style-type: none; margin: 0px; padding: 0px; visibility:
+                    hidden; }
                     table#contents tr td.actions ul li { float: left; }
                     table#contents tr:hover td.actions ul { visibility: visible; }
 
-                    nav#breadcrumbs { margin-bottom: 30px; display: flex; justify-content: center; align-items: center; }
+                    nav#breadcrumbs { margin-bottom: 30px; display: flex; justify-content: center; align-items: center;
+                    }
                     nav#breadcrumbs ul { list-style: none; display: inline-block; margin: 0px; padding: 0px; }
                     nav#breadcrumbs ul .icon { font-size: 14px; }
                     nav#breadcrumbs ul li { float: left; }
-                    nav#breadcrumbs ul li a { color: #FFF; display: block; background: #4BAE6F; text-decoration: none; position: relative; height: 40px; line-height: 40px; padding: 0 10px 0 5px; text-align: center; margin-right: 23px; }
+                    nav#breadcrumbs ul li a { color: #FFF; display: block; background: #4BAE6F; text-decoration: none;
+                    position: relative; height: 40px; line-height: 40px; padding: 0 10px 0 5px; text-align: center;
+                    margin-right: 23px; }
                     nav#breadcrumbs ul li:nth-child(even) a { background-color: #4BAE6F; }
-                    nav#breadcrumbs ul li:nth-child(even) a:before { border-color: #4BAE6F; border-left-color: transparent; }
+                    nav#breadcrumbs ul li:nth-child(even) a:before { border-color: #4BAE6F; border-left-color:
+                    transparent; }
                     nav#breadcrumbs ul li:nth-child(even) a:after { border-left-color: #4BAE6F; }
-                    nav#breadcrumbs ul li:first-child a { padding-left: 15px; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; }
+                    nav#breadcrumbs ul li:first-child a { padding-left: 15px; -moz-border-radius: 4px 0 0 4px;
+                    -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; }
                     nav#breadcrumbs ul li:first-child a:before { border: none; }
-                    nav#breadcrumbs ul li:last-child a { padding-right: 15px; -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; }
+                    nav#breadcrumbs ul li:last-child a { padding-right: 15px; -moz-border-radius: 0 4px 4px 0;
+                    -webkit-border-radius: 0; border-radius: 0 4px 4px 0; }
                     nav#breadcrumbs ul li:last-child a:after { border: none; }
-                    nav#breadcrumbs ul li a:before, nav#breadcrumbs ul li a:after { content: ""; position: absolute; top: 0; border: 0 solid #4BAE6F; border-width: 20px 10px; width: 0; height: 0; }
+                    nav#breadcrumbs ul li a:before, nav#breadcrumbs ul li a:after { content: ""; position: absolute;
+                    top: 0; border: 0 solid #4BAE6F; border-width: 20px 10px; width: 0; height: 0; }
                     nav#breadcrumbs ul li a:before { left: -20px; border-left-color: transparent; }
                     nav#breadcrumbs ul li a:after { left: 100%; border-color: transparent; border-left-color: #4BAE6F; }
                     nav#breadcrumbs ul li a:hover { background-color: #155C79; }
@@ -130,50 +144,104 @@
                     <div class="subtitle">Installation</div>
                     <div id="code-wrapper">
                         <div id="code" class="block">
-                            <div class="code-line">sudo wget -q -O - https://deb.dwightstudio.fr/install-repository.sh | sudo bash</div>
+                            <div class="code-line">sudo wget -q -O - https://deb.dwightstudio.fr/install-repository.sh |
+                                sudo bash
+                            </div>
                             <div id="install"></div>
                         </div>
                         <div id="comment">Enter this command in your favorite shell to install it.</div>
                     </div>
                     <div class="subtitle">Repository content</div>
                     <div class="block">
-                        <nav id="breadcrumbs"><ul><li><a href="/"><i class="fa fa-home"></i></a></li></ul></nav>
+                        <nav id="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="/">
+                                        <i class="fa fa-home"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                         <table id="contents">
                             <tbody>
                                 <tr class="directory go-up">
-                                    <td class="icon"><a href="../"><i class="fa fa-arrow-up"></i></a></td>
-                                    <td class="name"><a href="../">..</a></td>
-                                    <td class="size"><a href="../"></a></td>
-                                    <td class="mtime"><a href="../"></a></td>
+                                    <td class="icon">
+                                        <a href="../">
+                                            <i class="fa fa-arrow-up"></i>
+                                        </a>
+                                    </td>
+                                    <td class="name">
+                                        <a href="../">..</a>
+                                    </td>
+                                    <td class="size">
+                                        <a href="../"></a>
+                                    </td>
+                                    <td class="mtime">
+                                        <a href="../"></a>
+                                    </td>
                                 </tr>
 
                                 <xsl:if test="count(directory) != 0">
                                     <tr class="separator directories">
-                                        <td colspan="4"><hr/></td>
+                                        <td colspan="4">
+                                            <hr/>
+                                        </td>
                                     </tr>
                                 </xsl:if>
 
                                 <xsl:for-each select="directory">
                                     <tr class="directory">
-                                        <td class="icon"><a href="{.}/"><i class="fa fa-folder"></i></a></td>
-                                        <td class="name"><a href="{.}/"><xsl:value-of select="." /></a></td>
-                                        <td class="size"><a href="{.}/"></a></td>
-                                        <td class="mtime"><a href="{.}/"><xsl:value-of select="./@mtime" /></a></td>
+                                        <td class="icon">
+                                            <a href="{.}/">
+                                                <i class="fa fa-folder"></i>
+                                            </a>
+                                        </td>
+                                        <td class="name">
+                                            <a href="{.}/">
+                                                <xsl:value-of select="."/>
+                                            </a>
+                                        </td>
+                                        <td class="size">
+                                            <a href="{.}/"></a>
+                                        </td>
+                                        <td class="mtime">
+                                            <a href="{.}/">
+                                                <xsl:value-of select="./@mtime"/>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </xsl:for-each>
 
                                 <xsl:if test="count(file) != 0">
                                     <tr class="separator files">
-                                        <td colspan="4"><hr/></td>
+                                        <td colspan="4">
+                                            <hr/>
+                                        </td>
                                     </tr>
                                 </xsl:if>
 
                                 <xsl:for-each select="file">
                                     <tr class="file">
-                                        <td class="icon"><a href="{.}" download="{.}"><i class="fa fa-file"></i></a></td>
-                                        <td class="name"><a href="{.}" download="{.}"><xsl:value-of select="." /></a></td>
-                                        <td class="size"><a href="{.}" download="{.}"><xsl:value-of select="./@size" /></a></td>
-                                        <td class="mtime"><a href="{.}" download="{.}"><xsl:value-of select="./@mtime" /></a></td>
+                                        <td class="icon">
+                                            <a href="{.}" download="{.}">
+                                                <i class="fa fa-file"></i>
+                                            </a>
+                                        </td>
+                                        <td class="name">
+                                            <a href="{.}" download="{.}">
+                                                <xsl:value-of select="."/>
+                                            </a>
+                                        </td>
+                                        <td class="size">
+                                            <a href="{.}" download="{.}">
+                                                <xsl:value-of select="./@size"/>
+                                            </a>
+                                        </td>
+                                        <td class="mtime">
+                                            <a href="{.}" download="{.}">
+                                                <xsl:value-of select="./@mtime"/>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </xsl:for-each>
                             </tbody>
@@ -187,7 +255,8 @@
                     const install = urlParams.get('install');
 
                     if (install != null) {
-                        document.getElementById("install").innerHTML = "sudo apt update &amp;&amp; sudo apt install " + install;
+                    document.getElementById("install").innerHTML = "sudo apt update &amp;&amp; sudo apt install " +
+                    install;
                     document.getElementById("install").classList.add('code-line');
                     }
                 </script>

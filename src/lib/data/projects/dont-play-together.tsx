@@ -5,7 +5,7 @@ import Yinx from "@/lib/data/members/yinx";
 import {Contributor} from "@/lib/data/member";
 import RoundButton from "@/lib/elements/buttons/round-button";
 import "./dont-play-together.css"
-import {AccentedSection, Center, Image, Justified, Section, Title} from "../../elements/base";
+import {AccentedSection, Center, Justified, Section, Title} from "../../elements/base";
 
 export default function DontPlayTogether() {
     return new Project(
@@ -52,7 +52,8 @@ export default function DontPlayTogether() {
                             dying. However, players can vote between 2 choices to prevent you from winning the game so
                             quickly.
                             You only have 2 life points, so be careful! </p>
-                        <p>The game is limitless: you can create your own addons to add content to the game! You can also
+                        <p>The game is limitless: you can create your own addons to add content to the game! You can
+                            also
                             create
                             your own levels with ease, thanks to the easy-to-use level editor! </p>
                         <p>Please note that the game is still in development, so bugs and crashes are to be expected! If

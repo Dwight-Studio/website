@@ -5,7 +5,8 @@ import {Page, PageContent, Section} from "@/lib/elements/base";
 
 export default function Member(props) {
     return (
-        <Page title={props.member.pseudo + " - " + props.member.firstName + " " + props.member.lastName} description={props.member.shortDescription}>
+        <Page title={props.member.pseudo + " - " + props.member.firstName + " " + props.member.lastName}
+              description={props.member.shortDescription}>
 
             <Header selected={"members"}/>
 

@@ -4,9 +4,8 @@ import Header from "@/lib/elements/header/header";
 import {AccentedSection, Center, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 import {getAllMembers} from "@/lib/data/member";
 import RoundButton from "@/lib/elements/buttons/round-button";
-import {getAllProjects} from "@/lib/data/project";
 
-export default function IndexPage({params: {lang}} : {params: {lang: string}}) {
+export default function IndexPage({params: {lang}}: { params: { lang: string } }) {
     return (
         <>
             <TitleHeader logo={"https://static.dwightstudio.fr/dwightstudio/LOGO_BANNER_RED.svg"}/>

@@ -9,7 +9,7 @@ import {useParams} from "next/navigation";
 
 export default function Footer() {
 
-    const {lang}: {lang: string} = useParams();
+    const {lang}: { lang: string } = useParams();
 
     return (
         <div className="footer">
@@ -18,21 +18,24 @@ export default function Footer() {
                     <div className="title">PAGES</div>
                     <Link href={lang}>Home</Link>
                     <Link href={"/" + lang + "/projects"}>Projects</Link>
-                    <Link href={lang+ "/members"}>Members</Link>
+                    <Link href={lang + "/members"}>Members</Link>
                     <Link href={"/" + lang + "/about-us"}>About us</Link>
                 </div>
                 <div className="section">
                     <div className="title">MEMBERS</div>
-                    {getAllMembers().map(member => <Link href={"/" + lang + member.getMemberURL()} key={member.pseudo}>{member.pseudo}</Link>)}
+                    {getAllMembers().map(member => <Link href={"/" + lang + member.getMemberURL()}
+                                                         key={member.pseudo}>{member.pseudo}</Link>)}
                 </div>
                 <div className="section">
                     <div className="title">PROJECTS</div>
-                    {getAllProjects().map(project => <Link href={"/" + lang + project.getProjectURL()} key={project.getURLFriendlyName()}>{project.projectName}</Link>)}
+                    {getAllProjects().map(project => <Link href={"/" + lang + project.getProjectURL()}
+                                                           key={project.getURLFriendlyName()}>{project.projectName}</Link>)}
                 </div>
             </div>
             <div className="bottom">
                 <div className="text">
-                    © 2023-{new Date().getFullYear()} Dwight Studio - <Link href={"/" + lang + "/legal"}>Legal information</Link>
+                    © 2023-{new Date().getFullYear()} Dwight Studio - <Link href={"/" + lang + "/legal"}>Legal
+                    information</Link>
                 </div>
             </div>
         </div>

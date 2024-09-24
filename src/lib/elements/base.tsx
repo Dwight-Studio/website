@@ -1,8 +1,7 @@
 import "./base.css"
 import React from "react";
-import {StaticImageData} from "next/image";
 
-export function PageContent({children} : {children: React.ReactNode}) {
+export function PageContent({children}: { children: React.ReactNode }) {
     return (
         <div className="content-wrapper">
             {children}
@@ -10,7 +9,7 @@ export function PageContent({children} : {children: React.ReactNode}) {
     )
 }
 
-export function Section({children} : {children: React.ReactNode}) {
+export function Section({children}: { children: React.ReactNode }) {
     return (
         <div className="section">
             {children}
@@ -18,7 +17,7 @@ export function Section({children} : {children: React.ReactNode}) {
     )
 }
 
-export function AccentedSection({children} : {children: React.ReactNode}) {
+export function AccentedSection({children}: { children: React.ReactNode }) {
     return (
         <div className="accented-section">
             {children}
@@ -26,32 +25,37 @@ export function AccentedSection({children} : {children: React.ReactNode}) {
     )
 }
 
-export function Title({children} : {children: React.ReactNode}) {
+export function Title({children}: { children: React.ReactNode }) {
     return (
         <div className="title">{children}</div>
     )
 }
 
-export function Subtitle({children} : {children: React.ReactNode}) {
+export function Subtitle({children}: { children: React.ReactNode }) {
     return (
         <div className="subtitle">{children}</div>
     )
 }
 
-export function Justified({children} : {children: React.ReactNode}) {
+export function Justified({children}: { children: React.ReactNode }) {
     return (
         <div className="justified">{children}</div>
     )
 }
 
-export function Center({children} : {children: React.ReactNode}) {
+export function Center({children}: { children: React.ReactNode }) {
     return (
         <div className="center">{children}</div>
     )
 }
 
 // @ts-ignore
-export function Image({children, src, alt, align} : {children?: React.ReactNode, src: string, alt: string, align?: string}) {
+export function Image({children, src, alt, align}: {
+    children?: React.ReactNode,
+    src: string,
+    alt: string,
+    align?: string
+}) {
     if (children == null) {
         return (
             <div className="image-wrapper">
@@ -70,7 +74,7 @@ export function Image({children, src, alt, align} : {children?: React.ReactNode,
     )
 }
 
-export function CenteredCover({children} : {children: React.ReactNode}) {
+export function CenteredCover({children}: { children: React.ReactNode }) {
     return (
         <div className="centered-cover">
             <Center>
@@ -80,7 +84,7 @@ export function CenteredCover({children} : {children: React.ReactNode}) {
     )
 }
 
-export function Video({children, src, align} : {children: React.ReactNode, src: string, align: string}) {
+export function Video({children, src, align}: { children: React.ReactNode, src: string, align: string }) {
 
     if (children == null) {
         return (

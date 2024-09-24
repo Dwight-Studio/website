@@ -1,9 +1,9 @@
 import './title-header.css';
 import React from "react";
 import {FaAngleDown} from "react-icons/fa";
-import Image, {StaticImageData} from "next/image";
+import {StaticImageData} from "next/image";
 
-export default function TitleHeader({logo, background} : {logo: string | StaticImageData, background?: string}) {
+export default function TitleHeader({logo, background}: { logo: string | StaticImageData, background?: string }) {
     return (
         <div className="title-header">
             <video autoPlay muted loop className="title-background" src={background}/>
@@ -14,13 +14,13 @@ export default function TitleHeader({logo, background} : {logo: string | StaticI
             <a href="#header">
                 <div className="animation">
                     <div className="down-logo-wrapper">
-                        <FaAngleDown />
+                        <FaAngleDown/>
                     </div>
                     <div className="down-logo-wrapper">
-                        <FaAngleDown />
+                        <FaAngleDown/>
                     </div>
                     <div className="down-logo-wrapper">
-                        <FaAngleDown />
+                        <FaAngleDown/>
                     </div>
                 </div>
             </a>

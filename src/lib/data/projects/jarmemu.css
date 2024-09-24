@@ -107,6 +107,7 @@
     .features-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .features-grid .card:hover {
         transform: scale(1.2);
     }

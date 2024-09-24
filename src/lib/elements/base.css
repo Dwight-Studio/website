@@ -95,7 +95,7 @@
     align-items: center;
 }
 
-.content-wrapper .centered-cover > .center  {
+.content-wrapper .centered-cover > .center {
     width: 50%;
 }
 
@@ -109,7 +109,7 @@
         height: 50vh;
     }
 
-    .content-wrapper .centered-cover > .center  {
+    .content-wrapper .centered-cover > .center {
         width: 80%;
     }
 

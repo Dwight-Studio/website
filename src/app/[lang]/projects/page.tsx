@@ -4,7 +4,7 @@ import {PageContent, Section} from "@/lib/elements/base";
 import {getAllProjects} from "@/lib/data/project";
 import "./projects.css"
 
-export default function Projects({params: {lang}} : {params: {lang: string}}) {
+export default function Projects({params: {lang}}: { params: { lang: string } }) {
     return (
         <>
             <Header lang={lang}/>

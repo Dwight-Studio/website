@@ -9,20 +9,20 @@ import {Project} from "@/lib/data/project";
 import {OctokitResponse} from "@octokit/types";
 import {Suspense} from "react";
 
-function fetchAssets(project : Project) : {name: string; browser_download_url: string;}[] | null {
+function fetchAssets(project: Project): { name: string; browser_download_url: string; }[] | null {
     const octokit = new Octokit();
 
     // @ts-ignore
     return octokit.request("GET /repos/" + project.githubIdentifier + "/releases/latest")
         .then(response => response.data.id, () => null)
-        .then((assetsID : string) => {
+        .then((assetsID: string) => {
             if (assetsID != null) return octokit.request("GET /repos/" + project.githubIdentifier + "/releases/{assetsURL}/assets", {assetsURL: assetsID})
             else return new Promise<OctokitResponse<any>>(() => null);
         })
         .then(response => response == null ? null : (response.data));
 }
 
-function Repositories({project} : {project: Project}) {
+function Repositories({project}: { project: Project }) {
     if (project.repositories.length > 0) {
         return [
             <div className="title">Install</div>,
@@ -54,7 +54,7 @@ function Repositories({project} : {project: Project}) {
     }
 }
 
-function FilesButtons({project} : {project: Project}) {
+function FilesButtons({project}: { project: Project }) {
     let files = fetchAssets(project);
 
     if (files == null) {
@@ -63,7 +63,7 @@ function FilesButtons({project} : {project: Project}) {
         return (
             <div className="buttons">
                 {
-                    files.map((asset: {name: string; browser_download_url: string;}) => {
+                    files.map((asset: { name: string; browser_download_url: string; }) => {
                         if (asset.name.endsWith(".exe")) {
                             return (
                                 <RoundButton leftGraphic={<FaWindows/>} text="Windows"
@@ -96,19 +96,19 @@ function FilesButtons({project} : {project: Project}) {
     }
 }
 
-function Files({project} : {project: Project}) {
+function Files({project}: { project: Project }) {
 
     return (
         <>
             <div className="title">Download</div>
             <Suspense fallback={<PuffLoader color="#ffffff"/>}>
-                <FilesButtons project={project}  />
+                <FilesButtons project={project}/>
             </Suspense>
         </>
     )
 }
 
-export default function HeaderProjectCard({project, lang} : {project: Project, lang: string}) {
+export default function HeaderProjectCard({project, lang}: { project: Project, lang: string }) {
     return (
         <div id="header-card" className="header-project-card">
             <div className="downloads">

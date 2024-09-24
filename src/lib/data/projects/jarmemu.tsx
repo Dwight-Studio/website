@@ -8,7 +8,6 @@ import {TbCodeAsterisk, TbWaveSawTool} from "react-icons/tb";
 import {PiHandsClappingFill} from "react-icons/pi";
 import {BsFillMenuButtonWideFill} from "react-icons/bs";
 import {MdMemory} from "react-icons/md";
-import editor from "@/medias/jarmemu/editor.png"
 import {AccentedSection, Center, CenteredCover, Image, Section, Subtitle, Title, Video} from "../../elements/base";
 
 export default function JArmEmu() {

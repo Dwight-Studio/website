@@ -2,9 +2,8 @@ import "./large-project-card.css"
 import RoundButton from "@/lib/elements/buttons/round-button";
 import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 import {Project, ProjectFlag} from "@/lib/data/project";
-import Image from "next/image";
 
-export default function LargeProjectCard({project, lang} : {project: Project, lang: string}) {
+export default function LargeProjectCard({project, lang}: { project: Project, lang: string }) {
     let flag;
     switch (project.flag) {
         case ProjectFlag.OUTDATED:

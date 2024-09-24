@@ -26,7 +26,8 @@ export default function Project(props) {
                 <div className="flag-message preview">
                     <FaCode/>
                     <div>
-                        This project is a preview of a software under development. It should be used with caution as it may be unstable.
+                        This project is a preview of a software under development. It should be used with caution as it
+                        may be unstable.
                     </div>
                 </div>
             )

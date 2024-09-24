@@ -3,13 +3,13 @@ import "./project-card-carousel.css"
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 import {Project} from "@/lib/data/project";
 
-export default function ProjectCardCarousel({projects, lang} : {projects: Project[], lang: string}) {
+export default function ProjectCardCarousel({projects, lang}: { projects: Project[], lang: string }) {
     let first = true;
     return (
         <div className="project-card-carousel">
             <div className="title">Contributions</div>
             <div className="up-arrow">
-                <FaAngleUp />
+                <FaAngleUp/>
             </div>
             {projects.map(project => {
                 if (first) {
@@ -19,7 +19,7 @@ export default function ProjectCardCarousel({projects, lang} : {projects: Projec
                 return project.getEmbeddedCard(false, lang)
             })}
             <div className="down-arrow">
-                <FaAngleDown />
+                <FaAngleDown/>
             </div>
         </div>
     )

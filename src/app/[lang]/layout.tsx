@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 }
 
 export async function generateStaticParams() {
-    return [{ lang: 'en' }, { lang: 'fr' }]
+    return [{lang: 'en'}, {lang: 'fr'}]
 }
 
 export default function RootLayout(
@@ -41,8 +41,8 @@ export default function RootLayout(
     return (
         <html lang={params.lang}>
         <body>
-            {children}
-            <Footer/>
+        {children}
+        <Footer/>
         </body>
         </html>
     )

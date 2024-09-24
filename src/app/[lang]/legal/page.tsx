@@ -2,10 +2,10 @@ import React from "react";
 import Header from "@/lib/elements/header/header";
 import {AccentedSection, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 
-export default function LegalPage({params: {lang}} : {params: {lang: string}}) {
+export default function LegalPage({params: {lang}}: { params: { lang: string } }) {
     return (
         <>
-            <Header lang={lang} />
+            <Header lang={lang}/>
             <PageContent>
                 <Section>
                     <Title>Legal information</Title>

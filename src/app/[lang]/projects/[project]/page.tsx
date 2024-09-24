@@ -4,16 +4,15 @@ import TitleHeader from "@/lib/elements/header/title-header";
 import "./project.css"
 import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 import {PageContent, Section} from "@/lib/elements/base";
-import {getAllProjects, getProject, Project, ProjectFlag} from "@/lib/data/project";
+import {getAllProjects, getProject, ProjectFlag} from "@/lib/data/project";
 import {Metadata} from "next";
 import {notFound} from "next/navigation";
 
-export default function ProjectPage({params: {lang, project}} : {params: {lang: string, project: string}}) {
+export default function ProjectPage({params: {lang, project}}: { params: { lang: string, project: string } }) {
     let flag;
     let projectInstance = getProject(project);
 
     if (projectInstance) {
-
         switch (projectInstance.flag) {
             case ProjectFlag.OUTDATED:
                 flag = (
@@ -73,12 +72,12 @@ export async function generateMetadata(
             lang,
             project
         }
-    } : {
+    }: {
         params: {
             lang: string,
             project: string
         }
-    }) : Promise<Metadata> {
+    }): Promise<Metadata> {
 
     let projectInstance = getProject(project);
 

@@ -6,7 +6,11 @@ import React from "react";
 import {FaCode, FaExclamationTriangle} from "react-icons/fa";
 import {Project, ProjectFlag} from "@/lib/data/project";
 
-export default function EmbeddedProjectCard({project, selected, lang}: {project: Project, selected: boolean, lang: string}) {
+export default function EmbeddedProjectCard({project, selected, lang}: {
+    project: Project,
+    selected: boolean,
+    lang: string
+}) {
     const cardRef = React.useRef<HTMLDivElement>(null)
 
     function handleClick() {

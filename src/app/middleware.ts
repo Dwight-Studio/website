@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import type {NextRequest} from 'next/server'
+import {NextResponse} from 'next/server'
 
 const LOCALES = ['en', 'fr']
 
 // Source: https://nbellocam.dev/blog/next-middleware-i18n
-function getBrowserLocale(request : NextRequest) : string | undefined {
+function getBrowserLocale(request: NextRequest): string | undefined {
     return request.headers
         .get("accept-language")
         ?.split(",")
@@ -12,7 +12,7 @@ function getBrowserLocale(request : NextRequest) : string | undefined {
         ?.reduce(
             (ac: { code: string; priority: string }[], lang) => [
                 ...ac,
-                { code: lang[0], priority: lang[1] },
+                {code: lang[0], priority: lang[1]},
             ],
             []
         )
@@ -21,11 +21,11 @@ function getBrowserLocale(request : NextRequest) : string | undefined {
         ?.code?.substring(0, 2);
 }
 
-export function middleware(request : NextRequest) {
+export function middleware(request: NextRequest) {
     console.log("HEY")
 
     // Check if there is any supported locale in the pathname
-    const { pathname } = request.nextUrl
+    const {pathname} = request.nextUrl
     const pathnameHasLocale = LOCALES.some(
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     )

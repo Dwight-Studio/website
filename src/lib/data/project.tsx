@@ -8,7 +8,7 @@ import DontPlayTogether from "./projects/dont-play-together";
 import JArmEmu from "./projects/jarmemu";
 import DeMuG from "./projects/demug";
 import {Contributor, Member} from "@/lib/data/member";
-import { StaticImageData } from "next/image";
+import {StaticImageData} from "next/image";
 
 export class Project {
 
@@ -76,7 +76,8 @@ export class Project {
     }
 
     getContributorCards(lang: string) {
-        return this.contributors.map(contributor => <ContributorCard contributor={contributor} lang={lang} key={contributor.member.pseudo + ":" + contributor.role}/>)
+        return this.contributors.map(contributor => <ContributorCard contributor={contributor} lang={lang}
+                                                                     key={contributor.member.pseudo + ":" + contributor.role}/>)
     }
 }
 

@@ -4,7 +4,7 @@ import Header from "@/lib/elements/header/header";
 import {AccentedSection, Center, PageContent, Section, Subtitle, Title} from "@/lib/elements/base";
 import RoundButton from "@/lib/elements/buttons/round-button";
 
-export default function AboutUsPage({params: {lang}} : {params: {lang: string}}) {
+export default function AboutUsPage({params: {lang}}: { params: { lang: string } }) {
     return (
         <>
             <Header lang={lang}/>
@@ -23,7 +23,8 @@ export default function AboutUsPage({params: {lang}} : {params: {lang: string}})
                         join the official Discord server.
                     </p>
                     <Center>
-                        <RoundButton leftGraphic={<FaDiscord/>} text="Dwight Studo's Hub" link="https://discord.gg/Eqake7q"/>
+                        <RoundButton leftGraphic={<FaDiscord/>} text="Dwight Studo's Hub"
+                                     link="https://discord.gg/Eqake7q"/>
                     </Center>
                 </Section>
                 <AccentedSection>

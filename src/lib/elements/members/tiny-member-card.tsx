@@ -2,9 +2,8 @@ import React from "react";
 import './tiny-member-card.css'
 import Link from 'next/link';
 import {Member} from "@/lib/data/member";
-import Image from "next/image";
 
-export function TinyMemberCard({member, lang} : {member: Member, lang: string}) {
+export function TinyMemberCard({member, lang}: { member: Member, lang: string }) {
     return (
         <Link href={"/" + lang + member.getMemberURL()} key={member.pseudo}>
             <div className="tiny-member-card">
