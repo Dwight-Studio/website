@@ -1,0 +1,121 @@
+.large-project-card {
+    background-color: var(--accent-black);
+    position: relative;
+    border-radius: 25px;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.large-project-card:hover {
+    width: 500px;
+}
+
+.large-project-card .warning {
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 1em;
+    top: 5%;
+    right: 5%;
+    padding: 0.5em 0.8em;
+    border-radius: 1000px;
+    transition: 0.4s ease;
+    height: 1em;
+    width: 1em;
+    font-size: 0;
+}
+
+.large-project-card .warning.outdated {
+    background-color: var(--accent-yellow);
+}
+
+.large-project-card .warning.preview {
+    background-color: var(--accent-blue);
+}
+
+.large-project-card:hover .warning {
+    font-size: 0.8rem;
+}
+
+.large-project-card:hover .warning:hover {
+    width: 7em;
+}
+
+.large-project-card .warning svg {
+    overflow: visible;
+}
+
+.large-project-card .warning .text {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.large-project-card .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.large-project-card .logo-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.large-project-card .button-wrapper {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.large-project-card .short-description, .large-project-card .short-description-inverted {
+    text-align: center;
+    /*max-width: 75%;*/
+    background-image: linear-gradient(to bottom right, var(--normal-black), rgba(0, 0, 0, 0));
+    font-weight: 700;
+    font-size: 0.8rem;
+    opacity: 0;
+    padding: 0.5em 0.8em;
+    border-radius: 1000px;
+    transition: 0.4s ease;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.large-project-card .short-description-inverted {
+    background-image: linear-gradient(to bottom right, var(--normal-white), rgba(0, 0, 0, 0));
+    color: var(--accent-black);
+}
+
+.large-project-card .round-button {
+    font-size: 0;
+    transition: 0.4s ease;
+}
+
+.large-project-card:hover .round-button {
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.large-project-card:hover .short-description, .large-project-card .short-description-inverted {
+    opacity: 100%;
+}
+
+.large-project-card .image {
+    width: 80%;
+    object-fit: scale-down;
+}

@@ -1,0 +1,135 @@
+.content-wrapper {
+    min-height: 80vh;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: clip;
+    transition: 1s;
+}
+
+.content-wrapper > * {
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.content-wrapper .section,
+.content-wrapper .large-section {
+    background-color: var(--normal-black);
+    color: var(--normal-white);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content-wrapper .accented-section,
+.content-wrapper .large-accented-section {
+    background-color: var(--accent-black);
+    color: var(--normal-white);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content-wrapper .large-section,
+.content-wrapper .large-accented-section {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.content-wrapper .title {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.content-wrapper .subtitle {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--deactivated-light);
+}
+
+.content-wrapper p {
+    font-size: 1.5rem;
+}
+
+.content-wrapper .justify {
+    text-align: justify;
+}
+
+.content-wrapper .center {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.content-wrapper .image-wrapper {
+    background-color: var(--normal-black);
+    color: var(--normal-white);
+    position: relative;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.content-wrapper .image-wrapper .image {
+    height: 100%;
+    box-shadow: 0 0 30px 5px var(--accent-black);
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.content-wrapper .image-wrapper .cover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: .5s ease;
+}
+
+.content-wrapper .image-wrapper .cover:hover {
+    opacity: 1;
+}
+
+.content-wrapper .centered-cover {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper .centered-cover > .center {
+    width: 50%;
+}
+
+@media (max-width: 1000px) {
+    .content-wrapper > * {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .content-wrapper .image-wrapper {
+        height: 50vh;
+    }
+
+    .content-wrapper .centered-cover > .center {
+        width: 80%;
+    }
+
+    .content-wrapper .image-wrapper .image.right {
+        object-position: right;
+    }
+
+    .content-wrapper .image-wrapper .image.left {
+        object-position: left;
+    }
+
+    .content-wrapper .image-wrapper .cover {
+        opacity: 1;
+    }
+}

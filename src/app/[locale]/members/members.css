@@ -1,0 +1,20 @@
+.members {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .members {
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+        gap: 50px;
+        align-items: center;
+        margin: 30px 5vw;
+    }
+}

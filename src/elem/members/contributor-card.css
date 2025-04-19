@@ -1,0 +1,43 @@
+.contributor-card {
+    color: var(--normal-white);
+    display: flex;
+    border-radius: 1000px;
+    width: 300px;
+    overflow: hidden;
+    transition: .2s;
+    height: 90px;
+    cursor: pointer;
+    background-image: linear-gradient(to right bottom, var(--normal-black), var(--member-color));
+    text-decoration: none;
+}
+
+.contributor-card:hover {
+    z-index: 100;
+    transform: scale(1.2);
+}
+
+.contributor-card img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+.contributor-card .text {
+    width: 100%;
+    padding-right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contributor-card .text .display-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contributor-card .text .role {
+    font-size: 16px;
+    font-weight: 200;
+}

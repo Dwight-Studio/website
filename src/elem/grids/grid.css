@@ -1,0 +1,30 @@
+.vertical-grid, .horizontal-grid {
+    display: grid;
+    justify-content: stretch;
+    justify-items: stretch;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.vertical-grid .dynamic {
+    grid-template-columns: auto;
+}
+
+.vertical-grid.n {
+    grid-template-columns: repeat(var(--n), 1fr);
+}
+
+
+.horizontal-grid .dynamic {
+    grid-template-rows: auto;
+}
+
+.horizontal-grid.n {
+    grid-template-rows: repeat(var(--n), 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+    .vertical-grid .horizontal-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
